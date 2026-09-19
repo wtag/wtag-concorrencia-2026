@@ -17,46 +17,6 @@
    ========================================================================= */
 window.DIC_EN = {
 
-/* ── 1 a 3 · abertura Grupo WE ─────────────────────────────────────────── */
-'Capa · Grupo WE': 'Cover · Grupo WE',
-'Fachada do edifício do Grupo WE': 'Facade of the Grupo WE building',
-'Credenciais&nbsp;&nbsp;|&nbsp;&nbsp;Grupo WE': 'Credentials&nbsp;&nbsp;|&nbsp;&nbsp;Grupo WE',
-'Credenciais': 'Credentials',
-'100% nacional e independente': '100% Brazilian and independent',
-'Somos um dos': 'We are one of',
-'maiores grupos': 'the largest',
-'de comunicação': 'advertising groups',
-'100% nacional': '100% Brazilian',
-'e independente.': 'and independent.',
-'Fachada em vidro refletindo nuvens': 'Glass facade reflecting clouds',
-'Números do Grupo': 'The Group in Numbers',
-'Forro iluminado do escritório': 'Illuminated office ceiling',
-'profissionais': 'professionals',
-'integrados': 'integrated',
-'empresas': 'companies',
-'clientes': 'clients',
-'em movimentação': 'in media',
-'de': 'spend',
-'mídia*': 'volume*',
-'*Fonte: Kantar Ibope': '*Source: Kantar Ibope',
-
-/* ── 4 · clientes do Grupo WE (slide oculto, traduzido de todo jeito) ──── */
-'Principais Clientes': 'Key Clients',
-'Lobby com luminárias suspensas': 'Lobby with suspended light fixtures',
-
-/* ── 5 · hub de soluções ──────────────────────────────────────────────── */
-'Hub de Soluções': 'Solutions Hub',
-'Diagrama radial das soluções do Grupo WE': 'Radial diagram of Grupo WE solutions',
-'Somos um hub': 'We are a hub',
-'de soluções': 'of communications',
-'de comunicação.': 'solutions.',
-'Não importa o porte,': 'Whatever the size,',
-'o desafio ou o momento': 'the challenge or the moment',
-'– temos a solução certa': '– we have the right answer',
-'para cada cliente.': 'for every client.',
-'Para cada desafio, uma resposta.': 'For every challenge, an answer.',
-'Para cada tamanho, um modelo.': 'For every size, a model.',
-
 /* ── 6 e 7 · abertura WT.AG ───────────────────────────────────────────── */
 'Abertura WT.AG': 'WT.AG Opening',
 'Transformamos marcas': 'We turn brands into',
@@ -176,7 +136,6 @@ window.DIC_EN = {
 'Ver o case': 'See the case',
 'Central do Corre': 'Central do Corre',
 'Dia das Mães': 'Mother’s Day',
-'Histórias que crescem com a gente': 'Stories that grow with us',
 
 /* ── 16 e 22 · divisores ─────────────────────────────────────────────── */
 'Divisor · Cultura e Cases': 'Divider · Culture and Cases',
@@ -186,18 +145,14 @@ window.DIC_EN = {
 'Contexto': 'Context',
 'Insight': 'Insight',
 'Ideia': 'Idea',
-'Desafio': 'Challenge',
-'Execução': 'Execution',
 'Repercussão': 'Coverage',
 'Ampliar': 'Enlarge',
 'Assistir': 'Watch',
 'Assistir ao videocase': 'Watch the video case',
-'Assistir ao trailer': 'Watch the trailer',
 'Clientes': 'Clients',
 'Case': 'Case',
 'Ver as marcas parceiras da WT.AG': 'See WT.AG partner brands',
 '＋ Texto completo': '＋ Full text',
-'(Números a substituir)': '(Numbers to be replaced)',
 
 /* ── 23 e 24 · time ──────────────────────────────────────────────────── */
 'Liderança': 'Leadership',
@@ -215,7 +170,6 @@ window.DIC_EN = {
 'Sede da WT.AG em Novo Hamburgo': 'WT.AG office in Novo Hamburgo',
 'Rua Quatá, 909 · Vila Olímpia': 'Rua Quatá, 909 · Vila Olímpia, São Paulo',
 
-
 /* ── textos dos cases · versão curta no slide e completa no painel ──────── */
 'No Brasil, 45% das pessoas buscam na renda extra a solução para apoiar as finanças da família. Nesse cenário, oportunidades de faturamento adicional ganham ainda mais relevância social e impacto real.': 'In Brazil, 45% of people turn to extra income to support the family finances. In that context, opportunities to earn more carry even greater social relevance and real impact.',
 'Hoje, no Brasil, 45% das pessoas buscam na renda extra a solução para apoiar as finanças da família. Com o aumento do custo de vida, complementar o salário é essencial para equilibrar o orçamento. Nesse cenário, oportunidades de faturamento adicional ganham ainda mais relevância social e impacto real.': 'In Brazil today, 45% of people turn to extra income to support the family finances. With the rising cost of living, topping up a salary is essential to balance the budget. In that context, opportunities to earn more carry even greater social relevance and real impact.',
@@ -229,25 +183,12 @@ window.DIC_EN = {
 'Mas o problema nunca foi a falta de informação. Era a falta de identificação. Os canais digitais respondiam dúvidas, mas de forma fria, automática e distante da rotina de quem estava na rua. O mapeamento da comunidade revelou uma forte conexão com a cultura do rap e da rima.': 'But the problem was never a lack of information. It was a lack of recognition. The digital channels did answer questions — coldly, automatically, and far removed from the daily routine of someone out on the street. Mapping the community revealed a strong connection to rap and rhyme.',
 'A Central do Corre: um hack no Instagram da Keeta onde dúvidas reais dos entregadores viraram rap. Com Vitor Massaki no flow, a informação ganhou a linguagem da rua.': 'Central do Corre: a hack inside Keeta’s own Instagram, where real courier questions became rap. With Vitor Massaki on the flow, the information picked up the language of the street.',
 'Lançamos a Central do Corre: um hack dentro do próprio Instagram da Keeta, onde dúvidas reais dos entregadores se transformaram em conteúdo na linguagem do corre: o rap. Com Vitor Massaki no flow, temas como bag, pagamento, suporte e performance ganharam um formato mais simples, humano e acessível, traduzindo a informação para a linguagem da rua.': 'We launched Central do Corre: a hack inside Keeta’s own Instagram, where real courier questions turned into content in the language of the hustle — rap. With Vitor Massaki on the flow, subjects like the bag, payments, support and performance took on a simpler, more human and more accessible form, translating the information into the language of the street.',
-'A Sicredi Serrana, cooperativa com atuação na Serra Gaúcha, Vale do Caí e Espírito Santo, celebrou 40 anos com o desafio de contar 40 histórias marcantes de sua trajetória.': 'Sicredi Serrana, a cooperative operating across the Serra Gaúcha, the Vale do Caí and Espírito Santo, marked its 40th anniversary with the challenge of telling 40 defining stories from its history.',
-'A Sicredi Serrana é uma cooperativa de crédito do Sicredi, com atuação na Serra Gaúcha, Vale do Caí e Espírito Santo, que em 2025 celebrou 40 anos com o desafio de criar uma campanha contando 40 histórias marcantes de sua trajetória.': 'Sicredi Serrana is a Sicredi credit cooperative operating across the Serra Gaúcha, the Vale do Caí and Espírito Santo. In 2025 it marked its 40th anniversary with the challenge of building a campaign around 40 defining stories from its history.',
-'“Histórias que crescem com a gente” valoriza o protagonismo dos associados: depoimentos reais que ganham forma em quadros pintados por artistas locais.': '“Stories that grow with us” puts the members centre stage: real testimonials that take shape as paintings made by local artists.',
-'"Histórias que crescem com a gente" é um conceito que valoriza o protagonismo dos associados por meio de uma série de vídeos com depoimentos reais. As histórias são transformadas em quadros pintados por artistas locais, gerando emoção e autenticidade, em uma campanha que coloca as pessoas no centro e cria conexão com o público.': '"Stories that grow with us" is a concept that puts the members centre stage through a series of films built on real testimonials. Each story is turned into a painting by a local artist, which brings emotion and authenticity to a campaign that places people at its centre and builds a connection with the audience.',
-'Série de vídeos com depoimentos reais publicada desde julho de 2025, com desdobramentos offline nas agências e mídia tradicional em rádio e jornal nas praças de atuação.': 'A series of films built on real testimonials, running since July 2025, with offline extensions in the branches and traditional media on radio and in print across the regions served.',
-'Mais de 30 das 40 histórias já foram publicadas desde julho de 2025, com versões no YouTube e adaptações para redes sociais. O projeto também teve desdobramentos offline, com adesivos nas agências, mídia e repercussão em veículos locais. A campanha foi impulsionada nas redes sociais para ampliar o alcance nas praças de atuação, além de contar com mídia tradicional como rádio e jornal.': 'More than 30 of the 40 stories have been published since July 2025, with YouTube versions and cuts adapted for social media. The project also extended offline, with decals in the branches, paid media and coverage in local outlets. The campaign was boosted on social to widen its reach across the regions served, alongside traditional media such as radio and print.',
-'Transmitir a emoção da data e construir um filme com o qual o público se identificasse, usando inteligência artificial sem cair num resultado engessado e sem vida, com baixo custo de produção.': 'Convey the emotion of the occasion and build a film the audience could see itself in, using artificial intelligence without ending up with something stiff and lifeless — on a low production budget.',
-'Transmitir toda a emoção da data, criando uma conexão com a Odontoprev, além de construir um filme criativo, que contasse uma história com a qual o público se identificasse, usando inteligência artificial e superando a limitação de torná-la emocional, fugindo de um resultado que pudesse parecer engessado e sem vida, dentro de um contexto de baixo custo de produção.': 'Convey the full emotion of the occasion and build a connection with Odontoprev, while making a creative film that told a story the audience could see itself in. All of it with artificial intelligence, overcoming its difficulty with genuine emotion and avoiding a result that might feel stiff and lifeless — and all on a low production budget.',
-'Ilustrar o conceito “Toda mãe nasce no dia mais feliz da sua vida”: mãe e filho brincam com massinha e a realidade se mistura com o imaginário, conduzida pela narração dela.': 'Illustrate the idea that “every mother is born on the happiest day of her life”: a mother and son play with modelling clay and reality blurs into imagination, carried by her narration.',
-'A ideia foi ilustrar o conceito "Toda mãe nasce no dia mais feliz da sua vida" em um filme em que uma mãe e um filho brincam com massinha de modelar e a realidade se mistura com o imaginário. As cenas ganham vida enquanto a narração da mãe conduz a história com emoção, revelando que o dia mais feliz da sua vida foi o nascimento do filho, o dia em que ela também nasceu como mãe.': 'The idea was to illustrate the concept that "every mother is born on the happiest day of her life" in a film where a mother and son play with modelling clay and reality blurs into imagination. The scenes come alive as her narration carries the story, until it reveals that the happiest day of her life was the day her son was born — the day she was born as a mother too.',
-'A I.A como ferramenta para uma história cheia de afeto. A massinha de modelar trouxe o calor do que é feito à mão, remetendo ao cuidado e à infância — tudo em apenas uma semana.': 'AI as a tool in service of a story full of affection. The modelling clay brought the warmth of something made by hand, evoking care and childhood — all of it in a single week.',
-'Utilizamos a inteligência artificial como uma ferramenta para dar vida a uma história cheia de afeto, evitando aquele visual frio e robótico. A escolha da massinha de modelar foi estratégica para trazer o calor do que é feito à mão, remetendo ao cuidado e à infância. Em apenas uma semana, a tecnologia serviu como ferramenta para dar vida a uma história emocionante e real entre mãe e filho.': 'We used artificial intelligence as a tool to bring a story full of affection to life, steering clear of that cold, robotic look. Modelling clay was a deliberate choice: it carries the warmth of something made by hand and evokes care and childhood. In a single week, the technology served a story that felt moving and real between a mother and her son.',
 'O Carnaval faz o delivery explodir, mas trava a cidade. Bloqueios imprevisíveis e rotas quebradas viram o pesadelo de quem precisa entregar rápido — e a marca perde na experiência.': 'Carnival makes delivery explode and gridlocks the city at the same time. Unpredictable road closures and broken routes become a nightmare for anyone who has to deliver fast — and the brand pays for it in customer experience.',
 'O Carnaval faz o delivery explodir, mas também trava a cidade. Bloqueios imprevisíveis, trânsito travado e rotas quebradas viram o pesadelo de quem precisa entregar rápido. Entregador preso no trânsito gera atraso, baixa a nota e sofre com menos entregas e a marca perde com a experiência do cliente.': 'Carnival makes delivery explode and gridlocks the city at the same time. Unpredictable road closures, stalled traffic and broken routes become a nightmare for anyone who has to deliver fast. A courier stuck in traffic runs late, takes a hit on their rating and ends up with fewer deliveries — and the brand pays for it in customer experience.',
 'Enquanto a cidade curte, tem gente fazendo ela funcionar. A Keeta entra numa conversa legítima: ser a marca que protege o corre do motoca em tempo real.': 'While the city celebrates, there are people keeping it running. Keeta earns a legitimate place in that conversation: the brand that protects the rider’s hustle in real time.',
 'Enquanto a cidade curte, tem gente fazendo ela funcionar. É aí que a Keeta entra numa conversa legítima: ser a marca que protege o corre do motoca em tempo real. Com linguagem de rua, tom direto e utilidade imediata, a gente fala a língua de quem tá na rua todo dia.': 'While the city celebrates, there are people keeping it running. That is where Keeta earns a legitimate place in the conversation: the brand that protects the rider’s hustle in real time. With street language, a direct tone and immediate usefulness, we speak the language of people who are out there every day.',
 'Transformamos as notificações push do app e as redes da marca em uma central de informação urbana, ajudando entregadores a evitar os bloqueios dos bloquinhos de rua.': 'We turned the app’s push notifications and the brand’s social channels into an urban information desk, helping couriers steer clear of the street-party road closures.',
 'Transformamos as notificações push do app e as redes sociais da marca em uma central de informação urbana, ajudando entregadores a evitarem bloqueios causados pelos bloquinhos de Carnaval de rua e manterem suas entregas em movimento.': 'We turned the app’s push notifications and the brand’s social channels into an urban information desk, helping couriers steer clear of closures caused by street Carnival parties and keep their deliveries moving.',
-
 
 /* ── Keeta · Brasil Corre · textos e rótulos que chegaram fechados ──────────
    "Corre" segue como hustle, a escolha já feita na Central do Corre; várzea
@@ -291,25 +232,17 @@ window.DIC_EN = {
    "Sessões engajadas" é a métrica do GA4, que em inglês é engaged sessions —
    o termo existe e é o que o cliente lê no próprio painel. */
 'Cliques': 'Clicks',
-'Sessões engajadas': 'Engaged sessions',
 
 /* ── Golden Lake e BarraShoppingSul · textos e rótulos que chegaram ──────────
    Os nomes de conceito não se traduzem, como nos outros cases: "Para viver no
    seu tempo" e "NOW! NEW BARRA" ficam como estão. ThruPlays é métrica da Meta e
    é o mesmo termo nos dois idiomas — por isso não tem entrada. */
-'Depois do Lake Victoria e do Lake Eyre, o Golden Lake chegou ao terceiro condomínio, o Lake Baikal, com um novo desafio: traduzir o que significa viver bem nos dias de hoje.': 'After Lake Victoria and Lake Eyre, Golden Lake reached its third development, Lake Baikal, with a new challenge: to translate what living well means today.',
-'Depois de explorar diferentes dimensões do morar de alto padrão nos lançamentos do Lake Victoria e do Lake Eyre, o Golden Lake chegou ao seu terceiro condomínio, o Lake Baikal, com um novo desafio: traduzir o que significa viver bem nos dias de hoje.': 'After exploring different dimensions of high-end living in the Lake Victoria and Lake Eyre launches, Golden Lake reached its third development, Lake Baikal, with a new challenge: to translate what it means to live well today.',
-'No comportamento do consumidor porto-alegrense, o tempo apareceu como o ativo mais valioso: conveniência e fluidez ganham valor porque devolvem a liberdade de escolher como usá-lo.': 'In the behaviour of the Porto Alegre consumer, time emerged as the most valuable asset: convenience and flow gain value because they give back the freedom to choose how to spend it.',
-'Ao olhar para o comportamento do consumidor porto-alegrense, identificamos que o tempo se tornou um dos ativos mais valiosos da vida contemporânea. Em uma rotina cada vez mais acelerada, conveniência, fluidez e previsibilidade ganham valor porque devolvem às pessoas a liberdade de escolher como aproveitar o próprio tempo.': 'Looking at the behaviour of the Porto Alegre consumer, we identified that time has become one of the most valuable assets of contemporary life. In an ever faster routine, convenience, flow and predictability gain value because they give people back the freedom to choose how to enjoy their own time.',
-'Nasceu “Para viver no seu tempo”: no Lake Baikal, estrutura, conforto e conveniência existem para tornar a rotina fluida e devolver ao morador o que importa — tempo para viver do seu jeito.': '“Para viver no seu tempo” was born: at Lake Baikal, structure, comfort and convenience exist to make the routine flow and give the resident back what matters — time to live their own way.',
-'A partir disso, nasceu “Para viver no seu tempo”: um conceito que ressignifica a sofisticação para além dos atributos tradicionais do alto padrão. No Lake Baikal, estrutura, conforto e conveniência existem para tornar a rotina mais fluida e devolver ao morador aquilo que realmente importa: tempo para viver do seu jeito.': 'From there, “Para viver no seu tempo” was born: a concept that reframes sophistication beyond the traditional attributes of the high-end market. At Lake Baikal, structure, comfort and convenience exist to make the routine flow and give the resident back what really matters: time to live their own way.',
 'O BarraShoppingSul queria se aproximar da geração Z, que vive entre experiências, lugares e conteúdos — e virar um espaço conectado ao ritmo das redes e aos novos comportamentos de consumo.': 'BarraShoppingSul wanted to get closer to Gen Z, who live among experiences, places and content — and to become a space connected to the rhythm of social and to new consumer behaviour.',
 'O BarraShoppingSul tinha a intenção de se aproximar da geração Z, que vive entre experiências, lugares e conteúdos, transformando o shopping em um espaço mais conectado ao ritmo das redes e aos novos comportamentos de consumo.': 'BarraShoppingSul set out to get closer to Gen Z, who live among experiences, places and content, turning the mall into a space more connected to the rhythm of social media and to new consumer behaviour.',
 'Para quem descobre e compartilha tudo em tempo real, não basta mostrar o que acontece no shopping: era preciso colocar essa geração dentro dele e deixar o olhar dela traduzir o Barra.': 'For a generation that discovers and shares everything in real time, showing what happens at the mall is not enough: they had to be put inside it, letting their own eyes translate the Barra.',
 'Para uma geração que quer descobrir e compartilhar tudo em tempo real, não basta mostrar o que acontece no shopping. Era preciso colocar essa geração dentro dele e deixar que seus próprios olhares traduzissem o movimento, as tendências e as experiências do Barra.': 'For a generation that wants to discover and share everything in real time, showing what happens at the mall is not enough. That generation had to be put inside it, letting their own perspectives translate the movement, the trends and the experiences of the Barra.',
 'Nasce NOW! NEW BARRA: o shopping virou um estúdio de criação a céu aberto, ocupado por creators durante três dias — o Barra como mídia viva, indo direto para as redes.': 'NOW! NEW BARRA is born: the mall became an open-air creation studio, taken over by creators for three days — the Barra as live media, going straight to social.',
 'Nasce NOW! NEW BARRA: o shopping virou um estúdio de criação a céu aberto, ocupado por creators de diferentes territórios durante três dias. Em tempo real, eles exploraram lojas, experiências e novidades, transformando o Barra em mídia viva e levando sua energia diretamente para as redes.': 'NOW! NEW BARRA is born: the mall became an open-air creation studio, occupied by creators from different territories for three days. In real time, they explored stores, experiences and launches, turning the Barra into live media and taking its energy straight to social.',
-'Leads gerados': 'Leads generated',
 'Viram 95% do vídeo': '95% watched',
 'Engajadas no TikTok': 'Engaged on TikTok',
 
@@ -344,15 +277,12 @@ window.DIC_EN = {
 'em 8 etapas que gera resultados consistentes numa comunicação 360º que inicia pelas redes sociais.': 'in 8 steps that delivers consistent results in 360º communication, starting with social media.',
 'Emojis essenciais': 'Core emojis',
 'Showreel WT.AG · 2026 &nbsp;·&nbsp; clique para reproduzir &nbsp;·&nbsp; F para tela cheia': 'WT.AG Showreel · 2026 &nbsp;·&nbsp; click to play &nbsp;·&nbsp; F for full screen',
-'Histórias': 'Stories',
 'Ver o case Keeta · Central do Corre': 'See the Keeta · Central do Corre case',
 'Ver o case Magalu · Craques Gigantes': 'See the Magalu · Craques Gigantes case',
 'Ver o case Odontoprev · Dia das Mães': 'See the Odontoprev · Mother’s Day case',
 'Ver o case Sicredi Serrana · 40 Anos': 'See the Sicredi Serrana · 40 Years case',
 'Ver o case: Keeta · Central do Corre': 'See the case: Keeta · Central do Corre',
 'Ver o case: Magalu · Craques Gigantes': 'See the case: Magalu · Craques Gigantes',
-'Ver o case: Odontoprev · Dia das Mães': 'See the case: Odontoprev · Mother’s Day',
-'Ver o case: Sicredi Serrana · 40 Anos': 'See the case: Sicredi Serrana · 40 Years',
 'Grand Prix em Social Media · 2 pratas · 5 bronzes': 'Grand Prix in Social Media · 2 silver · 5 bronze',
 'Grand Prix em Media Low-Budget · 4 ouros · 3 bronzes': 'Grand Prix in Low-Budget Media · 4 gold · 3 bronze',
 '3 Grand Prix em Eficácia · 3 ouros · 3 bronzes': '3 Grand Prix in Effectiveness · 3 gold · 3 bronze',
@@ -360,15 +290,7 @@ window.DIC_EN = {
 'Sicredi Serrana · 40 Anos': 'Sicredi Serrana · 40 Years',
 'Magalu · Craques Gigantes — videocase': 'Magalu · Craques Gigantes — video case',
 'Keeta · Central do Corre — videocase': 'Keeta · Central do Corre — video case',
-'Odontoprev · Dia das Mães — videocase': 'Odontoprev · Mother’s Day — video case',
 'Keeta · Pulando o Bloco — videocase': 'Keeta · Pulando o Bloco — video case',
-'Sicredi Serrana · 40 Anos — trailer': 'Sicredi Serrana · 40 Years — trailer',
-'Sicredi Serrana · 40 Anos — filme 1': 'Sicredi Serrana · 40 Years — film 1',
-'Sicredi Serrana · 40 Anos — filme 2': 'Sicredi Serrana · 40 Years — film 2',
-'Sicredi Serrana · 40 Anos — filme 3': 'Sicredi Serrana · 40 Years — film 3',
-'Assistir ao filme 1': 'Watch film 1',
-'Assistir ao filme 2': 'Watch film 2',
-'Assistir ao filme 3': 'Watch film 3',
 'Afiliado Magalu gravando conteúdo': 'Magalu affiliate recording content',
 'Reels dos afiliados Magalu': 'Reels by Magalu affiliates',
 'Reels gravados pelos afiliados': 'Reels recorded by the affiliates',
@@ -383,12 +305,6 @@ window.DIC_EN = {
 'Comentários reais': 'Real comments',
 'Episódios na linguagem do corre': 'Episodes in the language of the hustle',
 'Reels da Central do Corre': 'Central do Corre reels',
-'Campanha Sicredi Serrana 40 Anos': 'Sicredi Serrana 40 Years campaign',
-'Cena do filme Dia das Mães': 'Scene from the Mother’s Day film',
-'Cena em massinha de modelar entre mãe e filho': 'Modelling-clay scene between mother and son',
-'Odontoprev · imagem 1': 'Odontoprev · image 1',
-'Odontoprev · imagem 2': 'Odontoprev · image 2',
-'Odontoprev · imagem 3': 'Odontoprev · image 3',
 'Entregador Keeta no bloco de Carnaval': 'Keeta courier at a Carnival street party',
 'Entregador com a sacola Keeta': 'Courier with the Keeta bag',
 'POV dos entregadores': 'Courier POV',
@@ -400,7 +316,6 @@ window.DIC_EN = {
 'Sede WT.AG · São Paulo — Rua Quatá, 909 · Vila Olímpia': 'WT.AG office · São Paulo — Rua Quatá, 909 · Vila Olímpia',
 'Sede WT.AG · Novo Hamburgo — Rua Gen. Daltro Filho, 856 · Hamburgo Velho': 'WT.AG office · Novo Hamburgo — Rua Gen. Daltro Filho, 856 · Hamburgo Velho',
 
-
 /* ── divisores e encerramento · autocentrados, sem geometria a corrigir ──── */
 'ESTRUTURA': 'STRUCTURE',
 'VAMOS CONSTRUIR': 'LET’S BUILD',
@@ -408,8 +323,6 @@ window.DIC_EN = {
 'UMA MARCA': 'A BRAND',
 'PROTAGONISTA': 'THAT LEADS',
 'DA CULTURA?': 'CULTURE?',
-'The Consumer Has Changed': 'The Consumer Changed',
-
 
 /* ── texto com marcação por dentro ────────────────────────────────────────
    Estes precisam de chave com o innerHTML INTEIRO, tags incluídas. O texto
@@ -417,9 +330,6 @@ window.DIC_EN = {
    só alcança innerHTML inteiro ou elemento-folha — nó de texto solto dentro
    de elemento com filhos não é visitado. Foi o que deixou o parágrafo de
    apoio do slide 11 em português enquanto o lettering já estava em inglês. */
-'em movimentação<br>de <b>mídia*</b>': 'in media<br><b>spend*</b>',
-'Não importa o porte,<br>o desafio ou o momento<br>– temos a solução certa<br>para cada cliente.': 'Whatever the size,<br>the challenge or the moment<br>– we have the right answer<br>for every client.',
-'Para cada tamanho, um modelo.<br>Para cada desafio, uma resposta.': 'For every size, a model.<br>For every challenge, an answer.',
 'Conectamos marcas, pessoas e cultura através de um <i>framework</i> em 8 etapas que gera resultados consistentes numa comunicação 360º que inicia pelas redes sociais.': 'We connect brands, people and culture through an 8-step <i>framework</i> that delivers consistent results in 360º communication, starting with social media.',
 'Definição de<br>objetivos<br>estratégicos': 'Defining<br>strategic<br>objectives',
 'Seleção de<br>players<br>analisados': 'Selecting the<br>players<br>to analyse',
@@ -435,19 +345,16 @@ window.DIC_EN = {
 'Sumário <kbd>espaço</kbd>': 'Contents <kbd>space</kbd>',
 '<kbd>Enter</kbd> ir para a tela': '<kbd>Enter</kbd> go to slide',
 
-
 /* ── mais texto com <br> por dentro. A varredura anterior usou heurística de
    idioma (acento ou palavra da lista) e deixou passar frase sem acento como
    "PORQUE EXISTIMOS?" e "TRANSFORMANDO MARCAS...". Esta leva foi achada
    varrendo TODO elemento com texto solto + filhos, sem adivinhar idioma. */
-'profissionais<br>integrados': 'integrated<br>professionals',
 'Transformamos marcas<br>em protagonistas<br>da cultura digital': 'We turn brands into<br>protagonists of<br>digital culture',
 'TRANSFORMANDO MARCAS<br>EM PROTAGONISTAS DA<br>CULTURA DIGITAL': 'TURNING BRANDS INTO<br>PROTAGONISTS OF<br>DIGITAL CULTURE',
 'PORQUE<br>EXISTIMOS?': 'WHY DO WE<br>EXIST?',
 'Coleta de<br>dados em redes<br>sociais': 'Collecting<br>social media<br>data',
 'Melhorar a Vida<br>das Pessoas': 'Improve People’s<br>Lives',
 'Gerar Desejo e<br>Pertencimento': 'Drive Desire and<br>Belonging',
-'Stop<br>motion': 'Stop<br>motion',
 
 /* ── nomes dos atos, usados no HUD e no sumário ──────────────────────────── */
 'Transição': 'Transition',
@@ -467,70 +374,44 @@ window.DIC_EN = {
 'Dias de campanha': 'Campaign days',
 'Episódios da série': 'Episodes in the series',
 'Seguidores': 'Followers',
-'Compartilhamentos': 'Shares',
 'Engajamentos': 'Engagements',
 'Impressões': 'Impressions',
 'Contas alcançadas': 'Accounts reached',
 'De investimento': 'In media spend',
 'Dias': 'Days',
-'De produção': 'Of production',
-'Como ferramenta': 'As a tool',
-'Massinha 3D': '3D clay',
-'Stop': 'Stop',
-'motion': 'motion',
 '1º lugar em Social Media': '1st place in Social Media',
-'Prata em Mídias Integradas': 'Silver in Integrated Media',
-'Vencedor em Branded Content': 'Winner in Branded Content',
 'Prêmios Lusófonos 2026': 'Prémios Lusófonos 2026',
 'Prêmios Lusófonos 2026 · 2 edições': 'Prémios Lusófonos 2026 · 2 editions',
-'Prêmio Colunistas 2025': 'Prêmio Colunistas 2025',
 'Festival Élan 2026': 'Festival Élan 2026',
 'Grandes Nomes da Propaganda': 'Grandes Nomes da Propaganda',
 'Portal Martin Behrend': 'Portal Martin Behrend',
-'Marcas Pelo Mundo': 'Marcas Pelo Mundo',
 'Matéria em ARP': 'Article on ARP',
 'Matéria em Acontecendo Aqui': 'Article on Acontecendo Aqui',
 'Matéria em Nosso Meio': 'Article on Nosso Meio',
 'Matéria em Portal Martin Behrend': 'Article on Portal Martin Behrend',
-'Matéria em Marcas Pelo Mundo': 'Article on Marcas Pelo Mundo',
 'Matéria em Grandes Nomes da Propaganda': 'Article on Grandes Nomes da Propaganda',
 'Matéria em Propmark': 'Article on Propmark',
-'Esta campanha não recebeu prêmios nem publicações na imprensa.': 'This campaign received no awards or press coverage.',
 'Vamos construir juntos': 'Let\u2019s build together',
 
 /* ── cases novos: BarraShoppingSul e Golden Lake ───────────────────────────── */
 'BarraShoppingSul · Now New Barra!': 'BarraShoppingSul · Now New Barra!',
-'Golden Lake · Lake Baikal': 'Golden Lake · Lake Baikal',
 'BarraShoppingSul · Now New Barra! — videocase':
   'BarraShoppingSul · Now New Barra! — video case',
-'Golden Lake · Lake Baikal — videocase': 'Golden Lake · Lake Baikal — video case',
 'Cena do filme Now New Barra!': 'Scene from the Now New Barra! film',
-'Cena do minidoc Lake Baikal': 'Scene from the Lake Baikal mini-doc',
 'Keeta · Brasil Corre': 'Keeta · Brasil Corre',
 'Keeta · Brasil Corre — videocase': 'Keeta · Brasil Corre — video case',
 'Cena do filme Brasil Corre': 'Scene from the Brasil Corre film',
 'Frame da campanha Brasil Corre': 'Frame from the Brasil Corre campaign',
-'selo a chegar': 'seal pending',
 'Brasil Corre': 'Brasil Corre',
 
 'BarraShoppingSul · Now New Barra! — conteúdo 1': 'BarraShoppingSul · Now New Barra! — content 1',
 'BarraShoppingSul · Now New Barra! — conteúdo 2': 'BarraShoppingSul · Now New Barra! — content 2',
 'BarraShoppingSul · Now New Barra! — conteúdo 3': 'BarraShoppingSul · Now New Barra! — content 3',
-'Golden Lake · Lake Baikal — conteúdo 1': 'Golden Lake · Lake Baikal — content 1',
-'Golden Lake · Lake Baikal — conteúdo 2': 'Golden Lake · Lake Baikal — content 2',
-'Golden Lake · Lake Baikal — conteúdo 3': 'Golden Lake · Lake Baikal — content 3',
 'Assistir ao conteúdo 1': 'Watch content 1',
 'Assistir ao conteúdo 2': 'Watch content 2',
 'Assistir ao conteúdo 3': 'Watch content 3',
-'lettering a chegar': 'lettering pending',
 /* Os placeholders também são traduzidos: um deck em inglês com marcação em
    português denuncia o rascunho duas vezes em vez de uma. */
-'(a definir)': '(TBD)',
-'(nº)': '(no.)',
-'(Texto a chegar — este bloco recebe cerca de 200 caracteres, na mesma medida dos outros cases.)':
-  '(Copy pending — this block takes about 200 characters, the same measure as the other cases.)',
-'(Texto a chegar — este bloco recebe cerca de 420 caracteres, na mesma medida dos outros cases.)':
-  '(Copy pending — this block takes about 420 characters, the same measure as the other cases.)',
 
 /* ── capa · tela de abertura e instruções de navegação ────────────────────── */
 'Abertura': 'Opening',
@@ -555,8 +436,6 @@ window.DIC_EN = {
 'deslize': 'swipe',
 
 /* ── rodapé e sumário · lacunas que estavam sem tradução ──────────────────── */
-'Credenciais WT.AG · 2026 · abertura e cinco atos, 29 telas':
-  'WT.AG Credentials · 2026 · opening and five acts, 29 screens',
 'Fechar': 'Close',
 'Tela cheia': 'Full screen',
 'Tela cheia (F)': 'Full screen (F)',
@@ -565,6 +444,5 @@ window.DIC_EN = {
 'Vídeo': 'Video',
 'Posição do vídeo': 'Video position',
 'Sumário (barra de espaço)': 'Contents (space bar)'
-
 
 };

@@ -26,7 +26,6 @@
      percorrendo elementos — a tradução é consultada na hora de escrever. */
   var ATOS = {
     abertura:  'Abertura',
-    we:        'Grupo WE',
     trans:     'Transição',
     wtag:      'WT.AG',
     cases:     'Cases',

@@ -78,11 +78,10 @@ conferir_master () {
 }
 
 # só estes entram na compressão; o resto fica como está
-ALVOS=(case-magalu case-central-do-corre case-odontoprev
-       case-pulando-o-bloco case-sicredi showreel-wtag
-       case-barrashoppingsul case-golden-lake
+ALVOS=(case-magalu case-central-do-corre
+       case-pulando-o-bloco  showreel-wtag
+       case-barrashoppingsul
        case-barrashoppingsul-v1 case-barrashoppingsul-v2 case-barrashoppingsul-v3
-       case-golden-lake-v1 case-golden-lake-v2 case-golden-lake-v3
        case-keeta-brasil-corre
        case-bridgestone-pneu-novo
        case-bridgestone-pneu-novo-v1 case-bridgestone-pneu-novo-v2
@@ -95,7 +94,7 @@ LADO=1920
 # principal. Lado maior 1280 a 1200k em vez de 1920 a 1500k economiza ~40% e
 # não muda nada no que se vê. Sem esta lista, rodar o script de novo os
 # reencodaria maiores — e em silêncio.
-SECUNDARIOS="case-barrashoppingsul-v1 case-barrashoppingsul-v2 case-barrashoppingsul-v3 case-golden-lake-v1 case-golden-lake-v2 case-golden-lake-v3"
+SECUNDARIOS="case-barrashoppingsul-v1 case-barrashoppingsul-v2 case-barrashoppingsul-v3   "
 
 # A Bridgestone é o primeiro case de mídia vertical: os masters são 1080×1920 e
 # os cartões na tela têm 478 (herói) e 228 (os quatro da grade) de largura.

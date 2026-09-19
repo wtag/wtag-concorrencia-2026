@@ -55,7 +55,7 @@ PDF = os.path.join(AQUI, 'WT.AG_Credenciais_2026.pdf')
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
 # Cases fora desta versão: os três últimos, ainda com texto e números por vir.
-EXCLUIR = ('s-barrashoppingsul', 's-golden-lake', 's-keeta-brasil-corre')
+EXCLUIR = ()   # todos os cases deste deck estão completos
 
 # A capa WT.AG também fica fora. Ela existe no deck para receber quem abre a
 # apresentação e não sabe como andar nela; num PDF, que se folheia, a tela de
@@ -78,8 +78,6 @@ DRIVE = {
     'assets/video/showreel-wtag.mp4':        '13BFRBAkxWK763XY_elaQRid8rRjUl0lG',
     'assets/video/case-magalu.mp4':          '1n_ADx4O-c8S-l3Kq0303apFROvZAsff5',
     'assets/video/case-central-do-corre.mp4': '17up2G6KZ-B1WyDEOKLHFF7aacSAJrmso',
-    'assets/video/case-sicredi.mp4':         '1vMjDQDwM0dmJAGQLNKcTMnATFoWUVFkj',
-    'assets/video/case-odontoprev.mp4':      '1h7UfIERRpU0filz6L-Uto68-zbo-acho',
     'assets/video/case-pulando-o-bloco.mp4': '1ERyWn-C2ZLsLaZ04Ds_XzDbk6W3X2iO7',
     'assets/video/sede-sao-paulo.mp4':       '1Opess1tmBxRQ1bTsxXiOoMlz7b9ST34J',
     'assets/video/sede-novo-hamburgo.mp4':   '1EWbC15x4IqwG-Id-CRfKjZyXy7GcgTTC',
