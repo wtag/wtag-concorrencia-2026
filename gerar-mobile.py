@@ -168,9 +168,10 @@ def extrair(html):
         # no divisor e o logotipo — que é o assunto da tela — sumiria. Aqui a
         # linha vira legenda do logotipo e o divisor é desarmado.
         if 'capa-cli__logo' in lim:
+            # Bridgestone traz DUAS marcas no lockup, então é lista e não campo.
             d['capa_cli'] = {
-                'logo': um(r'capa-cli__logo[\s\S]{0,240}?data-lazy="([^"]+)"', lim),
-                'alt':  um(r'capa-cli__logo[\s\S]{0,320}?alt="([^"]*)"', lim),
+                'logos': [(m.group(1), m.group(2)) for m in re.finditer(
+                    r'capa-cli__logo[\s\S]{0,260}?data-lazy="([^"]+)"[^>]*alt="([^"]*)"', lim)],
                 'ctx':  d.get('divisor') or '',
                 'intro': limpo(um(r'capa-cli__scrim[\s\S]*?class="abs l-apoio blk"[^>]*>(.*?)</div>', lim)),
             }
@@ -432,9 +433,9 @@ def emitir(dados):
         if d.get('capa_cli'):
             k = d['capa_cli']
             o.append(sec_abre(d))
-            if k['logo']:
+            for cam, alt in k['logos']:
                 o.append('<img style="width:min(58%%,240px);height:auto" '
-                         'data-lazy="%s" alt="%s">' % (k['logo'], esc(k['alt'] or '')))
+                         'data-lazy="%s" alt="%s">' % (cam, esc(alt or '')))
             if k['ctx']:
                 o.append('<div class="rot">%s</div>' % esc(k['ctx']))
             if k.get('intro'):

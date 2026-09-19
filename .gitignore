@@ -9,9 +9,12 @@
 index_review.html
 
 # Gerados por `python3 gerar-pdf.py`. O PDF é uma exportação, não uma fonte:
-# 13 MB de binário que muda inteiro a cada rodada não têm o que fazer no git.
+# 16 MB de binário que muda inteiro a cada rodada não têm o que fazer no git.
+# O padrão substitui o nome fixo de propósito: quando o arquivo passou de
+# Credenciais para Concorrência, a linha antiga deixou de casar em silêncio e o
+# PDF entrou no histórico por quatro commits.
 index_pdf.html
-WT.AG_Credenciais_2026.pdf
+WT.AG_*.pdf
 
 # Auxiliares de conferência que eu crio e apago
 _teste-*.html
@@ -21,3 +24,8 @@ _teste-*.html
 # gerada por `comprimir-videos.sh`.
 assets/video/*.original.mp4
 assets/video/_alta/
+
+# Fotos de origem das capas de cliente, como chegaram (PNG/TIF de 29 MB).
+# Mesma regra dos vídeos: master não entra no repositório. O que o deck usa é o
+# recorte 16:9 em assets/img/capas/, gerado a partir daqui.
+assets/img/capascases/

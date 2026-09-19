@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WT.AG — Credenciais 2026</title>
 <meta name="description" content="Credenciais WT.AG 2026 — Social First Agency. Apresentação de slides.">
-<link rel="stylesheet" href="css/deck.css?v=195">
+<link rel="stylesheet" href="css/deck.css?v=197">
 </head>
 <body>
 
@@ -832,48 +832,39 @@
      Direcional do Lucas (21.09): "cada cliente precisa ter uma capa própria
      valorizando a marca". São telas de respiro e de assinatura.
 
-     Gramática emprestada do próprio case: .case__fundo (foto com blur 2px,
-     brilho .80 e a deriva lateral de 22s) e .case__scrim, cujo degradê de 100°
-     escurece justamente a coluna da esquerda, que é onde o texto vive. A foto é
-     a MESMA do primeiro case do cliente, de propósito: virar a capa para o case
-     lê como uma cortina que abre, e não como um corte.
+     A FOTO NÃO É DESFOCADA. No fundo de case a imagem é textura e leva blur; na
+     capa ela é assunto, e desfocá-la jogaria fora o motivo de estar ali. Quem
+     garante a leitura é um filtro escuro UNIFORME — uma folha preta de opacidade
+     constante — e não o degradê do case, que escurecia só a esquerda.
 
-     TAMANHO DOS LOGOTIPOS · equalização óptica por ÁREA DE TINTA, não por altura
-     nem por largura: área = fração_de_tinta · L² · (h/l), igualada num alvo
-     T = 15196. Foi a régua que resolveu o Bridgestone no case — altura-de-x e
-     "massa óptica" erram feio em proporções extremas. Quem fixou o T foi o
-     próprio Bridgestone: o arquivo tem 240×30 e ampliar além de 2× não para em pé.
+     A opacidade saiu de medição. Com o texto em creme (#F7F9EA), o fundo precisa
+     ficar abaixo de ~88 de luminância para o contraste passar de 6,5:1. Na caixa
+     onde o texto mora (x 72→792, y 290→710) o p90 é 196 no Bridgestone, 161 no
+     Magalu e 198 na Multiplan — os três resolvidos com .55. A Keeta é a exceção:
+     a mochila amarela leva o p90 a 236, e por isso a tela dela declara .63.
 
-     Os logotipos saem em negativo (branco puro com o alfa do arquivo original),
-     porque sobre foto escura é o que se lê — e porque não existe negativo
-     aprovado dos quatro para copiar.
-
-     ORDEM DO BLOCO · logotipo, filete, chamada, parágrafo. A chamada vem antes
-     do texto por hierarquia (quem é o cliente → o que fizemos → quem ele é), mas
-     também por medição: na foto do BarraShoppingSul, a mais clara do lote, a
-     faixa y=480–560 tem média 32 e p98 146, enquanto de y=680 para baixo o
-     celular em primeiro plano sobe o p98 para 205. Uma linha branca de display
-     em 40px não sobrevive ali. Medido banda a banda, não estimado.
-
-     O z-index 5 não é enfeite: o .case__scrim vive em z-index 1, então qualquer
-     coisa em z-index automático fica ATRÁS do degradê e some. É o mesmo 5 que a
-     .case__col usa nos cases.
-
-     ⚠ Dois pedidos em aberto: o VETOR dos quatro logotipos (com eles, dobrar a
-     escala é mudar o T) e a marca da FIRESTONE, que não existe em assets/ — hoje
-     ela entra só no texto, não no lockup. ════════════════════════════════════ -->
+     TAMANHO DOS LOGOTIPOS · equalização óptica por ÁREA DE TINTA: a área
+     renderizada (fração de tinta × largura × altura) é a mesma nas quatro capas,
+     num alvo T = 15196. Foi a régua que resolveu o Bridgestone no case — altura
+     de x e "massa óptica" erram feio em proporções extremas.
+     Na capa da Bridgestone são DUAS marcas, então o T é dividido ao meio: cada
+     uma leva 7598 de tinta, e as duas juntas pesam o mesmo que o logotipo único
+     das outras três. Bridgestone e Firestone vieram em SVG, então ali a escala
+     não tem teto — o que ainda falta é o vetor de Magalu, Keeta e Multiplan, que
+     seguem em PNG pequeno.
+     ══════════════════════════════════════════════════════════════════════════ -->
 
 <!-- 17 ─ Capa · Magalu -->
 <section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Magalu">
-  <div class="case__fundo"><img data-lazy="assets/img/cases/magalu-fundo.jpg" data-lazy-m="assets/img/cases/magalu-fundo-m.jpg" alt=""></div>
+  <div class="capa-cli__fundo"><img data-lazy="assets/img/capas/magalu.jpg" data-lazy-m="assets/img/capas/magalu-m.jpg" alt=""></div>
   <div class="capa-cli__scrim"></div>
   <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas sobre-escuro" data-enter="fade" data-delay="0">2026</div>
 
-  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
-       style="z-index:5;left:72px;top:306.6px;width:396.6px;height:86.7px">
-    <img data-lazy="assets/img/logos-capas/magalu.png" data-lazy-m="assets/img/logos-capas/magalu-m.png" alt="Magalu" style="width:100%;height:100%;display:block">
-  </div>
+    <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
+         style="z-index:5;left:72px;top:306.6px;width:396.6px;height:86.7px">
+      <img data-lazy="assets/img/logos-capas/magalu.png" data-lazy-m="assets/img/logos-capas/magalu-m.png" alt="Magalu" style="width:100%;height:100%;display:block">
+    </div>
 
   <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
        style="z-index:5;left:72px;top:470px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
@@ -1059,16 +1050,16 @@
 </section>
 
 <!-- 20 ─ Capa · Keeta -->
-<section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Keeta">
-  <div class="case__fundo"><img data-lazy="assets/img/cases/central-corre-fundo.jpg" data-lazy-m="assets/img/cases/central-corre-fundo-m.jpg" alt=""></div>
+<section class="slide" style="--escuro:.63" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Keeta">
+  <div class="capa-cli__fundo"><img data-lazy="assets/img/capas/keeta.jpg" data-lazy-m="assets/img/capas/keeta-m.jpg" alt=""></div>
   <div class="capa-cli__scrim"></div>
   <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas sobre-escuro" data-enter="fade" data-delay="0">2026</div>
 
-  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
-       style="z-index:5;left:72px;top:280.7px;width:260.7px;height:138.6px">
-    <img data-lazy="assets/img/logos-capas/keeta.png" data-lazy-m="assets/img/logos-capas/keeta-m.png" alt="Keeta" style="width:100%;height:100%;display:block">
-  </div>
+    <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
+         style="z-index:5;left:72px;top:280.7px;width:260.7px;height:138.6px">
+      <img data-lazy="assets/img/logos-capas/keeta.png" data-lazy-m="assets/img/logos-capas/keeta-m.png" alt="Keeta" style="width:100%;height:100%;display:block">
+    </div>
 
   <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
        style="z-index:5;left:72px;top:470px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
@@ -1335,15 +1326,19 @@
 
 <!-- 24 ─ Capa · Bridgestone -->
 <section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Bridgestone">
-  <div class="case__fundo"><img data-lazy="assets/img/cases/bridgestone-pneu-novo-fundo.jpg" data-lazy-m="assets/img/cases/bridgestone-pneu-novo-fundo-m.jpg" alt=""></div>
+  <div class="capa-cli__fundo"><img data-lazy="assets/img/capas/bridgestone.jpg" data-lazy-m="assets/img/capas/bridgestone-m.jpg" alt=""></div>
   <div class="capa-cli__scrim"></div>
   <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas sobre-escuro" data-enter="fade" data-delay="0">2026</div>
 
-  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
-       style="z-index:5;left:72px;top:320.0px;width:480px;height:60px">
-    <img data-lazy="assets/img/logos-capas/bridgestone.png" data-lazy-m="assets/img/logos-capas/bridgestone-m.png" alt="Bridgestone" style="width:100%;height:100%;display:block">
-  </div>
+    <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
+         style="z-index:5;left:72px;top:306.9px;width:431px;height:86.2px">
+      <img data-lazy="assets/img/logos-capas/bridgestone.svg" data-lazy-m="assets/img/logos-capas/bridgestone.svg" alt="Bridgestone" style="width:100%;height:100%;display:block">
+    </div>
+    <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
+         style="z-index:5;left:575px;top:322.1px;width:380.4px;height:55.8px">
+      <img data-lazy="assets/img/logos-capas/firestone.svg" data-lazy-m="assets/img/logos-capas/firestone.svg" alt="Firestone" style="width:100%;height:100%;display:block">
+    </div>
 
   <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
        style="z-index:5;left:72px;top:470px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
@@ -1462,15 +1457,15 @@
 
 <!-- 26 ─ Capa · Multiplan -->
 <section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Multiplan">
-  <div class="case__fundo"><img data-lazy="assets/img/cases/barrashoppingsul-fundo.jpg" data-lazy-m="assets/img/cases/barrashoppingsul-fundo-m.jpg" alt=""></div>
+  <div class="capa-cli__fundo"><img data-lazy="assets/img/capas/multiplan.jpg" data-lazy-m="assets/img/capas/multiplan-m.jpg" alt=""></div>
   <div class="capa-cli__scrim"></div>
   <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas sobre-escuro" data-enter="fade" data-delay="0">2026</div>
 
-  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
-       style="z-index:5;left:72px;top:296.9px;width:510.2px;height:106.1px">
-    <img data-lazy="assets/img/logos-capas/multiplan.png" data-lazy-m="assets/img/logos-capas/multiplan-m.png" alt="Multiplan" style="width:100%;height:100%;display:block">
-  </div>
+    <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
+         style="z-index:5;left:72px;top:296.9px;width:510.2px;height:106.1px">
+      <img data-lazy="assets/img/logos-capas/multiplan.png" data-lazy-m="assets/img/logos-capas/multiplan-m.png" alt="Multiplan" style="width:100%;height:100%;display:block">
+    </div>
 
   <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
        style="z-index:5;left:72px;top:470px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
@@ -1771,8 +1766,8 @@
 
 </div><!-- /#viewport -->
 
-<script src="js/deck.js?v=195"></script>
-<script src="js/i18n-dic.js?v=195"></script>
-<script src="js/i18n.js?v=195"></script>
+<script src="js/deck.js?v=197"></script>
+<script src="js/i18n-dic.js?v=197"></script>
+<script src="js/i18n.js?v=197"></script>
 </body>
 </html>

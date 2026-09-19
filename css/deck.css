@@ -746,18 +746,27 @@ html,body{background:var(--letterbox,#000)}
     linear-gradient(100deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.56) 30%,rgba(0,0,0,.08) 62%,rgba(0,0,0,.18) 100%),
     linear-gradient(0deg,rgba(0,0,0,.38) 0%,rgba(0,0,0,0) 26%)}
 
-/* A capa de cliente usa a mesma foto e o mesmo tratamento do case, mas carrega
-   MAIS texto branco sobre ela: logotipo grande, parágrafo e chamada, todos na
-   faixa 72→792. No case essa faixa tem só a coluna curta do rodapé.
-   Por isso o degradê da esquerda é mais fundo — .90 contra .78 na origem, .72
-   contra .56 no joelho — e o joelho anda de 30% para 34%. Da metade da tela
-   para a direita os dois são praticamente o mesmo: a foto continua aparecendo,
-   que é o ponto da capa. Quem pediu o reforço foi a capa da Multiplan, a foto
-   mais clara do lote, onde a chamada disputava com o rosto em primeiro plano. */
+/* ---------------------------------------------- capa de cliente: foto e filtro
+   A foto da capa NÃO é desfocada. No fundo de case a imagem é textura e leva
+   blur de 2px; aqui ela é assunto, e desfocá-la jogaria fora o motivo de estar
+   na tela. O que garante a leitura é um filtro escuro UNIFORME — uma folha preta
+   de opacidade constante — e não o degradê de 100° do case, que escurecia só a
+   coluna da esquerda.
+   A deriva lenta continua: é a mesma caseDeriva de 22s dos cases, e é ela que
+   pede o scale(1.14) — sem a sobra a borda apareceria no fim do curso.
+   A opacidade do filtro saiu de medição, não de gosto: com o texto em creme
+   (#F7F9EA) o fundo precisa ficar abaixo de ~88 de luminância para o contraste
+   passar de 6,5:1. Na caixa onde o texto mora o p90 é 196 no Bridgestone, 161 no
+   Magalu e 198 na Multiplan — os três em .55. A Keeta é a exceção e declara .63
+   na própria tela: a mochila amarela leva o p90 dela a 236. */
+.capa-cli__fundo{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;z-index:0}
+.capa-cli__fundo img{width:100%;height:100%;object-fit:cover;transform:scale(1.14);
+  animation:caseDeriva 22s ease-in-out infinite alternate}
 .capa-cli__scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:
-    linear-gradient(100deg,rgba(0,0,0,.90) 0%,rgba(0,0,0,.72) 34%,rgba(0,0,0,.10) 60%,rgba(0,0,0,.22) 100%),
-    linear-gradient(0deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,0) 26%)}
+  background:rgba(0,0,0,var(--escuro,.55))}
+@media (prefers-reduced-motion:reduce){
+  .capa-cli__fundo img{animation:none}
+}
 
 /* Coluna editorial à esquerda: chamada + três blocos de apoio.
    Clicar em qualquer ponto da coluna abre o texto completo — o botão
