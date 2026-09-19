@@ -154,6 +154,16 @@ window.DIC_EN = {
 'Ver as marcas parceiras da WT.AG': 'See WT.AG partner brands',
 '＋ Texto completo': '＋ Full text',
 
+/* ── capas de cliente ────────────────────────────────────────────────── */
+'Capa · Magalu': 'Cover · Magalu',
+'Capa · Keeta': 'Cover · Keeta',
+'Capa · Bridgestone': 'Cover · Bridgestone',
+'Capa · Multiplan': 'Cover · Multiplan',
+'DOIS CASES · INFLUÊNCIA E VAREJO': 'TWO CASES · INFLUENCE AND RETAIL',
+'TRÊS CASES · DELIVERY E MARKETPLACE': 'THREE CASES · DELIVERY AND MARKETPLACE',
+'UM CASE · MOBILIDADE E ESPORTE': 'ONE CASE · MOBILITY AND SPORT',
+'UM CASE · VAREJO E SHOPPING CENTERS': 'ONE CASE · RETAIL AND SHOPPING CENTRES',
+
 /* ── 04 · lente × escopo ─────────────────────────────────────────────── */
 'Lente × Escopo': 'Lens × Scope',
 'Social não é canal. É a camada estrutural onde marcas constroem relevância, influenciam cultura e geram crescimento.': 'Social is not a channel. It is the structural layer where brands build relevance, influence culture and drive growth.',

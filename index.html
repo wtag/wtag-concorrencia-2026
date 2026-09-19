@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WT.AG — Credenciais 2026</title>
 <meta name="description" content="Credenciais WT.AG 2026 — Social First Agency. Apresentação de slides.">
-<link rel="stylesheet" href="css/deck.css?v=179">
+<link rel="stylesheet" href="css/deck.css?v=180">
 </head>
 <body>
 
@@ -850,6 +850,51 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="630"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
+<!-- ══════════════════════════════════════════════════════════════════════════
+     CAPAS DE CLIENTE
+     Direcional do Lucas (21.09): "cada cliente precisa ter uma capa própria
+     valorizando a marca". São telas de respiro e de assinatura — o protagonista
+     é o logotipo, e tudo o mais é subordinado a ele.
+
+     Creme, e não preto: os quatro logotipos existem em versão positiva (a que a
+     tela de Marcas Parceiras usa) e não há negativo aprovado dos quatro. Inventar
+     um negativo de marca de cliente é risco que a capa não precisa correr. O
+     creme também dá um respiro claro antes de cada bloco de cases, que são todos
+     escuros.
+
+     TAMANHO DOS LOGOTIPOS · equalização óptica por ÁREA DE TINTA, não por altura
+     nem por largura. A conta é: área_renderizada = fração_de_tinta · L² · (h/l),
+     igualada entre os quatro num alvo T. Foi a régua que resolveu o Bridgestone
+     no case (altura-de-x e "massa óptica" davam respostas erradas para proporções
+     extremas). T = 14691, e quem fixou esse número foi o Bridgestone: o arquivo
+     tem 222×29 e ampliar além de 2× não se sustenta.
+
+     ⚠ Os quatro logotipos são PNGs pequenos — o Bridgestone tem 29px de altura.
+     Nesta escala a capa está no limite do que o arquivo aguenta. Com os vetores
+     dos clientes em mãos, dá para dobrar a escala mudando só o T e regerando
+     assets/img/logos-capas/. ══════════════════════════════════════════════════ -->
+
+<!-- 18 ─ Capa · Magalu -->
+<section class="slide bg-creme sobre-claro" data-ato="cases" data-tom="claro" data-titulo="Capa · Magalu">
+  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
+  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
+
+  <div class="abs l-visual" data-enter="pop" data-delay="120"
+       style="left:765.0px;top:427.4px;width:389.9px;height:85.3px">
+    <img data-lazy="assets/img/logos-capas/magalu.png" data-lazy-m="assets/img/logos-capas/magalu-m.png" alt="Magalu" style="width:100%;height:100%;display:block">
+  </div>
+
+  <div class="abs l-apoio" data-enter="scaleX" data-delay="280"
+       style="left:880px;top:620px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:center"></div>
+
+  <div class="abs l-chamada rl-alvo rl-caixa" style="left:50%;top:calc(672px - 0.145*44px);transform:translateX(-50%);
+       font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+       font-size:44px;line-height:1;color:var(--preto-wt);white-space:nowrap"
+       data-delay="360" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">DOIS CASES · INFLUÊNCIA E VAREJO</div>
+
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="520"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
+</section>
+
 <!-- A17/B1 · acento: azul Magalu — pedido explícito no PDF -->
 <section id="s-magalu" class="slide case" style="--acento:#2B7FFF" data-ato="cases" data-tom="escuro" data-titulo="Magalu · Craques Gigantes">
   <div class="case__fundo"><img data-lazy="assets/img/cases/magalu-fundo.jpg" data-lazy-m="assets/img/cases/magalu-fundo-m.jpg" alt=""></div>
@@ -1017,6 +1062,27 @@
   </div>
   <div class="marca marca--bl marca--sm l-marcas sobre-escuro" data-enter="fade" data-delay="700">Case</div>
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
+</section>
+
+<!-- 21 ─ Capa · Keeta -->
+<section class="slide bg-creme sobre-claro" data-ato="cases" data-tom="claro" data-titulo="Capa · Keeta">
+  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
+  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
+
+  <div class="abs l-visual" data-enter="pop" data-delay="120"
+       style="left:832.5px;top:401.4px;width:255.1px;height:137.3px">
+    <img data-lazy="assets/img/logos-capas/keeta.png" data-lazy-m="assets/img/logos-capas/keeta-m.png" alt="Keeta" style="width:100%;height:100%;display:block">
+  </div>
+
+  <div class="abs l-apoio" data-enter="scaleX" data-delay="280"
+       style="left:880px;top:620px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:center"></div>
+
+  <div class="abs l-chamada rl-alvo rl-caixa" style="left:50%;top:calc(672px - 0.145*44px);transform:translateX(-50%);
+       font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+       font-size:44px;line-height:1;color:var(--preto-wt);white-space:nowrap"
+       data-delay="360" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">TRÊS CASES · DELIVERY E MARKETPLACE</div>
+
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="520"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
 </section>
 
 <!-- A17/B1 · acento: verde da campanha (key visual verde+amarelo) -->
@@ -1268,6 +1334,27 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
+<!-- 25 ─ Capa · Bridgestone -->
+<section class="slide bg-creme sobre-claro" data-ato="cases" data-tom="claro" data-titulo="Capa · Bridgestone">
+  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
+  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
+
+  <div class="abs l-visual" data-enter="pop" data-delay="120"
+       style="left:738.0px;top:441.0px;width:444px;height:58px">
+    <img data-lazy="assets/img/logos-capas/bridgestone.png" data-lazy-m="assets/img/logos-capas/bridgestone-m.png" alt="Bridgestone" style="width:100%;height:100%;display:block">
+  </div>
+
+  <div class="abs l-apoio" data-enter="scaleX" data-delay="280"
+       style="left:880px;top:620px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:center"></div>
+
+  <div class="abs l-chamada rl-alvo rl-caixa" style="left:50%;top:calc(672px - 0.145*44px);transform:translateX(-50%);
+       font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+       font-size:44px;line-height:1;color:var(--preto-wt);white-space:nowrap"
+       data-delay="360" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">UM CASE · MOBILIDADE E ESPORTE</div>
+
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="520"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
+</section>
+
 <!-- Acento: o vermelho da marca (matiz 349°) clareado até 5,2:1 contra o scrim.
      O #E4002B oficial mede 3,8:1 e não passa do piso da família — vermelho é
      escuro por natureza em luminância, e o mesmo aconteceu com o verde do
@@ -1369,6 +1456,27 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
+<!-- 27 ─ Capa · Multiplan -->
+<section class="slide bg-creme sobre-claro" data-ato="cases" data-tom="claro" data-titulo="Capa · Multiplan">
+  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
+  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
+
+  <div class="abs l-visual" data-enter="pop" data-delay="120"
+       style="left:709.1px;top:417.9px;width:501.7px;height:104.3px">
+    <img data-lazy="assets/img/logos-capas/multiplan.png" data-lazy-m="assets/img/logos-capas/multiplan-m.png" alt="Multiplan" style="width:100%;height:100%;display:block">
+  </div>
+
+  <div class="abs l-apoio" data-enter="scaleX" data-delay="280"
+       style="left:880px;top:620px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:center"></div>
+
+  <div class="abs l-chamada rl-alvo rl-caixa" style="left:50%;top:calc(672px - 0.145*44px);transform:translateX(-50%);
+       font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+       font-size:44px;line-height:1;color:var(--preto-wt);white-space:nowrap"
+       data-delay="360" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">UM CASE · VAREJO E SHOPPING CENTERS</div>
+
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="520"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
+</section>
+
 <!-- BARRASHOPPINGSUL ─ BarraShoppingSul · Now New Barra! ─────────────────────────────────────────
      Case novo. O que já é definitivo: o logo do cliente, o videocase e todas as
      imagens, que são QUADROS DO PRÓPRIO FILME — não há banco de imagem aqui, e
@@ -1452,7 +1560,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 25 ─ Chamada Final -->
+<!-- 29 ─ Chamada Final -->
 <section class="slide bg-laranja sobre-laranja" data-ato="fecho" data-tom="laranja" data-titulo="Vamos construir juntos">
   <div class="cta__wrap">
     <div class="cta__head" data-enter="up" data-delay="84"><span>VAMOS CONSTRUIR</span><span>JUNTOS</span></div>
@@ -1571,8 +1679,8 @@
 
 </div><!-- /#viewport -->
 
-<script src="js/deck.js?v=179"></script>
-<script src="js/i18n-dic.js?v=179"></script>
-<script src="js/i18n.js?v=179"></script>
+<script src="js/deck.js?v=180"></script>
+<script src="js/i18n-dic.js?v=180"></script>
+<script src="js/i18n.js?v=180"></script>
 </body>
 </html>
