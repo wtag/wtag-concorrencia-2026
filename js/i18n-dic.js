@@ -154,6 +154,11 @@ window.DIC_EN = {
 'Ver as marcas parceiras da WT.AG': 'See WT.AG partner brands',
 '＋ Texto completo': '＋ Full text',
 
+/* ── 04 · lente × escopo ─────────────────────────────────────────────── */
+'Lente × Escopo': 'Lens × Scope',
+'Social não é canal. É a camada estrutural onde marcas constroem relevância, influenciam cultura e geram crescimento.': 'Social is not a channel. It is the structural layer where brands build relevance, influence culture and drive growth.',
+'Social como ponto de partida.<br>Resultado como consequência.': 'Social as the starting point.<br>Results as the consequence.',
+
 /* ── 10 · mandala · o que fazemos ────────────────────────────────────── */
 'O Que Fazemos': 'What We Do',
 'O que fazemos': 'What we do',
