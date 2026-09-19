@@ -70,6 +70,17 @@ class ComRange(SimpleHTTPRequestHandler):
         self.send_header('Accept-Ranges', 'bytes')
         super().end_headers()
 
+    def handle_one_request(self):
+        """Quem recarrega a página no meio de um carregamento derruba dezenas de
+        conexões de uma vez, e cada uma sobe um traceback de ConnectionResetError
+        no terminal. Barulho, não erro: a resposta que ninguém mais espera pode
+        ser abandonada em silêncio. Sem isto, uma apresentação que troca de slide
+        depressa enche a tela de quem rodou o servidor."""
+        try:
+            SimpleHTTPRequestHandler.handle_one_request(self)
+        except (ConnectionResetError, BrokenPipeError):
+            self.close_connection = True
+
     def log_message(self, *a):
         pass
 

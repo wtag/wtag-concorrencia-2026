@@ -1,4 +1,31 @@
-# WT.AG — Credenciais 2026 · deck HTML
+# WT.AG — Concorrência 2026 · deck HTML
+
+> **Este projeto é uma bifurcação do deck de credenciais**
+> (`wtag-credenciais-2026`), feita em 21.09 a partir dos direcionais do Lucas.
+> O deck de credenciais continua existindo, rodando e sendo mantido em separado:
+> nada aqui volta para lá.
+>
+> **O que difere do deck de origem**
+>
+> | | Credenciais | Concorrência |
+> |---|---|---|
+> | Público | institucional | pitch para um anunciante |
+> | Idioma padrão | português | **inglês** (o toggle PT continua) |
+> | Telas | 31 | 29 |
+> | Grupo WE | abre o deck | **fora** — há um concorrente do anunciante entre os clientes do grupo |
+> | Cases | dez | **sete**, agrupados por cliente, cada um com capa |
+> | Time | duas telas (Liderança · O Time) | **uma**, com o número de 140 |
+>
+> **Telas que nasceram aqui:** `Lente × Escopo`, `O Que Fazemos` (a mandala),
+> e as quatro capas de cliente (Magalu, Keeta, Bridgestone, Multiplan).
+>
+> **Aviso sobre o que vem abaixo.** O corpo deste documento é o do deck de
+> origem e continua valendo para tudo que é design system — a métrica do
+> lettering, a constante `--cap-k`, a calibração dos logotipos, o diagnóstico do
+> `Range` no Safari. Mas ele cita telas, cases e numerações que **não existem
+> mais nesta versão** (Grupo WE, Sicredi, Odontoprev, Golden Lake, Marcos Muniz).
+> Leia essas passagens como histórico do sistema, não como mapa deste deck. O
+> mapa deste deck é a tabela de atos mais abaixo, que está atualizada.
 
 Apresentação de slides em HTML, 1920×1080 (16:9), **funciona offline**: basta abrir
 `index.html` no navegador (Chrome ou Safari). Sem build, sem dependências.
@@ -170,11 +197,11 @@ procura a menor caixa que contém o ponto.
 
 | Ato | Slides | Conteúdo |
 |---|---|---|
-| Grupo WE | 01–05 | capa, 100% nacional, números, clientes, hub de soluções |
-| Transição | 06 | wordmark WT.AG em loop |
-| WT.AG | 07–16 | Social First Agency → framework → persona → showreel → divisor |
-| Cases | 17–21 | Magalu, Central do Corre, Sicredi, Odontoprev, Pulando o Bloco |
-| Estrutura | 22–26 | divisor, direção executiva, lideranças, sedes, chamada final |
+| Abertura | 01–02 | capa WT.AG e o wordmark em loop |
+| WT.AG | 03–13 | Social First, Lente × Escopo, consumidor, marcas, metodologia, framework, persona, mandala, showreel, marcas parceiras |
+| Nosso Time | 14–16 | divisor, a tela única do time (140 + direção + lideranças), escritórios |
+| Cases | 17–28 | divisor, e quatro blocos de cliente, cada um aberto por uma capa: Magalu (2), Keeta (3), Bridgestone (1), Multiplan (1) |
+| Fecho | 29 | vamos construir juntos |
 
 
 ---
