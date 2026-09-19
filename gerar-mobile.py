@@ -163,6 +163,36 @@ def extrair(html):
         if 'rl-caixa' in lim:
             d['divisor'] = limpo(um(r'class="[^"]*rl-caixa[^"]*"[^>]*>([^<]*)<', lim))
 
+        # ── capa de cliente ──
+        # A capa também tem um .rl-caixa (a linha de contexto), então ela cairia
+        # no divisor e o logotipo — que é o assunto da tela — sumiria. Aqui a
+        # linha vira legenda do logotipo e o divisor é desarmado.
+        if 'capa-cli__logo' in lim:
+            d['capa_cli'] = {
+                'logo': um(r'capa-cli__logo[\s\S]{0,240}?data-lazy="([^"]+)"', lim),
+                'alt':  um(r'capa-cli__logo[\s\S]{0,320}?alt="([^"]*)"', lim),
+                'ctx':  d.get('divisor') or '',
+            }
+            d['divisor'] = ''
+
+        # ── mandala ──
+        # No palco ela é radial; num telefone, radial não cabe e não se lê. O que
+        # a tela DIZ, porém, cabe: o centro é a lente e as frentes são o escopo.
+        # Vira, então, núcleo + lista — a mesma informação, sem a geometria.
+        if 'mandala__rotulos' in lim:
+            frentes = []
+            for m in re.finditer(r'<div class="mandala__rot"[^>]*>(.*?)</div>', lim, re.S):
+                dentro = m.group(1)
+                nome = limpo(um(r'<span>(.*?)</span>', dentro))
+                sub  = limpo(um(r'<span class="mandala__sub"[^>]*>(.*?)</span>', dentro))
+                if nome:
+                    frentes.append({'n': nome, 's': sub})
+            d['mandala'] = {
+                'nucleo': limpo(um(r'class="[^"]*mandala__nucleo[^"]*"[^>]*>(.*?)</div>', lim).replace('<br>', ' ')),
+                'linhas': [limpo(x) for x in re.findall(r'<div class="mandala__ln"[^>]*>(.*?)</div>', lim, re.S)],
+                'frentes': frentes,
+            }
+
         # ── capa (slide 1) ──
         # A classe vem composta ("abs l-marcas we-capa__logo"), então o casamento
         # tem de ser por substring — exigir class="we-capa__logo" não achava nada,
@@ -388,6 +418,35 @@ def emitir(dados):
                          'data-lazy="%s" alt="Grupo WE">' % d['capa']['logo'])
             if d['capa']['card']:
                 o.append('<div class="rot">%s</div>' % esc(d['capa']['card']))
+            o.append('</section>')
+            continue
+
+        # ── capa de cliente ────────────────────────────────────────────────
+        if d.get('capa_cli'):
+            k = d['capa_cli']
+            o.append(sec_abre(d))
+            if k['logo']:
+                o.append('<img style="width:min(58%%,240px);height:auto" '
+                         'data-lazy="%s" alt="%s">' % (k['logo'], esc(k['alt'] or '')))
+            if k['ctx']:
+                o.append('<div class="rot">%s</div>' % esc(k['ctx']))
+            o.append('</section>')
+            continue
+
+        # ── mandala ────────────────────────────────────────────────────────
+        if d.get('mandala'):
+            m = d['mandala']
+            o.append(sec_abre(d, auto=True))
+            if m['linhas']:
+                o.append('<h2 class="tit">%s</h2>' % '<br>'.join(map(esc, m['linhas'])))
+            if m['nucleo']:
+                o.append('<div class="rot">%s</div>' % esc(m['nucleo']))
+            o.append('<div class="reperc">%s</div>'
+                     % ''.join('<span class="premio"><em style="max-width:none">%s</em></span>'
+                               % esc(f['n'] + (' · ' + f['s'] if f['s'] else ''))
+                               for f in m['frentes']))
+            if d['apoio']:
+                o.append('<p class="txt">%s</p>' % esc(d['apoio']))
             o.append('</section>')
             continue
 

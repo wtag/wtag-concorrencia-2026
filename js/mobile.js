@@ -182,7 +182,12 @@
     btn.setAttribute('aria-label', para === 'pt' ? 'Switch to English' : 'Mudar para português');
   }
   btn.addEventListener('click', function () { traduzir(idioma === 'pt' ? 'en' : 'pt'); });
-  try { if (localStorage.getItem('wtag-idioma') === 'en') traduzir('en'); } catch (e) {}
+  /* Mesmo padrão do deck: inglês por omissão, português só se estiver gravado.
+     Se o localStorage explodir (aba privada), o catch deixa em inglês, que é o
+     idioma da apresentação. */
+  var salvoM = null;
+  try { salvoM = localStorage.getItem('wtag-idioma'); } catch (e) {}
+  if (salvoM !== 'pt') traduzir('en');
 
   window.MOBILE = { traduzir: traduzir, secoes: secs.length };
 })();

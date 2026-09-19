@@ -156,6 +156,7 @@ window.DIC_EN = {
 
 /* ── marcações de canto ─────────────────────────────────────────────── */
 'Credenciais': 'Credentials',
+'Esta apresentação foi feita para a tela na horizontal.': 'This presentation was made for landscape screens.',
 
 /* ── capas de cliente ────────────────────────────────────────────────── */
 'Capa · Magalu': 'Cover · Magalu',

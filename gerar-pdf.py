@@ -83,6 +83,8 @@ DRIVE = {
     'assets/video/sede-novo-hamburgo.mp4':   '1EWbC15x4IqwG-Id-CRfKjZyXy7GcgTTC',
 }
 
+MESES_EN = ('January','February','March','April','May','June',
+            'July','August','September','October','November','December')
 MESES = ('janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho',
          'agosto', 'setembro', 'outubro', 'novembro', 'dezembro')
 
@@ -200,22 +202,30 @@ def showreel(bloco):
 
 # ----------------------------------------------------------------------- capa
 def caixa_da_capa(bloco):
+    """A caixa de instruções da capa é a única parte do documento escrita AQUI e
+    não no index.html — no deck ela ensina a navegar com o teclado, o que num PDF
+    não quer dizer nada. Por isso ela vem com data-en-txt em cada linha: o
+    dicionário é indexado pelo texto do index.html, e estas frases não existem
+    lá. O data-en-txt vence o dicionário no i18n, então o mecanismo continua
+    sendo um só — quem troca o idioma é o mesmo i18n.js, no Chrome."""
     hoje = datetime.date.today()
+    mes_pt, mes_en = MESES[hoje.month - 1], MESES_EN[hoje.month - 1]
+    dominio = DECK_ONLINE.split('//')[-1].rstrip('/')
     novo = """<div class="capa__nav" data-enter="up" data-delay="620">
-    <h2 class="nav__t">Sobre este documento</h2>
+    <h2 class="nav__t" data-en-txt="About this document">Sobre este documento</h2>
     <div class="nav__bloco">
-      <div class="nav__lab">Os vídeos</div>
-      <div class="nav__linha"><span class="nav__k"><kbd>&#8599;</kbd></span><span class="nav__d">Onde aparece a seta, o vídeo abre no navegador</span></div>
-      <div class="nav__linha"><span class="nav__k"><kbd>clique</kbd></span><span class="nav__d">Na imagem do vídeo, em qualquer página de case</span></div>
-      <div class="nav__linha"><span class="nav__k"><kbd>logos</kbd></span><span class="nav__d">Na faixa de repercussão, abrem as matérias</span></div>
+      <div class="nav__lab" data-en-txt="The videos">Os vídeos</div>
+      <div class="nav__linha"><span class="nav__k"><kbd>&#8599;</kbd></span><span class="nav__d" data-en-txt="Where the arrow appears, the video opens in your browser">Onde aparece a seta, o vídeo abre no navegador</span></div>
+      <div class="nav__linha"><span class="nav__k"><kbd data-en-txt="click">clique</kbd></span><span class="nav__d" data-en-txt="On the video still, on any case page">Na imagem do vídeo, em qualquer página de case</span></div>
+      <div class="nav__linha"><span class="nav__k"><kbd>logos</kbd></span><span class="nav__d" data-en-txt="In the press strip, they open the articles">Na faixa de repercussão, abrem as matérias</span></div>
     </div>
     <div class="nav__bloco">
-      <div class="nav__lab">Versão navegável</div>
-      <div class="nav__linha"><span class="nav__k"><kbd>online</kbd></span><span class="nav__d"><a href="%s" target="_blank" rel="noopener">wtag.github.io/wtag-credenciais-2026</a></span></div>
-      <div class="nav__linha nav__linha--nota"><span class="nav__k"></span><span class="nav__d">A mesma apresentação, com os vídeos tocando na própria tela</span></div>
+      <div class="nav__lab" data-en-txt="Interactive version">Versão navegável</div>
+      <div class="nav__linha"><span class="nav__k"><kbd>online</kbd></span><span class="nav__d"><a href="%s" target="_blank" rel="noopener">%s</a></span></div>
+      <div class="nav__linha nav__linha--nota"><span class="nav__k"></span><span class="nav__d" data-en-txt="The same presentation, with the videos playing in place">A mesma apresentação, com os vídeos tocando na própria tela</span></div>
     </div>
-    <p class="nav__pe">Versão em PDF &#183; %s de %d</p>
-  </div>""" % (DECK_ONLINE, MESES[hoje.month - 1], hoje.year)
+    <p class="nav__pe" data-en-txt="PDF version &#183; %s %d">Versão em PDF &#183; %s de %d</p>
+  </div>""" % (DECK_ONLINE, dominio, mes_en, hoje.year, mes_pt, hoje.year)
     ini = bloco.find('<div class="capa__nav"')
     if ini < 0:
         print('  ! capa: .capa__nav não encontrada — caixa mantida como está')
@@ -290,14 +300,23 @@ def main():
         b = b.replace('Clique para abrir o vídeo', 'Abrir o vídeo')
         paginas.append(b)
 
-    doc = ['<!DOCTYPE html>', '<html lang="pt-BR">', '<head>',
+    doc = ['<!DOCTYPE html>', '<html lang="en">', '<head>',
            '<meta charset="utf-8">',
-           '<title>WT.AG &#183; Credenciais 2026</title>',
-           '<meta name="description" content="Credenciais WT.AG 2026 — Social First Agency.">',
+           '<title>WT.AG &#183; Credentials 2026</title>',
+           '<meta name="description" content="WT.AG Credentials 2026 — Social First Agency.">',
            '<link rel="stylesheet" href="css/deck.css?v=%s">' % versao,
            '<link rel="stylesheet" href="css/pdf.css?v=%s">' % versao,
            '</head>', '<body>', AVISO]
     doc += paginas
+    # O PDF sai em inglês, como a apresentação. A tradução NÃO é refeita aqui:
+    # são os mesmos js/i18n-dic.js e js/i18n.js do deck, rodando no Chrome antes
+    # da impressão. Duplicar a lógica em Python daria duas verdades que divergem
+    # na primeira entrada nova do dicionário.
+    # O botão PT/EN não aparece: montarBotao() desiste sem o #ui, que só existe
+    # no deck. E o idioma inicial cai no inglês sozinho, porque o headless abre
+    # sem localStorage.
+    doc += ['<script src="js/i18n-dic.js?v=%s"></script>' % versao,
+            '<script src="js/i18n.js?v=%s"></script>' % versao]
     doc += ['</body>', '</html>', '']
     io_escrever(DESTINO, '\n'.join(doc))
 
