@@ -1,0 +1,89 @@
+/* ============================================================================
+   pdf.css — o deck impresso em papel de 1920×1080
+   ----------------------------------------------------------------------------
+   Entra DEPOIS do deck.css, e só no index_pdf.html (gerado por gerar-pdf.py).
+   Não é um tema novo: é o mínimo para trocar "um slide de cada vez, animado"
+   por "26 páginas empilhadas, paradas no quadro final".
+
+   As regras valem em tela E em impressão de propósito — o index_pdf.html
+   precisa poder ser aberto no navegador para conferência antes de virar PDF.
+   Só o @page é exclusivo da impressão, porque só lá existe página.
+   ========================================================================= */
+
+/* 1920×1080 px a 96dpi = 20in × 11,25in = 1440 × 810 pt. Sem margem: o slide
+   sangra até a borda, como na tela. */
+@page{size:1920px 1080px;margin:0}
+
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{overflow:visible;height:auto;background:#000}
+body{margin:0;cursor:default}
+
+/* ---------------------------------------------------------------- a página
+   O .slide nasce absoluto e invisível dentro do #stage, que aqui não existe:
+   as sections são filhas diretas do body, uma por página, em fluxo normal. */
+.pdf-pg{position:relative;inset:auto;margin:0;width:1920px;height:1080px;
+  overflow:hidden;opacity:1;visibility:visible;transform:none;
+  break-inside:avoid;break-after:page;page-break-after:always}
+.pdf-pg:last-of-type{break-after:auto;page-break-after:auto}
+
+/* A cor de fundo vem do #fundo no deck (uma camada fora dos slides, que sobe
+   na troca). Sem essa camada, cada página carrega a sua própria cor — o
+   gerador escreve `background` no style de cada section. */
+
+/* -------------------------------------------------- tudo parado no fim
+   Sem transições, o estado final de .is-played é o que fica. Sem animações,
+   o Ken Burns dos fundos, as fitas de repercussão e os degradês param no
+   primeiro quadro — que é o quadro composto, o que o desenho previu. */
+*,*::before,*::after{
+  transition:none !important;
+  animation:none !important}
+
+/* -------------------------------------------------------- o que só existe
+   no clique, e portanto não existe aqui.
+   .case__mais abre o painel de texto completo; .espia é o cartão de hover das
+   marcas parceiras. Num PDF são controles mortos. */
+.case__mais,.espia{display:none !important}
+
+/* ------------------------------------------------------ a etiqueta do vídeo
+   No deck ela aparece no hover, porque o cursor já diz onde está. No papel não
+   há hover: a etiqueta é a única pista de que ali existe um link. A seta ↗ é a
+   convenção de "abre fora do documento" — e o leitor de PDF não tem outra. */
+/* A pílula é do PDF, não do deck. Duas razões: no deck a etiqueta se apoia num
+   text-shadow, e o Chrome imprime sombra de texto como um retângulo escuro
+   rasterizado por cima do cartão (visível, feio, verificado); e a etiqueta usa
+   a cor de acento do case, que sobre um quadro claro do filme — o azul do
+   Magalu sobre o azul da campanha — não se lê sem um fundo próprio. */
+.case__video .case__tag,
+.sede__tag{opacity:1;text-shadow:none;
+  background:rgba(0,0,0,.62);border:1px solid rgba(247,249,234,.22);
+  border-radius:999px;padding:7px 15px 8px;line-height:1}
+.case__video .case__tag::after,
+.sede__tag::after{content:" \2197"}
+
+/* --------------------------------------------------------------- o link
+   Uma âncora transparente do tamanho do cartão. O Chrome transforma a caixa de
+   cada <a href> em anotação de link no PDF, então a área clicável é o cartão
+   inteiro — não só o botão de play. */
+.pdf-lk{position:absolute;inset:0;z-index:12;display:block;
+  background:transparent;border:0;text-decoration:none}
+
+/* ------------------------------------------- a faixa de repercussão, parada
+   A esteira anda em loop e por isso tem os logos duplicados no HTML. Parada,
+   a duplicata apareceria e o último item ficaria cortado na borda da pista —
+   e cortado a faca, porque a máscara que esmaece as pontas na tela não é
+   aplicada pelo Chrome na impressão. O gerador deixa UMA passada de logos; com
+   nada transbordando, a máscara não tem mais função, e os itens se distribuem
+   de ponta a ponta em vez de se amontoarem à esquerda com um vão morto antes
+   do logotipo. */
+.reperc__pista{-webkit-mask-image:none;mask-image:none}
+/* space-evenly, e não space-between: com `between` o último logo encostava no
+   logotipo WT.AG do canto do rodapé. `evenly` guarda folga também nas duas
+   pontas, e o gap de 40px do desenho continua sendo o mínimo entre itens — o
+   que se distribui é só a sobra. */
+.reperc__fita{width:100%;justify-content:space-evenly}
+
+/* ------------------------------------------------------------- a capa
+   A caixa da direita, no deck, ensina a navegar com teclado e toque. Num PDF
+   isso é instrução para um aparelho que o leitor não está usando; o gerador
+   troca o conteúdo por notas sobre este documento. O desenho é o mesmo. */
+.capa__nav a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(247,249,234,.32)}

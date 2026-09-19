@@ -1,0 +1,229 @@
+/* ============================================================================
+   WT.AG · Credenciais 2026 — CAMADA DE REVISÃO
+   Só é carregada pelo index_review.html. O index.html de apresentação não
+   conhece este arquivo, então nada aqui pode vazar para o deck final.
+
+   Estrutura de camadas (o deck usa: #stage 1, #ui 40, #sumario 60,
+   #txtpanel 65, #lb 70, #loader 90):
+     #rv-capa    z 30, dentro do #stage — captura o arraste
+     #rv-pinos   z 31, dentro do #stage — as marcações (acima da capa)
+     #rv-bar     z 80, dentro do #viewport — barra de ferramentas
+     #rv-painel  z 81, dentro do #viewport — lista de marcações
+     #rv-editor  z 82, dentro do #viewport — caixa de texto
+   Capa e pinos vivem DENTRO do #stage de propósito: o palco é escalado para
+   caber na janela, então eles acompanham a escala sem conta nenhuma e as
+   coordenadas gravadas já são as do palco (1920×1080).
+   A barra, o painel e o editor vivem FORA do palco, senão o texto da interface
+   seria escalado junto e ficaria borrado.
+   ========================================================================= */
+
+:root{
+  --rv-laranja:#FF4900;
+  --rv-creme:#F7F9EA;
+  --rv-preto:#0A0A0A;
+  --rv-resolvido:#5B8C5A;
+}
+
+/* ------------------------------------------------------- capa de captura */
+#rv-capa{position:absolute;inset:0;z-index:30;pointer-events:none;
+  /* a grade só aparece no modo revisão, para dar noção da área útil */
+  background-image:linear-gradient(to right,rgba(255,73,0,.07) 1px,transparent 1px),
+                   linear-gradient(to bottom,rgba(255,73,0,.07) 1px,transparent 1px);
+  background-size:120px 120px;opacity:0;transition:opacity 200ms ease}
+body.rv-on #rv-capa{pointer-events:auto;cursor:crosshair;opacity:1}
+
+/* retângulo sendo arrastado agora */
+#rv-tracejado{position:absolute;display:none;border:2px dashed var(--rv-laranja);
+  background:rgba(255,73,0,.12);pointer-events:none;z-index:32}
+#rv-tracejado.is-on{display:block}
+#rv-tracejado span{position:absolute;left:0;bottom:100%;margin-bottom:6px;
+  font-family:var(--font-sans);font-weight:500;font-size:15px;letter-spacing:.02em;
+  background:var(--rv-laranja);color:#000;padding:3px 8px;border-radius:4px;white-space:nowrap}
+
+/* --------------------------------------------------------------- marcações */
+#rv-pinos{position:absolute;inset:0;z-index:31;pointer-events:none;
+  /* --rv-inv desfaz a escala do palco: as etiquetas ficam do mesmo tamanho
+     em qualquer janela. Definido pelo JS a cada resize. */
+  --rv-inv:1}
+body:not(.rv-on) #rv-pinos{display:none}
+
+.rv-marca{position:absolute;pointer-events:auto;cursor:pointer}
+
+/* marcação de área */
+.rv-marca--area{border:2px solid var(--rv-laranja);background:rgba(255,73,0,.10);
+  box-shadow:0 0 0 1px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.35);
+  transition:background 160ms ease}
+.rv-marca--area:hover{background:rgba(255,73,0,.20)}
+
+/* marcação de ponto */
+.rv-marca--ponto{width:0;height:0}
+
+/* etiqueta numerada, comum aos dois tipos */
+.rv-marca__n{position:absolute;left:-2px;top:-2px;transform-origin:left top;
+  transform:scale(var(--rv-inv)) translateY(-100%);
+  display:flex;align-items:center;gap:6px;
+  background:var(--rv-laranja);color:#000;border-radius:5px;padding:4px 9px;
+  font-family:var(--font-sans);font-weight:600;font-size:15px;line-height:1;
+  letter-spacing:.02em;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.4)}
+.rv-marca--ponto .rv-marca__n{transform:scale(var(--rv-inv)) translate(-50%,-50%);
+  border-radius:50%;width:32px;height:32px;padding:0;justify-content:center;
+  box-sizing:border-box}
+.rv-marca__n em{font-style:normal;font-weight:400;max-width:290px;overflow:hidden;
+  text-overflow:ellipsis;opacity:.82}
+.rv-marca--ponto .rv-marca__n em{display:none}
+
+/* resolvida: sai do caminho visualmente, mas continua no relatório */
+.rv-marca.is-resolvida{opacity:.45}
+.rv-marca.is-resolvida.rv-marca--area{border-color:var(--rv-resolvido);
+  border-style:dashed;background:rgba(91,140,90,.08)}
+.rv-marca.is-resolvida .rv-marca__n{background:var(--rv-resolvido);color:#fff}
+
+/* marcação em foco (selecionada pela lista) */
+.rv-marca.is-foco{animation:rvPulso 1.4s ease-in-out 2}
+@keyframes rvPulso{
+  0%,100%{box-shadow:0 0 0 1px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.35)}
+  50%{box-shadow:0 0 0 7px rgba(255,73,0,.45),inset 0 0 0 1px rgba(255,255,255,.35)}
+}
+
+/* ================================================== barra de ferramentas */
+#rv-bar{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:80;
+  display:flex;align-items:center;gap:8px;padding:8px;
+  background:rgba(10,10,10,.93);border:1px solid rgba(247,249,234,.14);
+  border-radius:13px;backdrop-filter:blur(14px);
+  font-family:var(--font-sans);box-shadow:0 10px 40px rgba(0,0,0,.5)}
+
+#rv-bar button{appearance:none;border:1px solid transparent;background:transparent;
+  color:var(--rv-creme);font-family:inherit;font-weight:500;font-size:13.5px;
+  letter-spacing:.02em;padding:8px 13px;border-radius:8px;cursor:pointer;
+  display:flex;align-items:center;gap:7px;transition:background 160ms ease,color 160ms ease}
+#rv-bar button:hover{background:rgba(247,249,234,.11)}
+/* o `display:flex` acima vence o `display:none` que o atributo hidden traz do
+   navegador, então o botão de resolvidas aparecia mesmo com zero. */
+#rv-bar button[hidden]{display:none}
+#rv-bar button.is-on{background:var(--rv-laranja);color:#000}
+#rv-bar .rv-sep{width:1px;height:24px;background:rgba(247,249,234,.16);margin:0 3px}
+#rv-bar .rv-conta{font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(247,249,234,.5);padding:0 8px;white-space:nowrap}
+#rv-bar kbd{font-family:inherit;font-size:11px;padding:2px 5px;border-radius:4px;
+  background:rgba(247,249,234,.14);color:rgba(247,249,234,.75)}
+#rv-bar button.is-on kbd{background:rgba(0,0,0,.22);color:rgba(0,0,0,.7)}
+
+/* a barra some no modo de apresentação limpa, mas volta no hover na base */
+body.rv-oculta #rv-bar{opacity:0;transform:translateX(-50%) translateY(14px);
+  pointer-events:none;transition:opacity 260ms ease,transform 260ms ease}
+
+/* ========================================================= painel / lista */
+#rv-painel{position:absolute;right:0;top:0;bottom:0;width:432px;z-index:81;
+  background:rgba(8,8,8,.975);border-left:1px solid rgba(247,249,234,.14);
+  backdrop-filter:blur(18px);font-family:var(--font-sans);color:var(--rv-creme);
+  display:flex;flex-direction:column;
+  transform:translateX(100%);transition:transform 320ms cubic-bezier(.22,1,.36,1)}
+#rv-painel.is-on{transform:none}
+
+#rv-painel .rv-cab{padding:22px 24px 16px;border-bottom:1px solid rgba(247,249,234,.12)}
+#rv-painel .rv-cab h2{margin:0 0 5px;font-size:19px;font-weight:600;letter-spacing:.01em}
+#rv-painel .rv-cab p{margin:0;font-size:12.5px;line-height:1.45;color:rgba(247,249,234,.5)}
+#rv-painel .rv-fechar{position:absolute;right:16px;top:18px;width:28px;height:28px;
+  border:0;background:transparent;color:rgba(247,249,234,.55);cursor:pointer;
+  font-size:20px;line-height:1;border-radius:6px}
+#rv-painel .rv-fechar:hover{background:rgba(247,249,234,.11);color:var(--rv-creme)}
+
+#rv-lista{flex:1;overflow-y:auto;padding:10px 14px 18px}
+#rv-lista .rv-vazio{padding:34px 12px;text-align:center;font-size:13.5px;line-height:1.6;
+  color:rgba(247,249,234,.42)}
+
+/* aviso de resolvidas escondidas: some da lista mas continua a um clique */
+#rv-lista .rv-oculto{display:block;width:100%;margin:8px 0 4px;padding:10px 12px;
+  border:1px dashed rgba(247,249,234,.24);border-radius:9px;background:transparent;
+  color:rgba(247,249,234,.55);font-family:inherit;font-size:12.5px;letter-spacing:.02em;
+  text-align:center;cursor:pointer;transition:background 150ms ease,color 150ms ease}
+#rv-lista .rv-oculto:hover{background:rgba(247,249,234,.07);color:var(--rv-creme)}
+
+/* o botão de resolvidas na barra fica verde quando ligado, não laranja: laranja é
+   a cor do "marcar", e as duas coisas ficam lado a lado */
+#rv-bar button[data-rv="resolvidas"].is-on{background:var(--rv-resolvido);color:#fff}
+#rv-bar button[data-rv="resolvidas"].is-on kbd{background:rgba(0,0,0,.24);color:rgba(255,255,255,.8)}
+#rv-lista .rv-grupo{margin:14px 0 6px;padding:0 10px;font-size:11px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--rv-laranja)}
+
+.rv-item{display:flex;gap:11px;padding:11px 10px;border-radius:9px;cursor:pointer;
+  transition:background 150ms ease}
+.rv-item:hover{background:rgba(247,249,234,.07)}
+.rv-item__n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--rv-laranja);
+  color:#000;font-size:12.5px;font-weight:600;display:grid;place-items:center}
+.rv-item.is-resolvida{opacity:.5}
+.rv-item.is-resolvida .rv-item__n{background:var(--rv-resolvido);color:#fff}
+.rv-item__c{flex:1;min-width:0}
+.rv-item__t{font-size:13.5px;line-height:1.5;word-break:break-word;white-space:pre-wrap}
+.rv-item.is-resolvida .rv-item__t{text-decoration:line-through}
+.rv-item__m{margin-top:4px;font-size:11px;letter-spacing:.03em;
+  color:rgba(247,249,234,.42);display:flex;flex-wrap:wrap;gap:4px 9px}
+.rv-item__acoes{flex:none;display:flex;flex-direction:column;gap:3px;opacity:0;
+  transition:opacity 150ms ease}
+.rv-item:hover .rv-item__acoes{opacity:1}
+.rv-item__acoes button{width:25px;height:25px;border:0;border-radius:6px;cursor:pointer;
+  background:rgba(247,249,234,.11);color:rgba(247,249,234,.8);font-size:12px;line-height:1;
+  display:grid;place-items:center;font-family:inherit}
+.rv-item__acoes button:hover{background:rgba(247,249,234,.22);color:var(--rv-creme)}
+
+#rv-painel .rv-pe{padding:14px;border-top:1px solid rgba(247,249,234,.12);
+  display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#rv-painel .rv-pe button{appearance:none;border:1px solid rgba(247,249,234,.2);
+  background:transparent;color:var(--rv-creme);font-family:inherit;font-weight:500;
+  font-size:12.5px;padding:10px;border-radius:8px;cursor:pointer;
+  transition:background 150ms ease}
+#rv-painel .rv-pe button:hover{background:rgba(247,249,234,.11)}
+#rv-painel .rv-pe button.rv-forte{grid-column:1 / -1;background:var(--rv-laranja);
+  border-color:var(--rv-laranja);color:#000;font-weight:600;font-size:13.5px}
+#rv-painel .rv-pe button.rv-forte:hover{filter:brightness(1.08);background:var(--rv-laranja)}
+#rv-painel .rv-pe button.rv-perigo:hover{background:rgba(200,40,20,.28);
+  border-color:rgba(200,40,20,.6)}
+
+/* ================================================================= editor */
+#rv-editor{position:absolute;z-index:82;width:376px;display:none;
+  background:rgba(8,8,8,.975);border:1px solid rgba(247,249,234,.2);border-radius:12px;
+  backdrop-filter:blur(18px);box-shadow:0 18px 60px rgba(0,0,0,.62);
+  font-family:var(--font-sans);color:var(--rv-creme);overflow:hidden}
+#rv-editor.is-on{display:block}
+#rv-editor .rv-ed-cab{padding:11px 14px;font-size:11px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--rv-laranja);
+  border-bottom:1px solid rgba(247,249,234,.12);display:flex;align-items:center;gap:9px}
+#rv-editor .rv-ed-cab b{margin-left:auto;font-weight:400;text-transform:none;
+  letter-spacing:.02em;font-size:11.5px;color:rgba(247,249,234,.45)}
+#rv-editor textarea{display:block;width:100%;box-sizing:border-box;min-height:104px;
+  max-height:290px;resize:vertical;border:0;background:transparent;padding:13px 14px;
+  color:var(--rv-creme);font-family:inherit;font-size:14px;line-height:1.55;outline:none}
+#rv-editor textarea::placeholder{color:rgba(247,249,234,.34)}
+#rv-editor .rv-ed-pe{display:flex;align-items:center;gap:8px;padding:11px 14px;
+  border-top:1px solid rgba(247,249,234,.12)}
+#rv-editor .rv-ed-pe .rv-dica{font-size:11px;color:rgba(247,249,234,.4);margin-right:auto}
+#rv-editor .rv-ed-pe button{appearance:none;border:1px solid rgba(247,249,234,.2);
+  background:transparent;color:var(--rv-creme);font-family:inherit;font-weight:500;
+  font-size:12.5px;padding:8px 14px;border-radius:7px;cursor:pointer}
+#rv-editor .rv-ed-pe button.rv-forte{background:var(--rv-laranja);border-color:var(--rv-laranja);
+  color:#000;font-weight:600}
+#rv-editor .rv-ed-pe button:hover{background:rgba(247,249,234,.11)}
+#rv-editor .rv-ed-pe button.rv-forte:hover{filter:brightness(1.08);background:var(--rv-laranja)}
+#rv-editor .rv-ed-pe button.rv-apagar:hover{background:rgba(200,40,20,.28);
+  border-color:rgba(200,40,20,.6)}
+
+/* ======================================================== aviso / toast */
+#rv-toast{position:absolute;left:50%;bottom:86px;transform:translateX(-50%) translateY(10px);
+  z-index:83;padding:11px 20px;border-radius:9px;background:var(--rv-creme);color:#000;
+  font-family:var(--font-sans);font-weight:500;font-size:13.5px;letter-spacing:.01em;
+  opacity:0;pointer-events:none;transition:opacity 220ms ease,transform 220ms ease;
+  box-shadow:0 10px 34px rgba(0,0,0,.45);max-width:560px;text-align:center}
+#rv-toast.is-on{opacity:1;transform:translateX(-50%)}
+
+/* ============================================ faixa de modo, canto da tela */
+#rv-selo{position:absolute;left:0;top:0;z-index:80;padding:7px 15px 8px;
+  background:var(--rv-laranja);color:#000;font-family:var(--font-sans);font-weight:600;
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  border-bottom-right-radius:10px;pointer-events:none;
+  opacity:0;transition:opacity 200ms ease}
+body.rv-on #rv-selo{opacity:1}
+
+@media (prefers-reduced-motion:reduce){
+  #rv-painel,#rv-toast,.rv-marca--area{transition:none}
+  .rv-marca.is-foco{animation:none}
+}

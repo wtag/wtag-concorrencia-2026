@@ -1,0 +1,212 @@
+/* ============================================================================
+   WT.AG · Credenciais 2026 — MOBILE
+   ============================================================================
+   Arquivo próprio, não media query do deck.css. O desktop é um palco fixo de
+   1920×1080 com tudo em coordenadas absolutas escaladas por transform: não há
+   como refluir aquilo. Aqui a lógica é oposta — nada de palco, nada de escala:
+   fluxo vertical, tipografia fluida em clamp() e uma seção por tela.
+
+   O que se mantém do desktop, porque é a identidade: as fontes, a paleta, a
+   régua de raios (24%), a cor de acento por case e a ordem dos 25 slides.
+   O que muda, porque mobile é outro suporte: leitura na vertical, tipografia em
+   tamanho real (não escalada), toque em vez de hover, e rolagem com encaixe em
+   vez de transição de slide.
+   ========================================================================= */
+
+@font-face{font-family:"Special Gothic Condensed One";src:url("../assets/fonts/SpecialGothicCondensedOne-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Geist";src:url("../assets/fonts/Geist-Light.ttf") format("truetype");font-weight:300;font-display:swap}
+@font-face{font-family:"Geist";src:url("../assets/fonts/Geist-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Geist";src:url("../assets/fonts/Geist-Medium.ttf") format("truetype");font-weight:500;font-display:swap}
+@font-face{font-family:"Geist";src:url("../assets/fonts/Geist-SemiBold.ttf") format("truetype");font-weight:600;font-display:swap}
+@font-face{font-family:"Geist";src:url("../assets/fonts/Geist-Bold.ttf") format("truetype");font-weight:700;font-display:swap}
+
+:root{
+  --laranja-wt:#FF4900; --preto-wt:#000; --creme-wt:#F7F9EA;
+  --sage-claro:#C8CBB7; --sage-oliva:#969889; --verde-profundo:#222E29;
+  --creme-72:rgba(247,249,234,.72); --creme-55:rgba(247,249,234,.55);
+  --creme-35:rgba(247,249,234,.35); --creme-14:rgba(247,249,234,.14);
+  --preto-70:rgba(0,0,0,.70); --preto-55:rgba(0,0,0,.55);
+  --font-display:"Special Gothic Condensed One","Geist",Arial,sans-serif;
+  --font-sans:"Geist",Arial,Helvetica,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  /* margem única, em vez do grid de 72px do desktop */
+  --m:clamp(20px,5.5vw,34px);
+  /* raios seguindo a mesma regra dos 24% do desktop */
+  --r-s:14px; --r-m:22px; --r-g:30px;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+html{background:var(--preto-wt)}
+body{
+  font-family:var(--font-sans);font-weight:400;
+  color:var(--creme-wt);background:var(--preto-wt);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  /* rolagem com encaixe: cada seção para no lugar, como um slide, mas sem
+     roubar o gesto nativo de rolar — que é o que o dedo espera */
+  scroll-snap-type:y proximity;
+  overflow-x:hidden;
+}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+
+/* ── seção ───────────────────────────────────────────────────────────────── */
+.sec{
+  position:relative;scroll-snap-align:start;
+  min-height:100svh;padding:calc(var(--m) + 46px) var(--m) calc(var(--m) + 30px);
+  display:flex;flex-direction:column;justify-content:center;gap:clamp(18px,4vw,26px);
+  overflow:hidden;
+}
+.sec--claro{background:var(--creme-wt);color:var(--preto-wt)}
+.sec--laranja{background:var(--laranja-wt);color:var(--preto-wt)}
+.sec--auto{min-height:auto;justify-content:flex-start}
+
+/* fundo de imagem, sempre atrás de um scrim para o texto sobreviver */
+.sec__bg{position:absolute;inset:0;z-index:0}
+.sec__bg img{width:100%;height:100%;object-fit:cover}
+.sec__bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.42) 45%,rgba(0,0,0,.88))}
+.sec--claro .sec__bg::after{background:linear-gradient(180deg,rgba(247,249,234,.82),rgba(247,249,234,.6) 45%,rgba(247,249,234,.9))}
+.sec > *:not(.sec__bg){position:relative;z-index:1}
+
+/* ── tipografia ──────────────────────────────────────────────────────────── */
+.kick{font-size:clamp(10px,2.8vw,12px);font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--laranja-wt)}
+.sec--laranja .kick{color:var(--preto-wt);opacity:.7}
+/* A chamada é o coração da identidade: display condensada, caixa alta, colada.
+   Em vez do --fs calculado por linha do desktop, aqui é clamp em vw — o texto
+   acompanha a largura do aparelho sem cálculo de métrica. */
+.tit{font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(44px,13.5vw,86px);line-height:.9;letter-spacing:-.01em;margin:0}
+.tit--g{font-size:clamp(58px,19vw,120px);line-height:.86}
+.tit--p{font-size:clamp(32px,9vw,58px)}
+.txt{font-size:clamp(14px,3.9vw,17px);line-height:1.55;color:var(--creme-72);margin:0}
+.sec--claro .txt{color:var(--preto-70)}
+.sec--laranja .txt{color:var(--preto-70)}
+.rot{font-size:clamp(10px,2.7vw,11.5px);font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--creme-55)}
+.sec--claro .rot{color:var(--preto-55)}
+
+/* ── números ─────────────────────────────────────────────────────────────── */
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,4vw,22px)}
+.num__v{font-family:var(--font-display);font-size:clamp(38px,11vw,64px);line-height:.9}
+.num__r{font-size:clamp(11px,3vw,13px);line-height:1.3;color:var(--creme-55);margin-top:4px}
+
+/* ── grade de logos ──────────────────────────────────────────────────────── */
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,3vw,16px)}
+.logos--4{grid-template-columns:repeat(4,1fr)}
+.logo{aspect-ratio:3/2;display:grid;place-items:center;padding:9px;
+  border-radius:var(--r-s);background:rgba(247,249,234,.05);border:1px solid var(--creme-14)}
+.logo img{max-width:100%;max-height:100%;object-fit:contain}
+.logo--case{border-color:rgba(255,73,0,.42);cursor:pointer}
+.logo--case::after{content:"→";position:absolute;font-size:9px}
+.logo{position:relative}
+.logo--case::after{right:6px;bottom:4px;color:var(--laranja-wt)}
+
+/* ── cartões (framework, persona, sedes) ─────────────────────────────────── */
+.cards{display:flex;flex-direction:column;gap:clamp(12px,3.4vw,18px)}
+.card{border-radius:var(--r-m);overflow:hidden;background:rgba(247,249,234,.06);
+  border:1px solid var(--creme-14);display:flex;align-items:stretch}
+.card__win{flex:0 0 34%;background:#0c0c0c}
+.card__win img{width:100%;height:100%;object-fit:cover}
+.card__body{flex:1;padding:clamp(12px,3.4vw,17px);display:flex;flex-direction:column;gap:6px}
+.card__n{font-family:var(--font-display);font-size:clamp(22px,6vw,32px);line-height:1;color:var(--laranja-wt)}
+.card__lb{font-size:clamp(12px,3.3vw,14px);line-height:1.32}
+
+/* ── pessoas ─────────────────────────────────────────────────────────────── */
+.gente{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,3vw,14px)}
+.pessoa{border-radius:var(--r-m);overflow:hidden;position:relative;background:#0c0c0c;
+  aspect-ratio:3/3.6}
+.pessoa img{width:100%;height:100%;object-fit:cover;object-position:50% var(--oy,50%)}
+.pessoa__leg{position:absolute;left:0;right:0;bottom:0;padding:26px 11px 11px;
+  background:linear-gradient(transparent,rgba(0,0,0,.86) 55%)}
+.pessoa__c{display:block;font-size:9.5px;font-weight:600;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--laranja-wt);margin-bottom:2px}
+.pessoa__n{display:block;font-size:clamp(12px,3.3vw,14px);font-weight:500;line-height:1.2}
+
+/* ── mídia ───────────────────────────────────────────────────────────────── */
+.media{position:relative;border-radius:var(--r-m);overflow:hidden;background:#0c0c0c}
+.media img,.media video{width:100%;height:auto;display:block}
+.media--16x9{aspect-ratio:16/9}
+.media--16x9 img{height:100%;object-fit:cover}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:clamp(52px,15vw,68px);aspect-ratio:1;border:0;border-radius:50%;
+  background:var(--acento,var(--laranja-wt));display:grid;place-items:center;cursor:pointer}
+.play::before{content:"";width:0;height:0;margin-left:16%;
+  border-left:32% solid var(--preto-wt);border-top:20% solid transparent;border-bottom:20% solid transparent}
+.minis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mini{position:relative;aspect-ratio:16/11;border-radius:var(--r-s);overflow:hidden;background:#0c0c0c}
+.mini img{width:100%;height:100%;object-fit:cover}
+.mini .play{width:34px}
+
+/* ── case ────────────────────────────────────────────────────────────────── */
+.credito{display:flex;align-items:center;gap:10px}
+.credito img{height:clamp(20px,5.4vw,26px);width:auto;object-fit:contain}
+.credito em{font-style:normal;font-size:9.5px;font-weight:600;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--creme-55)}
+.selo{max-height:clamp(78px,22vw,120px);width:auto;object-fit:contain;object-position:left center}
+.bloco h3{font-family:var(--font-sans);font-weight:600;font-size:clamp(11px,3vw,12.5px);
+  letter-spacing:.13em;text-transform:uppercase;color:var(--acento,var(--laranja-wt));margin:0 0 5px}
+.bloco p{margin:0}
+.mais{align-self:flex-start;margin-top:2px;padding:8px 15px;border-radius:999px;
+  background:transparent;border:1px solid var(--acento,var(--laranja-wt));
+  color:var(--acento,var(--laranja-wt));font-family:var(--font-sans);font-weight:600;
+  font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:1px;border-radius:var(--r-m);
+  overflow:hidden;background:var(--creme-14)}
+.kpi{background:#0d0d0d;padding:clamp(13px,3.6vw,17px) clamp(11px,3vw,14px)}
+.kpi b{display:block;font-family:var(--font-display);font-weight:400;
+  font-size:clamp(26px,7.6vw,40px);line-height:.94}
+.kpi span{display:block;font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--creme-55);margin-top:3px}
+/* Repercussão em lista, não em esteira. A esteira do desktop depende de hover
+   para pausar e de largura para funcionar: no celular ela vira texto fugindo. */
+.reperc{display:flex;flex-wrap:wrap;gap:8px}
+.premio{display:flex;align-items:center;gap:9px;padding:8px 13px;border-radius:999px;
+  background:color-mix(in srgb,var(--acento,#FF4900) 15%,transparent);
+  border:1px solid color-mix(in srgb,var(--acento,#FF4900) 48%,transparent)}
+.premio img{height:22px;width:auto;object-fit:contain}
+.premio em{font-style:normal;font-size:9px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--acento,var(--laranja-wt));line-height:1.25;max-width:130px}
+.veiculo{display:grid;place-items:center;padding:9px 13px;border-radius:999px;
+  background:rgba(247,249,234,.06);border:1px solid var(--creme-14);text-decoration:none}
+.veiculo img{height:17px;width:auto;object-fit:contain}
+.vazio{font-size:clamp(12px,3.3vw,13.5px);color:var(--creme-55);line-height:1.5}
+
+/* ── barra fixa ──────────────────────────────────────────────────────────── */
+#topo{position:fixed;left:0;right:0;top:0;z-index:60;height:46px;display:flex;
+  align-items:center;justify-content:space-between;padding:0 var(--m);
+  background:linear-gradient(rgba(0,0,0,.72),transparent);pointer-events:none}
+#topo > *{pointer-events:auto}
+.marca{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--creme-72)}
+#barra{position:fixed;left:0;top:0;height:2px;background:var(--laranja-wt);z-index:61;
+  width:0;transition:width 120ms linear}
+.lg{display:flex;align-items:center;gap:7px;padding:6px 11px;border-radius:999px;
+  font-family:var(--font-sans);font-weight:600;font-size:9.5px;letter-spacing:.13em;
+  background:rgba(247,249,234,.1);border:1px solid rgba(247,249,234,.22);color:var(--creme-wt);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.lg span{opacity:.42}
+.lg span.is-on{opacity:1;color:var(--laranja-wt)}
+.lg i{width:1px;height:10px;background:currentColor;opacity:.3}
+
+/* ── painel de texto completo e player ───────────────────────────────────── */
+#painel,#player{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.94);
+  display:none;flex-direction:column;padding:calc(var(--m) + 30px) var(--m) var(--m)}
+#painel.on,#player.on{display:flex}
+#painel .cx{overflow-y:auto;-webkit-overflow-scrolling:touch}
+#painel h2{font-family:var(--font-display);text-transform:uppercase;
+  font-size:clamp(30px,9vw,48px);line-height:.92;margin:0 0 16px}
+#painel h3{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--laranja-wt);margin:18px 0 5px}
+#painel p{margin:0;font-size:clamp(14px,3.9vw,16px);line-height:1.6;color:var(--creme-72)}
+#player{justify-content:center;background:#000}
+#player video,#player iframe{width:100%;max-height:78svh;border:0;background:#000}
+.fechar{position:absolute;right:var(--m);top:calc(var(--m) + 4px);width:34px;height:34px;
+  border:0;border-radius:50%;background:rgba(247,249,234,.12);color:var(--creme-wt);
+  font-size:18px;line-height:1;cursor:pointer}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  body{scroll-snap-type:none}
+}

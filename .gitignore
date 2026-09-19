@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Arquivo gerado — sai do index.html via `python3 gerar-review.py`.
+# Versionar os dois seria manter duas fontes de verdade que divergem em silêncio.
+index_review.html
+
+# Gerados por `python3 gerar-pdf.py`. O PDF é uma exportação, não uma fonte:
+# 13 MB de binário que muda inteiro a cada rodada não têm o que fazer no git.
+index_pdf.html
+WT.AG_Credenciais_2026.pdf
+
+# Auxiliares de conferência que eu crio e apago
+_teste-*.html
+
+# Os masters em alta NÃO entram no repositório. Ficam em
+# `_Assets/Videos-Alta/` no Drive. O que entra aqui é a versão comprimida,
+# gerada por `comprimir-videos.sh`.
+assets/video/*.original.mp4
+assets/video/_alta/
