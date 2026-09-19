@@ -264,12 +264,12 @@ window.DIC_EN = {
 'Reels de Rodrigo Faro para a campanha': 'Rodrigo Faro reels for the campaign',
 'Stories da campanha': 'Campaign stories',
 
-/* ── Golden Lake · números que chegaram ─────────────────────────────────────
+/* ── métricas de painel ────────────────────────────────────────────────────
    "Sessões engajadas" é a métrica do GA4, que em inglês é engaged sessions —
    o termo existe e é o que o cliente lê no próprio painel. */
 'Cliques': 'Clicks',
 
-/* ── Golden Lake e BarraShoppingSul · textos e rótulos que chegaram ──────────
+/* ── BarraShoppingSul · textos e rótulos ───────────────────────────────────
    Os nomes de conceito não se traduzem, como nos outros cases: "Para viver no
    seu tempo" e "NOW! NEW BARRA" ficam como estão. ThruPlays é métrica da Meta e
    é o mesmo termo nos dois idiomas — por isso não tem entrada. */
