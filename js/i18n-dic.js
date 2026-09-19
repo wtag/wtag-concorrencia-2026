@@ -154,12 +154,12 @@ window.DIC_EN = {
 'Ver as marcas parceiras da WT.AG': 'See WT.AG partner brands',
 '＋ Texto completo': '＋ Full text',
 
-/* ── 23 e 24 · time ──────────────────────────────────────────────────── */
-'Liderança': 'Leadership',
-'Quem conduz a WT.AG': 'Who leads WT.AG',
-'O Time': 'The Team',
-'O time': 'The team',
-'Quem sustenta a rotina': 'Who keeps it running',
+/* ── 13 · nosso time (uma tela só) ───────────────────────────────────── */
+'Nosso time': 'Our team',
+'Quem faz a WT.AG acontecer': 'The people who make WT.AG happen',
+'pessoas': 'people',
+'Direção': 'Executive Board',
+'Demais lideranças': 'Leadership',
 
 /* ── 25 · escritórios ────────────────────────────────────────────────── */
 'Nossos Escritórios': 'Our Offices',
@@ -310,8 +310,7 @@ window.DIC_EN = {
 'POV dos entregadores': 'Courier POV',
 'Post de entregador parceiro': 'Post by a partner courier',
 'Rotas em tempo real': 'Real-time routes',
-'Estratégia, criação, operação e relacionamento — quem assina cada entrega e sustenta a metodologia no dia a dia. Todos no mesmo tamanho: a direção é um time, não uma pirâmide.': 'Strategy, creative, operations and client relationships — the people who sign off on every deliverable and keep the methodology running day to day. All shown at the same size: leadership here is a team, not a pyramid.',
-'Coordenações e lideranças de criação, mídia, dados, influência, planejamento, atendimento e financeiro. É essa camada que transforma a estratégia em rotina — e a rotina em resultado.': 'Coordinators and leads across creative, media, data, influence, planning, account management and finance. This is the layer that turns strategy into routine — and routine into results.',
+'Direção e lideranças de criação, mídia, dados, influência, atendimento e financeiro. É essa camada que transforma a estratégia em rotina — e a rotina em resultado.': 'Executives and leads across creative, media, data, influence, account management and finance. This is the layer that turns strategy into routine — and routine into results.',
 'Rua Gen. Daltro Filho, 856 · Hamburgo Velho': 'Rua Gen. Daltro Filho, 856 · Hamburgo Velho, Novo Hamburgo',
 'Sede WT.AG · São Paulo — Rua Quatá, 909 · Vila Olímpia': 'WT.AG office · São Paulo — Rua Quatá, 909 · Vila Olímpia',
 'Sede WT.AG · Novo Hamburgo — Rua Gen. Daltro Filho, 856 · Hamburgo Velho': 'WT.AG office · Novo Hamburgo — Rua Gen. Daltro Filho, 856 · Hamburgo Velho',

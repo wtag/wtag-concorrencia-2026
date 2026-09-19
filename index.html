@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WT.AG — Credenciais 2026</title>
 <meta name="description" content="Credenciais WT.AG 2026 — Social First Agency. Apresentação de slides.">
-<link rel="stylesheet" href="css/deck.css?v=174">
+<link rel="stylesheet" href="css/deck.css?v=175">
 </head>
 <body>
 
@@ -472,171 +472,145 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="630"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- A18 · layout refeito conforme o PDF p7 e as marcações 12, 13 e 14:
-     · título passou a "LIDERANÇA" (era "DIREÇÃO EXECUTIVA")
-     · as 5 fotos têm o MESMO tamanho — acabou o destaque maior do CEO
-     · fotos bem menores: 292×520 e 480×768 viraram 329,6×412 para todos
-     · fundo claro (D9), com o cartão seguindo escuro: as fotos são PB de fundo
-       escuro e inverter exigiria refotografar
-     · Lucas Feltes primeiro (marcação 14)
-     · a fileira ocupa 72→1848, a mesma largura dos textos de cima (marcação 14)
-     · título de 112 para 220px (marcação 12)
-     · text-wrap:balance no apoio (marcação 13)
-     · selo de LinkedIn no hover de cada foto -->
-<section class="slide bg-creme sobre-claro est--claro" data-ato="time" data-tom="claro" data-fundo="#FDFDFB" data-titulo="Liderança">
+<!-- 13 ─ Nosso Time · uma tela só: o número, a Direção e as demais lideranças -->
+<!-- Direcional do Lucas (21.09): "esse slide precisa trazer 140 pessoas, Direção e
+     demais lideranças — tirar Marcos. Título geral: NOSSO TIME". Os antigos
+     slides "Liderança" e "O Time" foram fundidos aqui.
+
+     A grade: 15 cartões numa faixa de 620→1848 (1228px), 5 colunas de 234,4 com
+     calha de 14 — o mesmo ritmo do slide antigo, só que mais estreito porque a
+     coluna de texto cresceu para caber o número. Altura de 256 sai do que resta:
+     três fileiras entre 124 e 966 com calha de 14, e o logo do rodapé abre em
+     1011 — restam 45px de folga, mais que a altura-de-x do próprio logo. Raio 56 = 24% de 234,4 (regra 2.5), que é
+     exatamente o raio já definido em .pes--mini.
+
+     A Direção NÃO tem cartão maior de propósito: o slide antigo já registrava
+     "a direção é um time, não uma pirâmide". A hierarquia aqui é feita por
+     agrupamento e rótulo, não por tamanho. -->
+<section class="slide bg-preto sobre-escuro" data-ato="time" data-tom="escuro" data-fundo="#000000" data-titulo="Nosso Time">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
 
-  <div class="est__kicker l-kicker" style="left:72px;top:150px" data-enter="kicker" data-delay="50">Quem conduz a WT.AG</div>
-  <div class="escada display escada--forte l-chamada" data-stagger="0" data-delay="118">
-    <span class="ln" data-en-txt="LEADERSHIP" data-en-x="72.0px" data-en-fs="220.0px" style="--x:72px;--cap:196px;--fs:220px;color:var(--preto-wt)">LIDERANÇA</span>
+  <div class="est__kicker l-kicker" style="left:72px;top:110px" data-enter="kicker" data-delay="50">Quem faz a WT.AG acontecer</div>
+  <div class="escada display l-chamada" data-stagger="0" data-delay="118">
+    <span class="ln" data-en-txt="OUR TEAM" data-en-x="72.0px" data-en-fs="112.0px" style="--x:72px;--cap:150px;--fs:112px;color:var(--creme-wt)">NOSSO TIME</span>
   </div>
-  <p class="est__intro l-apoio" style="left:1160px;top:196px;width:688px;font-size:18px;line-height:1.5;text-wrap:balance"
-     data-enter="up" data-delay="470">Estratégia, criação, operação e relacionamento — quem assina cada entrega e sustenta a metodologia no dia a dia. Todos no mesmo tamanho: a direção é um time, não uma pirâmide.</p>
 
-  <!-- Fileira reconstruída (12/08): Mariane e Dudu trocaram de lugar.
-       Cinco cartões iguais de 329,6×412 na faixa 72→1848, calha de 32. -->
-  <div class="abs l-visual" style="left:0;top:0;width:1920px;height:1080px;--realce:1.05;--recuo:.96"
-       data-stagger="54" data-delay="150" data-foco>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:72.0px;top:470px;width:329.6px;height:412px;border-radius:79px;--r:79px;--dv:28s">
+  <!-- O número é o primeiro argumento do bloco: dá a escala antes de mostrar
+       rostos. Geist Bold 230px, altura de maiúscula em y=360 (topo corrigido
+       pelo --cap-k). O contador sobe de 0 a 140 como os números do deck. -->
+  <div class="abs l-apoio" style="left:72px;top:calc(360px - 0.145*230px);font-family:var(--font-sans);font-weight:700;font-size:230px;line-height:1;color:var(--creme-wt)"
+       data-enter="up" data-delay="240"><span data-count-to="140" data-count-dur="1200" data-delay="260">0</span></div>
+  <div class="abs l-apoio" style="left:78px;top:calc(575px - 0.145*44px);font-family:var(--font-sans);font-weight:300;font-size:44px;line-height:1;color:rgba(247,249,234,.86)"
+       data-enter="up" data-delay="330">pessoas</div>
+
+  <div class="abs l-apoio" style="left:74px;top:655px;width:310px;height:1.2px;background:rgba(247,249,234,.3);transform-origin:left" data-enter="scaleX" data-delay="380"></div>
+
+  <p class="est__intro l-apoio" style="left:76px;top:705px;width:462px;font-size:19px;line-height:1.55;text-wrap:balance"
+     data-enter="up" data-delay="430">Direção e lideranças de criação, mídia, dados, influência, atendimento e financeiro. É essa camada que transforma a estratégia em rotina — e a rotina em resultado.</p>
+
+  <div class="est__kicker l-kicker" style="left:620px;top:96px" data-enter="kicker" data-delay="120">Direção</div>
+  <div class="est__kicker l-kicker" style="left:620px;top:410px" data-enter="kicker" data-delay="300">Demais lideranças</div>
+
+  <div class="abs l-visual" style="left:0;top:0;width:1920px;height:1080px;--realce:1.06;--recuo:.955"
+       data-stagger="30" data-delay="150" data-foco>
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:620px;top:124px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:24s">
       <div class="px"><img data-lazy="assets/img/time/lucas-feltes.jpg" data-lazy-m="assets/img/time/lucas-feltes-m.jpg" alt="Lucas Feltes, CEO"></div>
       <span class="pes__grad"></span>
-      <a class="pes__in" href="#" data-nonav data-linkedin="#" title="LinkedIn de Lucas Feltes (URL a definir)">in</a>
-      <span class="pes__leg" style="left:26px;top:318px;width:277px"><em>CEO</em><b>Lucas Feltes</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>CEO</em><b>Lucas Feltes</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:433.6px;top:470px;width:329.6px;height:412px;border-radius:79px;--r:79px;--dv:24s;--dd:-5s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:868.4px;top:124px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:20s;--dd:-6s">
       <div class="px"><img data-lazy="assets/img/time/bruno-luiz.jpg" data-lazy-m="assets/img/time/bruno-luiz-m.jpg" alt="Bruno Luiz, COO"></div>
       <span class="pes__grad"></span>
-      <a class="pes__in" href="#" data-nonav data-linkedin="#" title="LinkedIn de Bruno Luiz (URL a definir)">in</a>
-      <span class="pes__leg" style="left:26px;top:318px;width:277px"><em>COO</em><b>Bruno Luiz</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>COO</em><b>Bruno Luiz</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:795.2px;top:470px;width:329.6px;height:412px;border-radius:79px;--r:79px;--dv:21s;--dd:-9s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:1116.8px;top:124px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:27s;--dd:-13s">
       <div class="px"><img data-lazy="assets/img/time/dudu-rodrigues.jpg" data-lazy-m="assets/img/time/dudu-rodrigues-m.jpg" alt="Dudu Rodrigues, CCO"></div>
       <span class="pes__grad"></span>
-      <a class="pes__in" href="#" data-nonav data-linkedin="#" title="LinkedIn de Dudu Rodrigues (URL a definir)">in</a>
-      <span class="pes__leg" style="left:26px;top:318px;width:277px"><em>CCO</em><b>Dudu Rodrigues</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>CCO</em><b>Dudu Rodrigues</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:1156.8px;top:470px;width:329.6px;height:412px;border-radius:79px;--r:79px;--dv:23s;--dd:-13s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:1365.2px;top:124px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:23s;--dd:-3s">
       <div class="px"><img data-lazy="assets/img/time/mariane-fernandes.jpg" data-lazy-m="assets/img/time/mariane-fernandes-m.jpg" alt="Mariane Fernandes, Account Director"></div>
       <span class="pes__grad"></span>
-      <a class="pes__in" href="#" data-nonav data-linkedin="#" title="LinkedIn de Mariane Fernandes (URL a definir)">in</a>
-      <span class="pes__leg" style="left:26px;top:318px;width:277px"><em>Account Director</em><b>Mariane Fernandes</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Account Director</em><b>Mariane Fernandes</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:1518.4px;top:470px;width:329.6px;height:412px;border-radius:79px;--r:79px;--dv:26s;--dd:-3s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:1613.6px;top:124px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:21s;--dd:-16s">
       <div class="px"><img data-lazy="assets/img/time/felipe-andrade.jpg" data-lazy-m="assets/img/time/felipe-andrade-m.jpg" alt="Felipe Andrade, Executive Creative Director"></div>
       <span class="pes__grad"></span>
-      <a class="pes__in" href="#" data-nonav data-linkedin="#" title="LinkedIn de Felipe Andrade (URL a definir)">in</a>
-      <span class="pes__leg" style="left:26px;top:318px;width:277px"><em>Executive Creative Director</em><b>Felipe Andrade</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Executive Creative Director</em><b>Felipe Andrade</b></span>
     </div>
-  </div>
-
-  <div class="marca marca--bl marca--sm l-marcas" data-enter="fade" data-delay="705">Liderança</div>
-  <div class="marca-logo l-marcas" data-enter="fade" data-delay="705"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
-</section>
-
-<!-- 14 ─ Lideranças -->
-<section class="slide bg-preto sobre-escuro" data-ato="time" data-tom="escuro" data-fundo="#000000" data-titulo="O Time">
-  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
-  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
-
-  <!-- D7 · "LIDERANÇAS" → "O TIME", para não repetir o título do slide 23 -->
-  <div class="est__kicker l-kicker" style="left:72px;top:368px" data-enter="kicker" data-delay="50">Quem sustenta a rotina</div>
-  <div class="escada display l-chamada" data-stagger="0" data-delay="118">
-    <span class="ln" data-en-txt="THE TEAM" data-en-x="72.0px" data-en-fs="112.0px" style="--x:72px;--cap:414.4px;--fs:112px;color:var(--creme-wt)">O TIME</span>
-  </div>
-  <p class="est__intro l-apoio" style="left:177px;top:580px;width:353px;font-size:21px;line-height:1.5"
-     data-enter="up" data-delay="420">Coordenações e lideranças de criação, mídia, dados, influência, planejamento, atendimento e financeiro. É essa camada que transforma a estratégia em rotina — e a rotina em resultado.</p>
-
-  <!-- A19 · 11 pessoas em 4+4+3, última fileira centrada.
-       Cartão de 268×290 — o MÁXIMO que caba nesta composição. O limite é geométrico:
-       as marcas do topo fecham em 54 e o logo do rodapé abre em 1011, o que deixa
-       96→995 (899px) para três fileiras. Com vão de 14, cada cartão chega a 290.
-       Para cartões bem mais altos seria preciso ir a DUAS fileiras, o que exige o
-       título no topo em vez da lateral — está montado como variante no
-       index_review.html (cartão 279×337, +22%% de altura).
-       Foto do Marcos recortada em 65% (--px-oy) para o queixo subir dentro do
-       quadro; a legenda ancora pelo pé, com 22px de margem fixa.
-       Grade: colunas 660/960/1260/1560 · fileiras 96/400/704 · base 994 -->
-  <div class="abs l-visual" style="left:0;top:0;width:1920px;height:1080px;--realce:1.075;--recuo:.945"
-       data-stagger="38" data-delay="130" data-foco>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:660px;top:96px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:24s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:620px;top:440px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:22s;--dd:-2s">
       <div class="px"><img data-lazy="assets/img/time/tatiane-moraes.jpg" data-lazy-m="assets/img/time/tatiane-moraes-m.jpg" alt="Tatiane Moraes, Finance Coordinator"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Finance Coordinator</em><b>Tatiane Moraes</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Finance Coordinator</em><b>Tatiane Moraes</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:960px;top:96px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:20s;--dd:-6s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:868.4px;top:440px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:26s;--dd:-7s">
       <div class="px"><img data-lazy="assets/img/time/rudinei-picinini.jpg" data-lazy-m="assets/img/time/rudinei-picinini-m.jpg" alt="Rudinei Picinini, B.I. Leader"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>B.I. Leader</em><b>Rudinei Picinini</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>B.I. Leader</em><b>Rudinei Picinini</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:1260px;top:96px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:27s;--dd:-13s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:1116.8px;top:440px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:25s;--dd:-9s">
       <div class="px"><img data-lazy="assets/img/time/graziele-brand.jpg" data-lazy-m="assets/img/time/graziele-brand-m.jpg" alt="Graziele Brand, Account Manager"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Account Manager</em><b>Graziele Brand</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Account Manager</em><b>Graziele Brand</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:1560px;top:96px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:24s;--dd:-16s;--px-oy:65%">
-      <div class="px"><img data-lazy="assets/img/time/marcos-muniz.jpg" data-lazy-m="assets/img/time/marcos-muniz-m.jpg" alt="Marcos Muniz, Planning Director"></div>
-      <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Planning Director</em><b>Marcos Muniz</b></span>
-    </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:660px;top:400px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:23s;--dd:-3s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:1365.2px;top:440px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:19s;--dd:-4s">
       <div class="px"><img data-lazy="assets/img/time/gabriel-magalhaes.jpg" data-lazy-m="assets/img/time/gabriel-magalhaes-m.jpg" alt="Gabriel Magalhães, Media Director"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Media Director</em><b>Gabriel Magalhães</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Media Director</em><b>Gabriel Magalhães</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:960px;top:400px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:21s;--dd:-11s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:1613.6px;top:440px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:28s;--dd:-15s">
       <div class="px"><img data-lazy="assets/img/time/aline-felix.jpg" data-lazy-m="assets/img/time/aline-felix-m.jpg" alt="Aline Felix, Influencer Lead"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Influencer Lead</em><b>Aline Felix</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Influencer Lead</em><b>Aline Felix</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:1260px;top:400px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:22s;--dd:-2s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:620px;top:710px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:23s;--dd:-11s">
       <div class="px"><img data-lazy="assets/img/time/cassio-guiot.jpg" data-lazy-m="assets/img/time/cassio-guiot-m.jpg" alt="Cássio Guiot, Associate Creative Director"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Associate Creative Director</em><b>Cássio Guiot</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Associate Creative Director</em><b>Cássio Guiot</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:1560px;top:400px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:26s;--dd:-7s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:868.4px;top:710px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:20s;--dd:-5s">
       <div class="px"><img data-lazy="assets/img/time/thiago-alves.jpg" data-lazy-m="assets/img/time/thiago-alves-m.jpg" alt="Thiago Alves, Associate Creative Director"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Associate Creative Director</em><b>Thiago Alves</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Associate Creative Director</em><b>Thiago Alves</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:810px;top:704px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:25s;--dd:-9s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:1116.8px;top:710px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:26s;--dd:-8s">
       <div class="px"><img data-lazy="assets/img/time/natalia-konrath.jpg" data-lazy-m="assets/img/time/natalia-konrath-m.jpg" alt="Natália Konrath, Creative Leader"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Creative Leader</em><b>Natália Konrath</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Creative Leader</em><b>Natália Konrath</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:1110px;top:704px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:19s;--dd:-4s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:1365.2px;top:710px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:22s;--dd:-12s">
       <div class="px"><img data-lazy="assets/img/time/bruna-rauber.jpg" data-lazy-m="assets/img/time/bruna-rauber-m.jpg" alt="Bruna Rauber, Creative Leader"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Creative Leader</em><b>Bruna Rauber</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Creative Leader</em><b>Bruna Rauber</b></span>
     </div>
-    <div class="pes pes--md" data-foco-item data-enter="expande" data-paralaxe="16"
-         style="left:1410px;top:704px;width:268px;height:290px;border-radius:64px;--r:64px;--dv:28s;--dd:-15s">
+    <div class="pes pes--mini" data-foco-item data-enter="expande" data-paralaxe="14"
+         style="left:1613.6px;top:710px;width:234.4px;height:256px;border-radius:56px;--r:56px;--dv:25s;--dd:-1s">
       <div class="px"><img data-lazy="assets/img/time/bernardo-santos.jpg" data-lazy-m="assets/img/time/bernardo-santos-m.jpg" alt="Bernardo Santos, Creative Leader"></div>
       <span class="pes__grad"></span>
-      <span class="pes__leg" style="left:24px;bottom:22px;width:220px"><em>Creative Leader</em><b>Bernardo Santos</b></span>
+      <span class="pes__leg" style="left:20px;bottom:18px;width:196px"><em>Creative Leader</em><b>Bernardo Santos</b></span>
     </div>
   </div>
 
-  <div class="marca marca--bl marca--sm l-marcas" data-enter="fade" data-delay="740">O time</div>
+  <div class="marca marca--bl marca--sm l-marcas" data-enter="fade" data-delay="740">Nosso time</div>
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="740"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 15 ─ Nossos Escritórios · duas sedes -->
+<!-- 14 ─ Nossos Escritórios · duas sedes -->
 <section class="slide bg-preto sobre-escuro" data-ato="time" data-tom="escuro" data-fundo="#000000" data-titulo="Nossos Escritórios">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -697,7 +671,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="705"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 16 ─ Divisor · Cultura e Cases -->
+<!-- 15 ─ Divisor · Cultura e Cases -->
 <section class="slide bg-preto sobre-escuro" data-ato="wtag" data-tom="escuro" data-titulo="Divisor · Cultura e Cases">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -1318,7 +1292,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 24 ─ Chamada Final -->
+<!-- 23 ─ Chamada Final -->
 <section class="slide bg-laranja sobre-laranja" data-ato="fecho" data-tom="laranja" data-titulo="Vamos construir juntos">
   <div class="cta__wrap">
     <div class="cta__head" data-enter="up" data-delay="84"><span>VAMOS CONSTRUIR</span><span>JUNTOS</span></div>
@@ -1437,8 +1411,8 @@
 
 </div><!-- /#viewport -->
 
-<script src="js/deck.js?v=174"></script>
-<script src="js/i18n-dic.js?v=174"></script>
-<script src="js/i18n.js?v=174"></script>
+<script src="js/deck.js?v=175"></script>
+<script src="js/i18n-dic.js?v=175"></script>
+<script src="js/i18n.js?v=175"></script>
 </body>
 </html>
