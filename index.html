@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WT.AG — Credenciais 2026</title>
 <meta name="description" content="Credenciais WT.AG 2026 — Social First Agency. Apresentação de slides.">
-<link rel="stylesheet" href="css/deck.css?v=175">
+<link rel="stylesheet" href="css/deck.css?v=177">
 </head>
 <body>
 
@@ -349,7 +349,117 @@
   </div>
 </section>
 
-<!-- 10 ─ Showreel WT.AG -->
+<!-- 10 ─ O Que Fazemos · a mandala das frentes -->
+<!-- Direcional do Lucas (21.09): "antes de Estrutura, uma mandala (usar de base
+     layout Grupo WE) com tudo que nós fazemos, em todas as frentes."
+
+     A composição é herdada do slide "Hub de Soluções" do Grupo WE: arte radial à
+     direita, coluna de texto à esquerda em Geist Medium 44,3px nas mesmas
+     coordenadas (125,7 / 303 / 361 / 420), filete de 310×1,2 em y=502 e dois
+     blocos de apoio em 551 e 713. A cadência de entrada também é a de lá.
+
+     A ARTE, porém, é nova e é vetor — não o PNG do grupo. Três razões: o texto
+     precisa passar pelo i18n (um PNG não traduz), o PDF sai leve e vetorial, e
+     mudar um raio vira mudar um número. Só os anéis, os raios e as pontas estão
+     em SVG; os rótulos são divs, para herdarem a mesma métrica de fonte do resto
+     do deck e serem traduzidos como qualquer outro texto.
+
+     A geometria diz a tese: o CENTRO é a lente (social first, em laranja chapado
+     com texto preto, como manda a paleta) e os RAIOS são o escopo 360. Oito
+     frentes a 45°, rótulos num raio de 300 a partir do centro em (1290, 540),
+     ancorados para fora — à esquerda do texto quando o raio aponta para a
+     esquerda, à direita quando aponta para a direita. -->
+<section class="slide bg-preto sobre-escuro" data-ato="wtag" data-tom="escuro" data-fundo="#000000" data-titulo="O Que Fazemos">
+  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
+  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
+
+  <!-- anéis -->
+  <div class="abs l-fundo" data-enter="fade" data-delay="0" style="left:940px;top:190px;width:700px;height:700px">
+    <svg width="700" height="700" viewBox="0 0 700 700" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="#F7F9EA">
+        <circle cx="350" cy="350" r="290" stroke-opacity=".18"/>
+        <circle cx="350" cy="350" r="205" stroke-opacity=".17" stroke-dasharray="2 8"/>
+        <circle cx="350" cy="350" r="124" stroke-opacity=".22"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- raios e pontas · a íris abre do centro para fora, que é o gesto da lente -->
+  <div class="abs l-visual" data-enter="iris" data-delay="109" style="left:940px;top:190px;width:700px;height:700px">
+    <svg width="700" height="700" viewBox="0 0 700 700" aria-hidden="true" focusable="false">
+      <g stroke="#F7F9EA" stroke-opacity=".26" stroke-width="1">
+    <line x1="350.0" y1="218.0" x2="350.0" y2="66.0"/>
+    <line x1="443.3" y1="256.7" x2="550.8" y2="149.2"/>
+    <line x1="482.0" y1="350.0" x2="634.0" y2="350.0"/>
+    <line x1="443.3" y1="443.3" x2="550.8" y2="550.8"/>
+    <line x1="350.0" y1="482.0" x2="350.0" y2="634.0"/>
+    <line x1="256.7" y1="443.3" x2="149.2" y2="550.8"/>
+    <line x1="218.0" y1="350.0" x2="66.0" y2="350.0"/>
+    <line x1="256.7" y1="256.7" x2="149.2" y2="149.2"/>
+      </g>
+      <g fill="#F7F9EA" fill-opacity=".5">
+    <circle cx="350.0" cy="60.0" r="4.5"/>
+    <circle cx="555.1" cy="144.9" r="4.5"/>
+    <circle cx="640.0" cy="350.0" r="4.5"/>
+    <circle cx="555.1" cy="555.1" r="4.5"/>
+    <circle cx="350.0" cy="640.0" r="4.5"/>
+    <circle cx="144.9" cy="555.1" r="4.5"/>
+    <circle cx="60.0" cy="350.0" r="4.5"/>
+    <circle cx="144.9" cy="144.9" r="4.5"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- o centro: a lente. Laranja chapado, texto preto (seção 3.2). -->
+  <div class="abs l-visual display" data-enter="pop" data-delay="180"
+       style="left:1166px;top:416px;width:248px;height:248px;border-radius:50%;
+       background:var(--laranja-wt);display:flex;align-items:center;justify-content:center;
+       font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+       font-size:68px;line-height:1;text-align:center;color:var(--preto-wt)">SOCIAL<br>FIRST</div>
+
+  <!-- rótulos das frentes -->
+  <div class="abs l-apoio" style="left:0;top:0;width:1920px;height:1080px" data-stagger="52" data-delay="420">
+    <div data-enter="up" style="position:absolute;left:1290.0px;top:218.0px;transform:translateX(-50%) translateY(-50%);
+         text-align:center;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
+         color:rgba(247,249,234,.92);white-space:nowrap"><span>Comunicação 360º</span></div>
+    <div data-enter="up" style="position:absolute;left:1517.7px;top:312.3px;transform:translateX(0) translateY(-50%);
+         text-align:left;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
+         color:rgba(247,249,234,.92);white-space:nowrap"><span>Gestão de Redes Sociais</span><br><span style="font-weight:300;font-size:16px;color:rgba(247,249,234,.66)">always on</span></div>
+    <div data-enter="up" style="position:absolute;left:1612.0px;top:540.0px;transform:translateX(0) translateY(-50%);
+         text-align:left;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
+         color:rgba(247,249,234,.92);white-space:nowrap"><span>Mídia e Performance</span><br><span style="font-weight:300;font-size:16px;color:rgba(247,249,234,.66)">on e off</span></div>
+    <div data-enter="up" style="position:absolute;left:1517.7px;top:767.7px;transform:translateX(0) translateY(-50%);
+         text-align:left;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
+         color:rgba(247,249,234,.92);white-space:nowrap"><span>Social Listening e BI</span></div>
+    <div data-enter="up" style="position:absolute;left:1290.0px;top:862.0px;transform:translateX(-50%) translateY(-50%);
+         text-align:center;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
+         color:rgba(247,249,234,.92);white-space:nowrap"><span>Influencer Marketing</span></div>
+    <div data-enter="up" style="position:absolute;left:1062.3px;top:767.7px;transform:translateX(-100%) translateY(-50%);
+         text-align:right;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
+         color:rgba(247,249,234,.92);white-space:nowrap"><span>Conteúdo e Criação</span></div>
+    <div data-enter="up" style="position:absolute;left:968.0px;top:540.0px;transform:translateX(-100%) translateY(-50%);
+         text-align:right;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
+         color:rgba(247,249,234,.92);white-space:nowrap"><span>IA Aplicada à Criação</span></div>
+    <div data-enter="up" style="position:absolute;left:1062.3px;top:312.3px;transform:translateX(-100%) translateY(-50%);
+         text-align:right;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
+         color:rgba(247,249,234,.92);white-space:nowrap"><span>SEO e Busca</span></div>
+  </div>
+
+  <!-- coluna de texto · mesmas coordenadas do Hub de Soluções -->
+  <div class="abs l-chamada" style="left:0;top:0;width:1920px;height:1080px" data-stagger="80" data-delay="235">
+    <div data-enter="up" style="position:absolute;left:125.7px;top:calc(303px - 0.145*44.3px);font-family:var(--font-sans);font-weight:500;font-size:44.3px;line-height:1;color:var(--creme-wt)">Tudo o que uma marca</div>
+    <div data-enter="up" style="position:absolute;left:125.7px;top:calc(361px - 0.145*44.3px);font-family:var(--font-sans);font-weight:500;font-size:44.3px;line-height:1;color:var(--creme-wt)">precisa, visto pela</div>
+    <div data-enter="up" style="position:absolute;left:125.7px;top:calc(420px - 0.145*44.3px);font-family:var(--font-sans);font-weight:500;font-size:44.3px;line-height:1;color:var(--creme-wt)">lente do social.</div>
+  </div>
+  <div class="abs l-apoio" style="left:122px;top:502px;width:310px;height:1.2px;background:rgba(247,249,234,.3);transform-origin:left" data-enter="scaleX" data-delay="344"></div>
+  <div class="abs l-apoio" style="left:128px;top:calc(551px - 0.145*24px);font-family:var(--font-sans);font-weight:300;font-size:24px;line-height:1.33;color:rgba(247,249,234,.86)" data-enter="up" data-delay="378">Não é uma lista de serviços.<br>É o mesmo olhar aplicado<br>a todas as frentes.</div>
+  <div class="abs l-apoio" style="left:128px;top:calc(713px - 0.145*22px);font-family:var(--font-sans);font-weight:300;font-size:22px;line-height:1.36;color:rgba(247,249,234,.86)" data-enter="up" data-delay="428">O escopo é 360.<br>A lente é social.</div>
+
+  <div class="marca marca--bl marca--sm l-marcas" data-enter="fade" data-delay="820">O que fazemos</div>
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="820"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
+</section>
+
+<!-- 11 ─ Showreel WT.AG -->
 <section class="slide s14" data-ato="wtag" data-tom="escuro" data-titulo="Showreel WT.AG">
   <div class="abs" style="inset:0" data-enter="fade" data-delay="0">
     <video class="s14__video" data-src="assets/video/showreel-wtag.mp4" poster="assets/img/poster-showreel.jpg"
@@ -359,7 +469,7 @@
   <div class="s14__legenda" data-enter="fade" data-delay="210">Showreel WT.AG · 2026 &nbsp;·&nbsp; clique para reproduzir &nbsp;·&nbsp; F para tela cheia</div>
 </section>
 
-<!-- 11 ─ Marcas Parceiras -->
+<!-- 12 ─ Marcas Parceiras -->
 <section id="s-parceiras" class="slide bg-creme sobre-claro" data-ato="wtag" data-tom="claro" data-titulo="Marcas Parceiras">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -450,7 +560,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="521"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 12 ─ Divisor · Nosso Time -->
+<!-- 13 ─ Divisor · Nosso Time -->
 <section class="slide bg-preto sobre-escuro" data-ato="time" data-tom="escuro" data-titulo="Divisor · Nosso Time">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -472,7 +582,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="630"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 13 ─ Nosso Time · uma tela só: o número, a Direção e as demais lideranças -->
+<!-- 14 ─ Nosso Time · uma tela só: o número, a Direção e as demais lideranças -->
 <!-- Direcional do Lucas (21.09): "esse slide precisa trazer 140 pessoas, Direção e
      demais lideranças — tirar Marcos. Título geral: NOSSO TIME". Os antigos
      slides "Liderança" e "O Time" foram fundidos aqui.
@@ -610,7 +720,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="740"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 14 ─ Nossos Escritórios · duas sedes -->
+<!-- 15 ─ Nossos Escritórios · duas sedes -->
 <section class="slide bg-preto sobre-escuro" data-ato="time" data-tom="escuro" data-fundo="#000000" data-titulo="Nossos Escritórios">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -671,7 +781,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="705"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 15 ─ Divisor · Cultura e Cases -->
+<!-- 16 ─ Divisor · Cultura e Cases -->
 <section class="slide bg-preto sobre-escuro" data-ato="wtag" data-tom="escuro" data-titulo="Divisor · Cultura e Cases">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -1292,7 +1402,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 23 ─ Chamada Final -->
+<!-- 24 ─ Chamada Final -->
 <section class="slide bg-laranja sobre-laranja" data-ato="fecho" data-tom="laranja" data-titulo="Vamos construir juntos">
   <div class="cta__wrap">
     <div class="cta__head" data-enter="up" data-delay="84"><span>VAMOS CONSTRUIR</span><span>JUNTOS</span></div>
@@ -1411,8 +1521,8 @@
 
 </div><!-- /#viewport -->
 
-<script src="js/deck.js?v=175"></script>
-<script src="js/i18n-dic.js?v=175"></script>
-<script src="js/i18n.js?v=175"></script>
+<script src="js/deck.js?v=177"></script>
+<script src="js/i18n-dic.js?v=177"></script>
+<script src="js/i18n.js?v=177"></script>
 </body>
 </html>

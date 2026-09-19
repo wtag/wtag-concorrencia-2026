@@ -154,6 +154,23 @@ window.DIC_EN = {
 'Ver as marcas parceiras da WT.AG': 'See WT.AG partner brands',
 '＋ Texto completo': '＋ Full text',
 
+/* ── 10 · mandala · o que fazemos ────────────────────────────────────── */
+'O Que Fazemos': 'What We Do',
+'O que fazemos': 'What we do',
+'Tudo o que uma marca': 'Everything a brand',
+'precisa, visto pela': 'needs, seen through',
+'lente do social.': 'the social lens.',
+'Não é uma lista de serviços.<br>É o mesmo olhar aplicado<br>a todas as frentes.': 'This is not a list of services.<br>It is one way of looking,<br>applied to every front.',
+'O escopo é 360.<br>A lente é social.': 'The scope is 360.<br>The lens is social.',
+'Comunicação 360º': '360° Communications',
+'Gestão de Redes Sociais': 'Social Media Management',
+'Mídia e Performance': 'Media & Performance',
+'on e off': 'online and offline',
+'Social Listening e BI': 'Social Listening & BI',
+'Conteúdo e Criação': 'Content & Creative',
+'IA Aplicada à Criação': 'AI Applied to Creative',
+'SEO e Busca': 'SEO & Search',
+
 /* ── 13 · nosso time (uma tela só) ───────────────────────────────────── */
 'Nosso time': 'Our team',
 'Quem faz a WT.AG acontecer': 'The people who make WT.AG happen',
