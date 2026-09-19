@@ -182,12 +182,18 @@ def extrair(html):
         # Vira, então, núcleo + lista — a mesma informação, sem a geometria.
         if 'mandala__rotulos' in lim:
             frentes = []
+            # a descrição de cada frente vive na ficha que o desktop mostra no
+            # hover. Num telefone não há hover, então ela vira texto corrido —
+            # é o mesmo conteúdo, sem o gesto.
+            fichas = {}
+            for m in re.finditer(r'<div class="mandala__ficha"[^>]*><b>(.*?)</b><span>(.*?)</span></div>', lim, re.S):
+                fichas[limpo(m.group(1))] = limpo(m.group(2))
             for m in re.finditer(r'<div class="mandala__rot"[^>]*>(.*?)</div>', lim, re.S):
                 dentro = m.group(1)
                 nome = limpo(um(r'<span>(.*?)</span>', dentro))
                 sub  = limpo(um(r'<span class="mandala__sub"[^>]*>(.*?)</span>', dentro))
                 if nome:
-                    frentes.append({'n': nome, 's': sub})
+                    frentes.append({'n': nome, 's': sub, 'd': fichas.get(nome, '')})
             d['mandala'] = {
                 'nucleo': limpo(um(r'class="[^"]*mandala__nucleo[^"]*"[^>]*>(.*?)</div>', lim).replace('<br>', ' ')),
                 'linhas': [limpo(x) for x in re.findall(r'<div class="mandala__ln"[^>]*>(.*?)</div>', lim, re.S)],
@@ -444,10 +450,11 @@ def emitir(dados):
                 o.append('<h2 class="tit">%s</h2>' % '<br>'.join(map(esc, m['linhas'])))
             if m['nucleo']:
                 o.append('<div class="rot">%s</div>' % esc(m['nucleo']))
-            o.append('<div class="reperc">%s</div>'
-                     % ''.join('<span class="premio"><em style="max-width:none">%s</em></span>'
-                               % esc(f['n'] + (' · ' + f['s'] if f['s'] else ''))
-                               for f in m['frentes']))
+            for f in m['frentes']:
+                o.append('<div class="rot" style="margin-top:22px">%s</div>'
+                         % esc(f['n'] + (' · ' + f['s'] if f['s'] else '')))
+                if f.get('d'):
+                    o.append('<p class="txt" style="margin-top:6px">%s</p>' % esc(f['d']))
             if d['apoio']:
                 o.append('<p class="txt">%s</p>' % esc(d['apoio']))
             o.append('</section>')

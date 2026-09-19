@@ -1834,3 +1834,58 @@ a.reperc__it:hover .reperc__ph{border-color:var(--acento,var(--laranja-wt));
   font-size:56px;line-height:.92;letter-spacing:.01em;color:var(--creme-72)}
 .selo-ph i{font-family:var(--font-sans);font-style:italic;font-weight:500;
   font-size:12px;letter-spacing:.1em;text-transform:none;color:var(--acento)}
+
+/* ============================================================================
+   MANDALA · o rótulo sob o cursor e a ficha do serviço
+   O contêiner cobre o palco inteiro só para posicionar; quem recebe o cursor
+   são os rótulos, senão a caixa invisível engoliria o hover de tudo que está
+   embaixo.
+   O rótulo cresce por CORPO. A translação que o ancora ao raio vive no
+   transform inline, então o scale() do [data-foco] genérico não o alcança (e
+   nem deve: arrancaria o rótulo do lugar). Mesma saída dos KPIs de case.
+   ========================================================================= */
+.mandala__rotulos{pointer-events:none}
+.mandala__rot{pointer-events:auto;cursor:default;
+  transition:opacity 170ms ease,font-size 210ms var(--ease)}
+.mandala__sub{font-size:.76em}
+.mandala__rotulos.tem-foco .mandala__rot.is-foco{font-size:25px}
+
+/* O texto de apoio sai de cena enquanto a ficha está em cena: os dois ocupam a
+   mesma coluna, e sobrepor seria ilegível mesmo com o desfoque do vidro. */
+.mandala__apoio{transition:opacity 190ms ease}
+.mandala__rot.is-foco ~ .mandala__apoio{opacity:0}
+
+/* Vidro na mesma receita da pílula de navegação: 9% de creme, borda a 20% e
+   blur de 14px com um toque de saturação.
+   A altura não é escolhida: a maior ficha mede 83px de descrição (três linhas em
+   360px, e o pior caso é o mesmo nos dois idiomas) mais 28 de título e 14 de
+   respiro = 125, com 46 de folga em cima e embaixo → 218. Fixa, e não ajustada
+   ao conteúdo, para a caixa não pular de tamanho de um rótulo para o outro.
+   Raio 52 = 24% de 218, a menor dimensão (regra 2.5). */
+.mandala__painel{position:absolute;left:118px;top:528px;width:440px;height:218px;
+  border-radius:52px;pointer-events:none;opacity:0;
+  background:rgba(247,249,234,.09);
+  border:1px solid rgba(247,249,234,.2);
+  -webkit-backdrop-filter:blur(14px) saturate(1.2);
+  backdrop-filter:blur(14px) saturate(1.2);
+  transition:opacity 210ms ease}
+.mandala__rot.is-foco ~ .mandala__painel{opacity:1}
+.mandala__ficha{position:absolute;left:40px;top:46px;width:360px;opacity:0;
+  transition:opacity 190ms ease}
+.mandala__ficha b{display:block;font-family:var(--font-sans);font-weight:500;
+  font-size:23px;line-height:1.2;color:var(--creme-wt);margin:0 0 14px}
+.mandala__ficha span{display:block;font-family:var(--font-sans);font-weight:300;
+  font-size:19px;line-height:1.45;color:rgba(247,249,234,.84)}
+.mandala__rot[data-f="1"].is-foco ~ .mandala__painel .mandala__ficha[data-f="1"]{opacity:1}
+.mandala__rot[data-f="2"].is-foco ~ .mandala__painel .mandala__ficha[data-f="2"]{opacity:1}
+.mandala__rot[data-f="3"].is-foco ~ .mandala__painel .mandala__ficha[data-f="3"]{opacity:1}
+.mandala__rot[data-f="4"].is-foco ~ .mandala__painel .mandala__ficha[data-f="4"]{opacity:1}
+.mandala__rot[data-f="5"].is-foco ~ .mandala__painel .mandala__ficha[data-f="5"]{opacity:1}
+.mandala__rot[data-f="6"].is-foco ~ .mandala__painel .mandala__ficha[data-f="6"]{opacity:1}
+.mandala__rot[data-f="7"].is-foco ~ .mandala__painel .mandala__ficha[data-f="7"]{opacity:1}
+.mandala__rot[data-f="8"].is-foco ~ .mandala__painel .mandala__ficha[data-f="8"]{opacity:1}
+
+@media (prefers-reduced-motion:reduce){
+  .mandala__rot,.mandala__apoio,.mandala__painel,.mandala__ficha{transition:none}
+}
+
