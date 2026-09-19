@@ -139,7 +139,7 @@ window.DIC_EN = {
 
 /* ── 16 e 22 · divisores ─────────────────────────────────────────────── */
 'Divisor · Cultura e Cases': 'Divider · Culture and Cases',
-'Divisor · Estrutura': 'Divider · Structure',
+'Divisor · Nosso Time': 'Divider · Our Team',
 
 /* ── comuns aos cases ────────────────────────────────────────────────── */
 'Contexto': 'Context',
@@ -358,7 +358,8 @@ window.DIC_EN = {
 
 /* ── nomes dos atos, usados no HUD e no sumário ──────────────────────────── */
 'Transição': 'Transition',
-'Estrutura': 'Structure',
+'Nosso Time': 'Our Team',
+'Fecho': 'Closing',
 'Cases': 'Cases',
 
 /* ── 26 · encerramento ───────────────────────────────────────────────── */

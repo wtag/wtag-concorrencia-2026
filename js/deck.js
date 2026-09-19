@@ -28,8 +28,9 @@
     abertura:  'Abertura',
     trans:     'Transição',
     wtag:      'WT.AG',
+    time:      'Nosso Time',
     cases:     'Cases',
-    estrutura: 'Estrutura'
+    fecho:     'Fecho'
   };
   function nomeAto(k) {
     var pt = ATOS[k] || k;
