@@ -193,7 +193,7 @@ window.DIC_EN = {
 'Ideia, roteiro e produção: still, motion, stop motion e live action, do social ao filme.': 'Idea, script and production: still, motion, stop motion and live action, from social to film.',
 'Inteligência artificial dentro do processo criativo, da pesquisa à peça final.': 'Artificial intelligence inside the creative process, from research to the final piece.',
 'Conteúdo e estrutura para a marca ser encontrada, nas buscas e dentro das plataformas.': 'Content and structure so the brand gets found, in search and inside the platforms.',
-'Comunicação 360º': '360° Communications',
+'Comunicação 360°': '360° Communications',
 'Gestão de Redes Sociais': 'Social Media Management',
 'Mídia e Performance': 'Media & Performance',
 'on e off': 'online and offline',
@@ -340,7 +340,7 @@ window.DIC_EN = {
 
 /* ── legendas, tooltips, prêmios e textos de apoio ───────────────────────── */
 'Conectamos marcas, pessoas e cultura através de um': 'We connect brands, people and culture through a',
-'em 8 etapas que gera resultados consistentes numa comunicação 360º que inicia pelas redes sociais.': 'in 8 steps that delivers consistent results in 360º communication, starting with social media.',
+'em 8 etapas que gera resultados consistentes numa comunicação 360° que inicia pelas redes sociais.': 'in 8 steps that delivers consistent results in 360° communication, starting with social media.',
 'Emojis essenciais': 'Core emojis',
 'Showreel WT.AG · 2026 &nbsp;·&nbsp; clique para reproduzir &nbsp;·&nbsp; F para tela cheia': 'WT.AG Showreel · 2026 &nbsp;·&nbsp; click to play &nbsp;·&nbsp; F for full screen',
 'Ver o case Keeta · Central do Corre': 'See the Keeta · Central do Corre case',
@@ -395,7 +395,7 @@ window.DIC_EN = {
    só alcança innerHTML inteiro ou elemento-folha — nó de texto solto dentro
    de elemento com filhos não é visitado. Foi o que deixou o parágrafo de
    apoio do slide 11 em português enquanto o lettering já estava em inglês. */
-'Conectamos marcas, pessoas e cultura através de um <i>framework</i> em 8 etapas que gera resultados consistentes numa comunicação 360º que inicia pelas redes sociais.': 'We connect brands, people and culture through an 8-step <i>framework</i> that delivers consistent results in 360º communication, starting with social media.',
+'Conectamos marcas, pessoas e cultura através de um <i>framework</i> em 8 etapas que gera resultados consistentes numa comunicação 360° que inicia pelas redes sociais.': 'We connect brands, people and culture through an 8-step <i>framework</i> that delivers consistent results in 360° communication, starting with social media.',
 'Definição de<br>objetivos<br>estratégicos': 'Defining<br>strategic<br>objectives',
 'Seleção de<br>players<br>analisados': 'Selecting the<br>players<br>to analyse',
 'Definição de<br>redes a serem<br>analisadas': 'Choosing the<br>channels to<br>analyse',
