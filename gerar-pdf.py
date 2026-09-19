@@ -50,21 +50,21 @@ import sys
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ORIGEM = os.path.join(AQUI, 'index.html')
 DESTINO = os.path.join(AQUI, 'index_pdf.html')
-PDF = os.path.join(AQUI, 'WT.AG_Credenciais_2026.pdf')
+PDF = os.path.join(AQUI, 'WT.AG_Concorrencia_2026.pdf')
 
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
-# Cases fora desta versão: os três últimos, ainda com texto e números por vir.
 EXCLUIR = ()   # todos os cases deste deck estão completos
 
-# A capa WT.AG também fica fora. Ela existe no deck para receber quem abre a
-# apresentação e não sabe como andar nela; num PDF, que se folheia, a tela de
-# instruções é uma página de rodeio antes do assunto. O documento abre direto
-# na capa do Grupo WE. (A caixa_da_capa() abaixo continua no arquivo: se a capa
-# voltar para o PDF, ela volta reescrita para leitor de PDF, não para o deck.)
-SEM_CAPA = True
+# A capa VOLTA para o PDF neste deck. No deck de credenciais ela ficava de fora
+# porque era a segunda capa — a tela de instruções de navegação antes da capa do
+# grupo — e num PDF, que se folheia, instrução de navegação é rodeio. Sem o Ato 1
+# a capa WT.AG é a ÚNICA capa do documento, e um PDF de concorrência sem capa
+# abriria no Social First. A caixa_da_capa() reescreve as instruções para leitor
+# de PDF, que é exatamente o caso de uso agora.
+SEM_CAPA = False
 
-DECK_ONLINE = 'https://wtag.github.io/wtag-credenciais-2026/'
+DECK_ONLINE = 'https://wtag.github.io/wtag-concorrencia-2026/'
 
 # ---------------------------------------------------------------- os vídeos
 # Os arquivos de alta já vivem no Drive, em _Assets/Videos-Alta — o deck usa

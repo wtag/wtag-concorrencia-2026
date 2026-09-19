@@ -17,9 +17,8 @@
   var txtpanel = document.getElementById('txtpanel');
   var loader   = document.getElementById('loader');
   /* `:not([data-oculto])` é o que tira um slide da apresentação sem apagá-lo.
-     O slide dos clientes do Grupo WE saiu por decisão de conteúdo — quem abre a
-     apresentação são as marcas parceiras da WT.AG, no slide próprio. O markup
-     fica no HTML, então voltar é remover um atributo. */
+     data-oculto tira um slide da navegação sem apagá-lo do HTML: voltar é
+     remover o atributo. */
   var slides   = [].slice.call(document.querySelectorAll('.slide:not([data-oculto])'));
 
   /* Nomes dos atos. Vivem aqui e não no DOM, então o i18n não os alcança

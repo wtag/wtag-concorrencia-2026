@@ -188,11 +188,19 @@
     atualizarBotao();
   }
 
+  /* O deck de concorrência é apresentado em inglês, então o PADRÃO é 'en' e o
+     português é que precisa estar gravado para valer. Repare no caso salvo ===
+     null: é a primeira visita, e é exatamente a máquina de quem vai apresentar —
+     por isso ele cai no inglês, e não no português.
+     O HTML continua escrito em português e o data-pt continua guardando o
+     original na primeira troca: a fonte não mudou de idioma, só o padrão de
+     exibição. Voltar ao português segue relendo o data-pt, e não reconstruindo
+     do dicionário no sentido inverso. */
   function iniciar() {
     montarBotao();
     var salvo = null;
     try { salvo = localStorage.getItem('wtag-idioma'); } catch (e) {}
-    if (salvo === 'en') aplicar('en');
+    if (salvo !== 'pt') aplicar('en');
   }
 
   if (document.readyState === 'loading') {

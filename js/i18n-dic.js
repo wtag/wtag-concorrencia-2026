@@ -154,6 +154,9 @@ window.DIC_EN = {
 'Ver as marcas parceiras da WT.AG': 'See WT.AG partner brands',
 '＋ Texto completo': '＋ Full text',
 
+/* ── marcações de canto ─────────────────────────────────────────────── */
+'Credenciais': 'Credentials',
+
 /* ── capas de cliente ────────────────────────────────────────────────── */
 'Capa · Magalu': 'Cover · Magalu',
 'Capa · Keeta': 'Cover · Keeta',
@@ -455,6 +458,7 @@ window.DIC_EN = {
 'Direita avança, esquerda volta': 'Right goes forward, left goes back',
 'Abrir o sumário': 'Open the contents',
 'Ir direto para uma tela': 'Jump straight to a screen',
+'Credenciais WT.AG · 2026 · abertura e cinco atos, 29 telas': 'WT.AG Credentials · 2026 · opening and five acts, 29 screens',
 'Para os lados, como quiser': 'Sideways, either direction',
 'Na foto ou no vídeo, abre em tela cheia': 'On a photo or video, opens full screen',
 'Deite o aparelho: a apresentação é horizontal':

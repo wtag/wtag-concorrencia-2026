@@ -297,7 +297,7 @@ html,body{background:var(--letterbox,#000)}
 .is-played [data-kb]{transform:scale(1);transition:transform 5200ms linear var(--d,0ms)}
 
 /* ============================================================================
-   ATO 1 · GRUPO WE  (monocromático)
+   MONOCROMÁTICO  (herdado do ato de abertura antigo)
    ========================================================================= */
 .we-foto{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover}
 .we-capa__logo{left:100px;top:98px;width:348px;height:152px}
