@@ -172,6 +172,7 @@ def extrair(html):
                 'logo': um(r'capa-cli__logo[\s\S]{0,240}?data-lazy="([^"]+)"', lim),
                 'alt':  um(r'capa-cli__logo[\s\S]{0,320}?alt="([^"]*)"', lim),
                 'ctx':  d.get('divisor') or '',
+                'intro': limpo(um(r'capa-cli__scrim[\s\S]*?class="abs l-apoio blk"[^>]*>(.*?)</div>', lim)),
             }
             d['divisor'] = ''
 
@@ -430,6 +431,8 @@ def emitir(dados):
                          'data-lazy="%s" alt="%s">' % (k['logo'], esc(k['alt'] or '')))
             if k['ctx']:
                 o.append('<div class="rot">%s</div>' % esc(k['ctx']))
+            if k.get('intro'):
+                o.append('<p class="txt">%s</p>' % esc(k['intro']))
             o.append('</section>')
             continue
 

@@ -178,6 +178,9 @@ html,body{background:var(--letterbox,#000)}
 .cta__main,
 .case__kpi b,
 .rl-caixa,
+/* o SOCIAL FIRST dentro do disco da mandala: é display em corpo grande como
+   qualquer outro, então leva o mesmo traçado de 2,67px. */
+.mandala__nucleo,
 #sumario .sum__t,
 #txtpanel h2{
   -webkit-text-stroke:2.67px currentColor;
@@ -742,6 +745,19 @@ html,body{background:var(--letterbox,#000)}
   background:
     linear-gradient(100deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.56) 30%,rgba(0,0,0,.08) 62%,rgba(0,0,0,.18) 100%),
     linear-gradient(0deg,rgba(0,0,0,.38) 0%,rgba(0,0,0,0) 26%)}
+
+/* A capa de cliente usa a mesma foto e o mesmo tratamento do case, mas carrega
+   MAIS texto branco sobre ela: logotipo grande, parágrafo e chamada, todos na
+   faixa 72→792. No case essa faixa tem só a coluna curta do rodapé.
+   Por isso o degradê da esquerda é mais fundo — .90 contra .78 na origem, .72
+   contra .56 no joelho — e o joelho anda de 30% para 34%. Da metade da tela
+   para a direita os dois são praticamente o mesmo: a foto continua aparecendo,
+   que é o ponto da capa. Quem pediu o reforço foi a capa da Multiplan, a foto
+   mais clara do lote, onde a chamada disputava com o rosto em primeiro plano. */
+.capa-cli__scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(100deg,rgba(0,0,0,.90) 0%,rgba(0,0,0,.72) 34%,rgba(0,0,0,.10) 60%,rgba(0,0,0,.22) 100%),
+    linear-gradient(0deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,0) 26%)}
 
 /* Coluna editorial à esquerda: chamada + três blocos de apoio.
    Clicar em qualquer ponto da coluna abre o texto completo — o botão

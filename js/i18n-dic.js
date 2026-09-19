@@ -163,10 +163,14 @@ window.DIC_EN = {
 'Capa · Keeta': 'Cover · Keeta',
 'Capa · Bridgestone': 'Cover · Bridgestone',
 'Capa · Multiplan': 'Cover · Multiplan',
+'Um dos maiores ecossistemas de varejo do Brasil: mais de 1.200 lojas, presença em 20 estados e cerca de 33 milhões de clientes ativos.': "One of Brazil's largest retail ecosystems: more than 1,200 stores, a presence in 20 states and some 33 million active customers.",
+'A operação brasileira da chinesa Meituan, uma das maiores plataformas de delivery do mundo. Chegou ao país com R$ 5,6 bilhões anunciados para cinco anos.': "The Brazilian arm of China's Meituan, one of the world's largest delivery platforms. It arrived with R$5.6 billion announced over five years.",
+'Bridgestone e Firestone, do maior fabricante de pneus do mundo: presença em mais de 150 países e duas fábricas no Brasil. A Firestone soma mais de 95 anos de história por aqui.': "Bridgestone and Firestone, from the world's largest tyre maker: present in more than 150 countries, with two plants in Brazil. Firestone alone has over 95 years of history here.",
+'Uma das maiores empresas de shopping centers do país: 20 shoppings, dois complexos de torres corporativas e mais de 30 empreendimentos imobiliários construídos.': "One of Brazil's largest shopping-centre companies: 20 malls, two corporate tower complexes and more than 30 real-estate developments built.",
 'DOIS CASES · INFLUÊNCIA E VAREJO': 'TWO CASES · INFLUENCE AND RETAIL',
 'TRÊS CASES · DELIVERY E MARKETPLACE': 'THREE CASES · DELIVERY AND MARKETPLACE',
-'UM CASE · MOBILIDADE E ESPORTE': 'ONE CASE · MOBILITY AND SPORT',
-'UM CASE · VAREJO E SHOPPING CENTERS': 'ONE CASE · RETAIL AND SHOPPING CENTRES',
+'UM CASE · PNEUS E MOBILIDADE': 'ONE CASE · TYRES AND MOBILITY',
+'DOIS CASES · SHOPPING E IMOBILIÁRIO': 'TWO CASES · MALLS AND REAL ESTATE',
 
 /* ── 04 · lente × escopo ─────────────────────────────────────────────── */
 'Lente × Escopo': 'Lens × Scope',
@@ -268,6 +272,24 @@ window.DIC_EN = {
    "Sessões engajadas" é a métrica do GA4, que em inglês é engaged sessions —
    o termo existe e é o que o cliente lê no próprio painel. */
 'Cliques': 'Clicks',
+
+/* ── Golden Lake · Lake Baikal ─────────────────────────────────────────────
+   O case voltou: Golden Lake é empreendimento da Multiplan, então entra no
+   bloco dela junto com o BarraShoppingSul. */
+'Depois do Lake Victoria e do Lake Eyre, o Golden Lake chegou ao terceiro condomínio, o Lake Baikal, com um novo desafio: traduzir o que significa viver bem nos dias de hoje.': 'After Lake Victoria and Lake Eyre, Golden Lake reached its third development, Lake Baikal, with a new challenge: to translate what living well means today.',
+'Depois de explorar diferentes dimensões do morar de alto padrão nos lançamentos do Lake Victoria e do Lake Eyre, o Golden Lake chegou ao seu terceiro condomínio, o Lake Baikal, com um novo desafio: traduzir o que significa viver bem nos dias de hoje.': 'After exploring different dimensions of high-end living in the Lake Victoria and Lake Eyre launches, Golden Lake reached its third development, Lake Baikal, with a new challenge: to translate what it means to live well today.',
+'No comportamento do consumidor porto-alegrense, o tempo apareceu como o ativo mais valioso: conveniência e fluidez ganham valor porque devolvem a liberdade de escolher como usá-lo.': 'In the behaviour of the Porto Alegre consumer, time emerged as the most valuable asset: convenience and flow gain value because they give back the freedom to choose how to spend it.',
+'Ao olhar para o comportamento do consumidor porto-alegrense, identificamos que o tempo se tornou um dos ativos mais valiosos da vida contemporânea. Em uma rotina cada vez mais acelerada, conveniência, fluidez e previsibilidade ganham valor porque devolvem às pessoas a liberdade de escolher como aproveitar o próprio tempo.': 'Looking at the behaviour of the Porto Alegre consumer, we identified that time has become one of the most valuable assets of contemporary life. In an ever faster routine, convenience, flow and predictability gain value because they give people back the freedom to choose how to enjoy their own time.',
+'Nasceu “Para viver no seu tempo”: no Lake Baikal, estrutura, conforto e conveniência existem para tornar a rotina fluida e devolver ao morador o que importa — tempo para viver do seu jeito.': '“Para viver no seu tempo” was born: at Lake Baikal, structure, comfort and convenience exist to make the routine flow and give the resident back what matters — time to live their own way.',
+'A partir disso, nasceu “Para viver no seu tempo”: um conceito que ressignifica a sofisticação para além dos atributos tradicionais do alto padrão. No Lake Baikal, estrutura, conforto e conveniência existem para tornar a rotina mais fluida e devolver ao morador aquilo que realmente importa: tempo para viver do seu jeito.': 'From there, “Para viver no seu tempo” was born: a concept that reframes sophistication beyond the traditional attributes of the high-end market. At Lake Baikal, structure, comfort and convenience exist to make the routine flow and give the resident back what really matters: time to live their own way.',
+'Leads gerados': 'Leads generated',
+'Como ferramenta': 'As a tool',
+'Golden Lake · Lake Baikal': 'Golden Lake · Lake Baikal',
+'Golden Lake · Lake Baikal — videocase': 'Golden Lake · Lake Baikal — video case',
+'Cena do minidoc Lake Baikal': 'Scene from the Lake Baikal mini-doc',
+'Golden Lake · Lake Baikal — conteúdo 1': 'Golden Lake · Lake Baikal — content 1',
+'Golden Lake · Lake Baikal — conteúdo 2': 'Golden Lake · Lake Baikal — content 2',
+'Golden Lake · Lake Baikal — conteúdo 3': 'Golden Lake · Lake Baikal — content 3',
 
 /* ── BarraShoppingSul · textos e rótulos ───────────────────────────────────
    Os nomes de conceito não se traduzem, como nos outros cases: "Para viver no

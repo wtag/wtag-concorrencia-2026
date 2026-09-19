@@ -13,11 +13,12 @@
 > | Idioma padrão | português | **inglês** (o toggle PT continua) |
 > | Telas | 31 | 29 |
 > | Grupo WE | abre o deck | **fora** — há um concorrente do anunciante entre os clientes do grupo |
-> | Cases | dez | **sete**, agrupados por cliente, cada um com capa |
+> | Cases | dez | **oito**, agrupados por cliente, cada um com capa |
 > | Time | duas telas (Liderança · O Time) | **uma**, com o número de 140 |
 >
-> **Telas que nasceram aqui:** `Lente × Escopo`, `O Que Fazemos` (a mandala),
-> e as quatro capas de cliente (Magalu, Keeta, Bridgestone, Multiplan).
+> **Telas que nasceram aqui:** `O Que Fazemos` (a mandala) e as quatro capas de
+> cliente (Magalu, Keeta, Bridgestone, Multiplan). A tela `Social First Agency`
+> foi reescrita: ela e a antiga `Lente × Escopo` viraram uma só.
 >
 > **Aviso sobre o que vem abaixo.** O corpo deste documento é o do deck de
 > origem e continua valendo para tudo que é design system — a métrica do
@@ -198,9 +199,9 @@ procura a menor caixa que contém o ponto.
 | Ato | Slides | Conteúdo |
 |---|---|---|
 | Abertura | 01–02 | capa WT.AG e o wordmark em loop |
-| WT.AG | 03–13 | Social First, Lente × Escopo, consumidor, marcas, metodologia, framework, persona, mandala, showreel, marcas parceiras |
-| Nosso Time | 14–16 | divisor, a tela única do time (140 + direção + lideranças), escritórios |
-| Cases | 17–28 | divisor, e quatro blocos de cliente, cada um aberto por uma capa: Magalu (2), Keeta (3), Bridgestone (1), Multiplan (1) |
+| WT.AG | 03–12 | Social First (lente × escopo), consumidor, marcas, metodologia, framework, persona, mandala, showreel, marcas parceiras |
+| Nosso Time | 13–15 | divisor, a tela única do time (140 + direção + lideranças), escritórios |
+| Cases | 16–28 | divisor, e quatro blocos de cliente, cada um aberto por uma capa sobre foto: Magalu (2), Keeta (3), Bridgestone (1), Multiplan (2 — BarraShoppingSul e Golden Lake) |
 | Fecho | 29 | vamos construir juntos |
 
 

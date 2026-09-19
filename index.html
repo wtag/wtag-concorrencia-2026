@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WT.AG — Credenciais 2026</title>
 <meta name="description" content="Credenciais WT.AG 2026 — Social First Agency. Apresentação de slides.">
-<link rel="stylesheet" href="css/deck.css?v=187">
+<link rel="stylesheet" href="css/deck.css?v=191">
 </head>
 <body>
 
@@ -75,82 +75,49 @@
   <div class="s06__desc" data-enter="fade" data-delay="50">Transformamos marcas<br>em protagonistas<br>da cultura digital</div>
 </section>
 
-<!-- 03 ─ Social First Agency -->
-<section class="slide bg-laranja sobre-laranja" data-ato="wtag" data-tom="laranja" data-titulo="Social First Agency">
-  <!-- Marcação 2 da revisão · remontado fiel ao print de referência.
-       Mudou a quebra: era SOCIAL / FIRST / AGENCY em três linhas alinhadas à
-       esquerda; virou "SOCIAL FIRST" numa linha só, ocupando a largura inteira,
-       e "AGENCY" na segunda, recuada.
+<!-- 03 ─ Social First Agency · a lente e o escopo na mesma tela -->
+<!-- Fusão das duas telas que existiam aqui: a "Social First Agency" e a
+     "Lente × Escopo". Diziam a mesma coisa em sequência, e o direcional do Lucas
+     era justamente contextualizar o Social First — não repeti-lo. A frase
+     principal passa a ser a distinção, no laranja chapado e no molde
+     tipográfico da tela antiga; o texto de apoio é o da tela de tese.
 
-       O corpo (423px) não foi estimado a olho: é o que faz "SOCIAL FIRST" medir
-       exatamente 1824px (de x=48 a x=1872), a única âncora inequívoca do print.
-       Medido na métrica da fonte — "SOCIAL FIRST" ocupa 4,313× o corpo. Daí sai
-       altura de maiúscula 300 e AGENCY com 1089 de largura.
-       Fecho de AGENCY em x=1490, encostando no texto de apoio (1493), como no
-       print. Vertical: 44→344 e 372→672, entrelinha de 28px.
-       Traçado reforçado por escada--forte (0,018em = 7,6px neste corpo). -->
+     As duas linhas medem os mesmos 1824px de avanço (x=48 a x=1872), que é a
+     âncora da composição original. O corpo sai da métrica: "SOCIAL É A LENTE"
+     ocupa 5,637× o corpo → 323,6px; "O ESCOPO É 360" ocupa 5,247× → 347,6px.
+     O --x corrige o left side bearing (--x = 48 − LSB·fs): o left do CSS é a
+     origem do glifo e o que se alinha é a tinta.
+
+     A entrelinha de 338px não é escolha: o acento do "É" sobe 0,217·fs acima da
+     maiúscula (0,927 contra 0,710 na fonte), 75,4px neste corpo. Com a segunda
+     linha em --cap 458 o acento nasce em 382,6 e a linha de base da primeira
+     está em 349,8 — 33px de folga. Nos 28px de entrelinha da tela antiga, que
+     não tinha acento nenhum, ele entraria dentro do "LENTE".
+     Em inglês não há acento e as palavras são mais largas, então o bloco é mais
+     baixo: as duas linhas vêm centradas no MESMO eixo (y=412,4) do bloco em
+     português, e não presas ao mesmo topo. Daí os --cap 183,3 e 417,5. -->
+<section class="slide bg-laranja sobre-laranja" data-ato="wtag" data-tom="laranja" data-titulo="Social First Agency">
   <div class="escada display escada--forte l-chamada" data-stagger="90" data-delay="134">
-    <span class="ln" style="--x:48px;--cap:44px;--fs:423px;color:var(--preto-wt)">SOCIAL FIRST</span>
-    <span class="ln" style="--x:401px;--cap:372px;--fs:423px;color:var(--preto-wt)">AGENCY</span>
+    <span class="ln" data-en-txt="SOCIAL IS THE LENS" data-en-x="43.1px" data-en-fs="290.4px" data-en-cap="183.3px"
+          style="--x:42.5px;--cap:120px;--fs:323.6px;color:var(--preto-wt)">SOCIAL É A LENTE</span>
+    <span class="ln" data-en-txt="THE SCOPE IS 360" data-en-x="43.9px" data-en-fs="315.5px" data-en-cap="417.5px"
+          style="--x:37.6px;--cap:458px;--fs:347.6px;color:var(--preto-wt)">O ESCOPO É 360</span>
   </div>
-  <div class="abs l-apoio s07__desc blk" style="--x:1493px;--cap:600px;--fs:20.5px;--lh:1.27" data-enter="kicker" data-delay="319">TRANSFORMANDO MARCAS<br>EM PROTAGONISTAS DA<br>CULTURA DIGITAL</div>
+
+  <div class="abs l-apoio" style="left:48px;top:800px;width:310px;height:1.2px;background:rgba(0,0,0,.28);transform-origin:left" data-enter="scaleX" data-delay="300"></div>
+
+  <div class="abs l-apoio blk" style="--x:48px;--cap:848px;--fs:26px;--lh:1.42;width:1100px;font-family:var(--font-sans);font-weight:300;color:var(--preto-wt)"
+       data-enter="up" data-delay="350">Social não é canal. É a camada estrutural onde marcas constroem relevância, influenciam cultura e geram crescimento.</div>
+  <div class="abs l-apoio blk" style="--x:1226px;--cap:848px;--fs:26px;--lh:1.42;width:646px;font-family:var(--font-sans);font-weight:500;color:var(--preto-wt)"
+       data-enter="up" data-delay="400">Social como ponto de partida.<br>Resultado como consequência.</div>
+
   <div class="marca marca--bl marca--sm l-marcas" data-enter="fade" data-delay="50">Credenciais</div>
-  <!-- no print o "2026" está centrado no rodapé, não junto do logo -->
+  <!-- no molde desta tela o "2026" está centrado no rodapé, não junto do logo -->
   <div class="marca l-marcas marca--sm" style="left:50%;transform:translateX(-50%);bottom:35.8px" data-enter="fade" data-delay="50">2026</div>
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="76"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 04 ─ Lente × Escopo -->
-<!-- Direcional do Lucas (21.09): "Social First sem contexto dá a entender que
-     somos uma agência exclusivamente de social. Precisamos de um texto de apoio
-     que deixe claro que ser social é a lente, sobre gerar conversa, mas o escopo
-     é 360, o olhar é social."
-
-     Em vez de espremer o argumento dentro do slide laranja — que o brandbook
-     manda manter com um protagonista só — a distinção ganha tela própria, logo
-     em seguida, no mesmo molde tipográfico. Creme entre o laranja chapado do
-     Social First e o preto do Consumidor Mudou: a sequência desce de tom.
-
-     Duas linhas de escada, cada uma com o corpo resolvido para medir os mesmos
-     1776px de avanço (x=72 a x=1848) — é a regra da escada, corpo por linha para
-     igualar larguras. Medido na métrica: "SOCIAL É A LENTE" ocupa 5,637× o corpo
-     → 315,1px; "O ESCOPO É 360" ocupa 5,247× → 338,5px. O --x traz a correção do
-     left side bearing (--x = 72 − LSB·fs), porque o left do CSS é a origem do
-     glifo e o que se quer alinhar é a tinta.
-     A entrelinha não é estética, é métrica: o acento do "É" sobe 0,217·fs acima
-     da altura de maiúscula (0,927 contra 0,710 medidos na fonte), ou seja 73,5px
-     no corpo da segunda linha. Com a segunda linha em --cap 560 o acento nasce
-     em 486,5 e a linha de base da primeira está em 455,7 — 31px de folga. Com os
-     486px que o desenho pedia sem essa conta, o acento entrava dentro do
-     "LENTE" de cima.
-     Em inglês não há acento e as palavras são mais largas: o bloco fica mais
-     baixo, então as duas linhas vêm centradas no MESMO eixo vertical (y=516) que
-     o bloco em português, e não ancoradas no mesmo topo. Daí os --cap 291,7 e
-     522,5 do inglês. -->
-<section class="slide bg-creme sobre-claro" data-ato="wtag" data-tom="claro" data-titulo="Lente × Escopo">
-  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
-  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
-
-  <div class="est__kicker l-kicker" style="left:72px;top:150px" data-enter="kicker" data-delay="50">Lente × Escopo</div>
-
-  <div class="escada display escada--forte l-chamada" data-stagger="90" data-delay="134">
-    <span class="ln" data-en-txt="SOCIAL IS THE LENS" data-en-x="67.2px" data-en-fs="282.8px" data-en-cap="291.7px"
-          style="--x:66.6px;--cap:232px;--fs:315.1px;color:var(--preto-wt)">SOCIAL É A LENTE</span>
-    <span class="ln" data-en-txt="THE SCOPE IS 360" data-en-x="68.0px" data-en-fs="307.2px" data-en-cap="522.5px"
-          style="--x:61.8px;--cap:560px;--fs:338.5px;color:var(--preto-wt)">O ESCOPO É 360</span>
-  </div>
-
-  <div class="abs l-apoio" style="left:72px;top:845px;width:310px;height:1.2px;background:rgba(0,0,0,.22);transform-origin:left" data-enter="scaleX" data-delay="330"></div>
-
-  <div class="abs l-apoio blk" style="--x:72px;--cap:893px;--fs:26px;--lh:1.42;width:1100px;font-family:var(--font-sans);font-weight:300;color:var(--preto-wt)"
-       data-enter="up" data-delay="380">Social não é canal. É a camada estrutural onde marcas constroem relevância, influenciam cultura e geram crescimento.</div>
-  <div class="abs l-apoio blk" style="--x:1250px;--cap:893px;--fs:26px;--lh:1.42;width:598px;font-family:var(--font-sans);font-weight:500;color:var(--preto-wt)"
-       data-enter="up" data-delay="430">Social como ponto de partida.<br>Resultado como consequência.</div>
-
-  <div class="marca-logo l-marcas" data-enter="fade" data-delay="520"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
-</section>
-
-<!-- 05 ─ O Consumidor Mudou -->
+<!-- 04 ─ O Consumidor Mudou -->
 <section class="slide bg-preto sobre-escuro" data-ato="wtag" data-tom="escuro" data-titulo="O Consumidor Mudou">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -176,7 +143,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="756"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 06 ─ As Marcas Precisam Ser -->
+<!-- 05 ─ As Marcas Precisam Ser -->
 <section class="slide bg-preto sobre-escuro" data-ato="wtag" data-tom="escuro" data-titulo="As Marcas Precisam Ser">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -204,7 +171,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="714"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 07 ─ Unir Criatividade, Dados e Influência -->
+<!-- 06 ─ Unir Criatividade, Dados e Influência -->
 <section class="slide bg-laranja sobre-laranja" data-ato="wtag" data-tom="laranja" data-titulo="Unir Criatividade, Dados e Influência">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -273,7 +240,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="546"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 09 ─ Framework em 8 Etapas -->
+<!-- 08 ─ Framework em 8 Etapas -->
 <section class="slide bg-creme sobre-claro" data-ato="wtag" data-tom="claro" data-titulo="Framework em 8 Etapas">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -315,7 +282,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="378"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 10 ─ Persona e Matriz de Canais -->
+<!-- 09 ─ Persona e Matriz de Canais -->
 <section class="slide bg-creme sobre-claro p13" data-ato="wtag" data-tom="claro" data-titulo="Persona e Matriz de Canais">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -399,7 +366,7 @@
   </div>
 </section>
 
-<!-- 11 ─ O Que Fazemos · a mandala das frentes -->
+<!-- 10 ─ O Que Fazemos · a mandala das frentes -->
 <!-- Direcional do Lucas (21.09): "antes de Estrutura, uma mandala (usar de base
      layout do hub) com tudo que nós fazemos, em todas as frentes."
 
@@ -509,7 +476,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="820"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 12 ─ Showreel WT.AG -->
+<!-- 11 ─ Showreel WT.AG -->
 <section class="slide s14" data-ato="wtag" data-tom="escuro" data-titulo="Showreel WT.AG">
   <div class="abs" style="inset:0" data-enter="fade" data-delay="0">
     <video class="s14__video" data-src="assets/video/showreel-wtag.mp4" poster="assets/img/poster-showreel.jpg"
@@ -519,7 +486,7 @@
   <div class="s14__legenda" data-enter="fade" data-delay="210">Showreel WT.AG · 2026 &nbsp;·&nbsp; clique para reproduzir &nbsp;·&nbsp; F para tela cheia</div>
 </section>
 
-<!-- 13 ─ Marcas Parceiras -->
+<!-- 12 ─ Marcas Parceiras -->
 <section id="s-parceiras" class="slide bg-creme sobre-claro" data-ato="wtag" data-tom="claro" data-titulo="Marcas Parceiras">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -610,7 +577,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="521"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 14 ─ Divisor · Nosso Time -->
+<!-- 13 ─ Divisor · Nosso Time -->
 <section class="slide bg-preto sobre-escuro" data-ato="time" data-tom="escuro" data-titulo="Divisor · Nosso Time">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -632,7 +599,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="630"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 15 ─ Nosso Time · uma tela só: o número, a Direção e as demais lideranças -->
+<!-- 14 ─ Nosso Time · uma tela só: o número, a Direção e as demais lideranças -->
 <!-- Direcional do Lucas (21.09): "esse slide precisa trazer 140 pessoas, Direção e
      demais lideranças — tirar Marcos. Título geral: NOSSO TIME". Os antigos
      slides "Liderança" e "O Time" foram fundidos aqui.
@@ -770,7 +737,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="740"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 16 ─ Nossos Escritórios · duas sedes -->
+<!-- 15 ─ Nossos Escritórios · duas sedes -->
 <section class="slide bg-preto sobre-escuro" data-ato="time" data-tom="escuro" data-fundo="#000000" data-titulo="Nossos Escritórios">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -831,7 +798,7 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="705"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 17 ─ Divisor · Cultura e Cases -->
+<!-- 16 ─ Divisor · Cultura e Cases -->
 <section class="slide bg-preto sobre-escuro" data-ato="wtag" data-tom="escuro" data-titulo="Divisor · Cultura e Cases">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
@@ -853,46 +820,63 @@
 <!-- ══════════════════════════════════════════════════════════════════════════
      CAPAS DE CLIENTE
      Direcional do Lucas (21.09): "cada cliente precisa ter uma capa própria
-     valorizando a marca". São telas de respiro e de assinatura — o protagonista
-     é o logotipo, e tudo o mais é subordinado a ele.
+     valorizando a marca". São telas de respiro e de assinatura.
 
-     Creme, e não preto: os quatro logotipos existem em versão positiva (a que a
-     tela de Marcas Parceiras usa) e não há negativo aprovado dos quatro. Inventar
-     um negativo de marca de cliente é risco que a capa não precisa correr. O
-     creme também dá um respiro claro antes de cada bloco de cases, que são todos
-     escuros.
+     Gramática emprestada do próprio case: .case__fundo (foto com blur 2px,
+     brilho .80 e a deriva lateral de 22s) e .case__scrim, cujo degradê de 100°
+     escurece justamente a coluna da esquerda, que é onde o texto vive. A foto é
+     a MESMA do primeiro case do cliente, de propósito: virar a capa para o case
+     lê como uma cortina que abre, e não como um corte.
 
      TAMANHO DOS LOGOTIPOS · equalização óptica por ÁREA DE TINTA, não por altura
-     nem por largura. A conta é: área_renderizada = fração_de_tinta · L² · (h/l),
-     igualada entre os quatro num alvo T. Foi a régua que resolveu o Bridgestone
-     no case (altura-de-x e "massa óptica" davam respostas erradas para proporções
-     extremas). T = 14691, e quem fixou esse número foi o Bridgestone: o arquivo
-     tem 222×29 e ampliar além de 2× não se sustenta.
+     nem por largura: área = fração_de_tinta · L² · (h/l), igualada num alvo
+     T = 15196. Foi a régua que resolveu o Bridgestone no case — altura-de-x e
+     "massa óptica" erram feio em proporções extremas. Quem fixou o T foi o
+     próprio Bridgestone: o arquivo tem 240×30 e ampliar além de 2× não para em pé.
 
-     ⚠ Os quatro logotipos são PNGs pequenos — o Bridgestone tem 29px de altura.
-     Nesta escala a capa está no limite do que o arquivo aguenta. Com os vetores
-     dos clientes em mãos, dá para dobrar a escala mudando só o T e regerando
-     assets/img/logos-capas/. ══════════════════════════════════════════════════ -->
+     Os logotipos saem em negativo (branco puro com o alfa do arquivo original),
+     porque sobre foto escura é o que se lê — e porque não existe negativo
+     aprovado dos quatro para copiar.
 
-<!-- 18 ─ Capa · Magalu -->
-<section class="slide bg-creme sobre-claro" data-ato="cases" data-tom="claro" data-titulo="Capa · Magalu">
-  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
-  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
+     ORDEM DO BLOCO · logotipo, filete, chamada, parágrafo. A chamada vem antes
+     do texto por hierarquia (quem é o cliente → o que fizemos → quem ele é), mas
+     também por medição: na foto do BarraShoppingSul, a mais clara do lote, a
+     faixa y=480–560 tem média 32 e p98 146, enquanto de y=680 para baixo o
+     celular em primeiro plano sobe o p98 para 205. Uma linha branca de display
+     em 40px não sobrevive ali. Medido banda a banda, não estimado.
 
-  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="120"
-       style="left:765.0px;top:427.4px;width:389.9px;height:85.3px">
+     O z-index 5 não é enfeite: o .case__scrim vive em z-index 1, então qualquer
+     coisa em z-index automático fica ATRÁS do degradê e some. É o mesmo 5 que a
+     .case__col usa nos cases.
+
+     ⚠ Dois pedidos em aberto: o VETOR dos quatro logotipos (com eles, dobrar a
+     escala é mudar o T) e a marca da FIRESTONE, que não existe em assets/ — hoje
+     ela entra só no texto, não no lockup. ════════════════════════════════════ -->
+
+<!-- 17 ─ Capa · Magalu -->
+<section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Magalu">
+  <div class="case__fundo"><img data-lazy="assets/img/cases/magalu-fundo.jpg" data-lazy-m="assets/img/cases/magalu-fundo-m.jpg" alt=""></div>
+  <div class="capa-cli__scrim"></div>
+  <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
+  <div class="marca marca--tr l-marcas sobre-escuro" data-enter="fade" data-delay="0">2026</div>
+
+  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
+       style="z-index:5;left:72px;top:306.6px;width:396.6px;height:86.7px">
     <img data-lazy="assets/img/logos-capas/magalu.png" data-lazy-m="assets/img/logos-capas/magalu-m.png" alt="Magalu" style="width:100%;height:100%;display:block">
   </div>
 
-  <div class="abs l-apoio" data-enter="scaleX" data-delay="280"
-       style="left:880px;top:620px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:center"></div>
+  <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
+       style="z-index:5;left:72px;top:470px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
 
-  <div class="abs l-chamada rl-alvo rl-caixa" style="left:50%;top:calc(672px - 0.145*44px);transform:translateX(-50%);
+  <div class="abs l-chamada rl-alvo rl-caixa" style="z-index:5;left:72px;top:calc(512px - 0.145*40px);
        font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-       font-size:44px;line-height:1;color:var(--preto-wt);white-space:nowrap"
-       data-delay="360" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">DOIS CASES · INFLUÊNCIA E VAREJO</div>
+       font-size:40px;line-height:1;color:var(--creme-wt);white-space:nowrap"
+       data-delay="330" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">DOIS CASES · INFLUÊNCIA E VAREJO</div>
 
-  <div class="marca-logo l-marcas" data-enter="fade" data-delay="520"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
+  <div class="abs l-apoio blk" data-enter="up" data-delay="430"
+       style="z-index:5;--x:72px;--cap:600px;--fs:25px;--lh:1.45;width:720px;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">Um dos maiores ecossistemas de varejo do Brasil: mais de 1.200 lojas, presença em 20 estados e cerca de 33 milhões de clientes ativos.</div>
+
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="560"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
 <!-- A17/B1 · acento: azul Magalu — pedido explícito no PDF -->
@@ -1064,25 +1048,30 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 21 ─ Capa · Keeta -->
-<section class="slide bg-creme sobre-claro" data-ato="cases" data-tom="claro" data-titulo="Capa · Keeta">
-  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
-  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
+<!-- 20 ─ Capa · Keeta -->
+<section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Keeta">
+  <div class="case__fundo"><img data-lazy="assets/img/cases/central-corre-fundo.jpg" data-lazy-m="assets/img/cases/central-corre-fundo-m.jpg" alt=""></div>
+  <div class="capa-cli__scrim"></div>
+  <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
+  <div class="marca marca--tr l-marcas sobre-escuro" data-enter="fade" data-delay="0">2026</div>
 
-  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="120"
-       style="left:832.5px;top:401.4px;width:255.1px;height:137.3px">
+  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
+       style="z-index:5;left:72px;top:280.7px;width:260.7px;height:138.6px">
     <img data-lazy="assets/img/logos-capas/keeta.png" data-lazy-m="assets/img/logos-capas/keeta-m.png" alt="Keeta" style="width:100%;height:100%;display:block">
   </div>
 
-  <div class="abs l-apoio" data-enter="scaleX" data-delay="280"
-       style="left:880px;top:620px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:center"></div>
+  <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
+       style="z-index:5;left:72px;top:470px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
 
-  <div class="abs l-chamada rl-alvo rl-caixa" style="left:50%;top:calc(672px - 0.145*44px);transform:translateX(-50%);
+  <div class="abs l-chamada rl-alvo rl-caixa" style="z-index:5;left:72px;top:calc(512px - 0.145*40px);
        font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-       font-size:44px;line-height:1;color:var(--preto-wt);white-space:nowrap"
-       data-delay="360" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">TRÊS CASES · DELIVERY E MARKETPLACE</div>
+       font-size:40px;line-height:1;color:var(--creme-wt);white-space:nowrap"
+       data-delay="330" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">TRÊS CASES · DELIVERY E MARKETPLACE</div>
 
-  <div class="marca-logo l-marcas" data-enter="fade" data-delay="520"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
+  <div class="abs l-apoio blk" data-enter="up" data-delay="430"
+       style="z-index:5;--x:72px;--cap:600px;--fs:25px;--lh:1.45;width:720px;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">A operação brasileira da chinesa Meituan, uma das maiores plataformas de delivery do mundo. Chegou ao país com R$ 5,6 bilhões anunciados para cinco anos.</div>
+
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="560"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
 <!-- A17/B1 · acento: verde da campanha (key visual verde+amarelo) -->
@@ -1334,25 +1323,30 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 25 ─ Capa · Bridgestone -->
-<section class="slide bg-creme sobre-claro" data-ato="cases" data-tom="claro" data-titulo="Capa · Bridgestone">
-  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
-  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
+<!-- 24 ─ Capa · Bridgestone -->
+<section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Bridgestone">
+  <div class="case__fundo"><img data-lazy="assets/img/cases/bridgestone-pneu-novo-fundo.jpg" data-lazy-m="assets/img/cases/bridgestone-pneu-novo-fundo-m.jpg" alt=""></div>
+  <div class="capa-cli__scrim"></div>
+  <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
+  <div class="marca marca--tr l-marcas sobre-escuro" data-enter="fade" data-delay="0">2026</div>
 
-  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="120"
-       style="left:738.0px;top:441.0px;width:444px;height:58px">
+  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
+       style="z-index:5;left:72px;top:320.0px;width:480px;height:60px">
     <img data-lazy="assets/img/logos-capas/bridgestone.png" data-lazy-m="assets/img/logos-capas/bridgestone-m.png" alt="Bridgestone" style="width:100%;height:100%;display:block">
   </div>
 
-  <div class="abs l-apoio" data-enter="scaleX" data-delay="280"
-       style="left:880px;top:620px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:center"></div>
+  <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
+       style="z-index:5;left:72px;top:470px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
 
-  <div class="abs l-chamada rl-alvo rl-caixa" style="left:50%;top:calc(672px - 0.145*44px);transform:translateX(-50%);
+  <div class="abs l-chamada rl-alvo rl-caixa" style="z-index:5;left:72px;top:calc(512px - 0.145*40px);
        font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-       font-size:44px;line-height:1;color:var(--preto-wt);white-space:nowrap"
-       data-delay="360" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">UM CASE · MOBILIDADE E ESPORTE</div>
+       font-size:40px;line-height:1;color:var(--creme-wt);white-space:nowrap"
+       data-delay="330" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">UM CASE · PNEUS E MOBILIDADE</div>
 
-  <div class="marca-logo l-marcas" data-enter="fade" data-delay="520"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
+  <div class="abs l-apoio blk" data-enter="up" data-delay="430"
+       style="z-index:5;--x:72px;--cap:600px;--fs:25px;--lh:1.45;width:720px;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">Bridgestone e Firestone, do maior fabricante de pneus do mundo: presença em mais de 150 países e duas fábricas no Brasil. A Firestone soma mais de 95 anos de história por aqui.</div>
+
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="560"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
 <!-- Acento: o vermelho da marca (matiz 349°) clareado até 5,2:1 contra o scrim.
@@ -1456,25 +1450,30 @@
   <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
-<!-- 27 ─ Capa · Multiplan -->
-<section class="slide bg-creme sobre-claro" data-ato="cases" data-tom="claro" data-titulo="Capa · Multiplan">
-  <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
-  <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
+<!-- 26 ─ Capa · Multiplan -->
+<section class="slide" data-ato="cases" data-tom="escuro" data-fundo="#000000" data-titulo="Capa · Multiplan">
+  <div class="case__fundo"><img data-lazy="assets/img/cases/barrashoppingsul-fundo.jpg" data-lazy-m="assets/img/cases/barrashoppingsul-fundo-m.jpg" alt=""></div>
+  <div class="capa-cli__scrim"></div>
+  <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0">Credenciais</div>
+  <div class="marca marca--tr l-marcas sobre-escuro" data-enter="fade" data-delay="0">2026</div>
 
-  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="120"
-       style="left:709.1px;top:417.9px;width:501.7px;height:104.3px">
+  <div class="abs l-visual capa-cli__logo" data-enter="pop" data-delay="140"
+       style="z-index:5;left:72px;top:296.9px;width:510.2px;height:106.1px">
     <img data-lazy="assets/img/logos-capas/multiplan.png" data-lazy-m="assets/img/logos-capas/multiplan-m.png" alt="Multiplan" style="width:100%;height:100%;display:block">
   </div>
 
-  <div class="abs l-apoio" data-enter="scaleX" data-delay="280"
-       style="left:880px;top:620px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:center"></div>
+  <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
+       style="z-index:5;left:72px;top:470px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
 
-  <div class="abs l-chamada rl-alvo rl-caixa" style="left:50%;top:calc(672px - 0.145*44px);transform:translateX(-50%);
+  <div class="abs l-chamada rl-alvo rl-caixa" style="z-index:5;left:72px;top:calc(512px - 0.145*40px);
        font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-       font-size:44px;line-height:1;color:var(--preto-wt);white-space:nowrap"
-       data-delay="360" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">UM CASE · VAREJO E SHOPPING CENTERS</div>
+       font-size:40px;line-height:1;color:var(--creme-wt);white-space:nowrap"
+       data-delay="330" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">DOIS CASES · SHOPPING E IMOBILIÁRIO</div>
 
-  <div class="marca-logo l-marcas" data-enter="fade" data-delay="520"><img src="assets/logo/wtag-preto.svg" alt="WT.AG"></div>
+  <div class="abs l-apoio blk" data-enter="up" data-delay="430"
+       style="z-index:5;--x:72px;--cap:600px;--fs:25px;--lh:1.45;width:720px;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">Uma das maiores empresas de shopping centers do país: 20 shoppings, dois complexos de torres corporativas e mais de 30 empreendimentos imobiliários construídos.</div>
+
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="560"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
 </section>
 
 <!-- BARRASHOPPINGSUL ─ BarraShoppingSul · Now New Barra! ─────────────────────────────────────────
@@ -1554,6 +1553,89 @@
       <div class="case__kpi" data-foco-item data-enter="up"><b data-count-to="1.3" data-count-dec="1" data-count-pos="M" data-delay="756">0M</b><span>ThruPlays</span></div>
       <div class="case__kpi" data-foco-item data-enter="up"><b data-count-to="577" data-count-pos="K" data-delay="790">0K</b><span>Viram 95% do vídeo</span></div>
       <div class="case__kpi" data-foco-item data-enter="up"><b data-count-to="234" data-count-pos="K" data-delay="823">0K</b><span>Engajadas no TikTok</span></div>
+    </div>
+  </div>
+  <div class="marca marca--bl marca--sm l-marcas sobre-escuro" data-enter="fade" data-delay="700">Case</div>
+  <div class="marca-logo l-marcas" data-enter="fade" data-delay="700"><img src="assets/logo/wtag-branco.svg" alt="WT.AG"></div>
+</section>
+
+<!-- GOLDEN-LAKE ─ Golden Lake · Lake Baikal ─────────────────────────────────────────
+     Case novo. O que já é definitivo: o logo do cliente, o videocase e todas as
+     imagens, que são QUADROS DO PRÓPRIO FILME — não há banco de imagem aqui, e
+     o fundo, o pôster e as três miniaturas saíram de tempos escolhidos do corte.
+     A cor de acento foi AMOSTRADA de material real da marca, não escolhida por
+     mim: dourado #AB7E2B, amostrado do GL_dourado_horizontal.png da marca.
+     O que é provisório e está marcado na tela: os três textos, os seis números
+     e as três miniaturas — estas últimas saem quando os 3 conteúdos chegarem. -->
+<section id="s-golden-lake" class="slide case case--sem-reperc" style="--acento:#AB7E2B" data-ato="cases" data-tom="escuro" data-titulo="Golden Lake · Lake Baikal">
+  <div class="case__fundo"><img data-lazy="assets/img/cases/golden-lake-fundo.jpg" data-lazy-m="assets/img/cases/golden-lake-fundo-m.jpg" alt=""></div>
+  <div class="case__scrim"></div>
+  <div class="marca marca--tl l-marcas sobre-escuro" data-enter="fade" data-delay="0"><span>Credenciais</span><button class="pilula-nav" type="button" data-ir="s-parceiras" data-nonav title="Ver as marcas parceiras da WT.AG">Clientes</button></div>
+  <div class="marca marca--tr l-marcas sobre-escuro" data-enter="fade" data-delay="0">2026</div>
+
+  <!-- Caixa de 46 de altura em vez dos 34 padrão, e topo em 136 em vez de 148.
+       O lockup do Golden Lake tem TRÊS níveis — monograma GL, o nome e a
+       assinatura Multiplan —, então a 34 de altura o nome ficava com uns 12px e
+       a assinatura com 6. Os logos de um nível só (odontoprev, magalu) cabem em
+       34 porque gastam a altura toda com a palavra.
+       O topo subiu 12 junto com o crescimento para o vão até o selo, que começa
+       em 210, continuar sendo os mesmos 28px. -->
+  <div class="case__marca case__marca--credito" style="left:72px;top:136px;width:528px;height:46px" data-delay="67">
+    <img data-lazy="assets/img/logos-cases/golden-lake.png" alt="Golden Lake">
+    <em>apresenta</em>
+  </div>
+  <div class="abs l-chamada case__selo" style="left:72px;top:210px" data-enter="up" data-delay="153">
+    <img data-lazy="assets/img/logos-cases/selo-lake-baikal.png" data-lazy-m="assets/img/logos-cases/selo-lake-baikal-m.png" alt="Lake Baikal">
+    <span class="selo__nota">Lake Baikal</span>
+  </div>
+
+  <div class="case__col" data-stagger="110" data-delay="260">
+    <div class="case__blk" data-enter="up"><h3>Contexto</h3>
+      <p data-texto="Depois de explorar diferentes dimensões do morar de alto padrão nos lançamentos do Lake Victoria e do Lake Eyre, o Golden Lake chegou ao seu terceiro condomínio, o Lake Baikal, com um novo desafio: traduzir o que significa viver bem nos dias de hoje.">Depois do Lake Victoria e do Lake Eyre, o Golden Lake chegou ao terceiro condomínio, o Lake Baikal, com um novo desafio: traduzir o que significa viver bem nos dias de hoje.</p></div>
+    <div class="case__blk" data-enter="up"><h3>Insight</h3>
+      <p data-texto="Ao olhar para o comportamento do consumidor porto-alegrense, identificamos que o tempo se tornou um dos ativos mais valiosos da vida contemporânea. Em uma rotina cada vez mais acelerada, conveniência, fluidez e previsibilidade ganham valor porque devolvem às pessoas a liberdade de escolher como aproveitar o próprio tempo.">No comportamento do consumidor porto-alegrense, o tempo apareceu como o ativo mais valioso: conveniência e fluidez ganham valor porque devolvem a liberdade de escolher como usá-lo.</p></div>
+    <div class="case__blk" data-enter="up"><h3>Ideia</h3>
+      <p data-texto="A partir disso, nasceu “Para viver no seu tempo”: um conceito que ressignifica a sofisticação para além dos atributos tradicionais do alto padrão. No Lake Baikal, estrutura, conforto e conveniência existem para tornar a rotina mais fluida e devolver ao morador aquilo que realmente importa: tempo para viver do seu jeito.">Nasceu “Para viver no seu tempo”: no Lake Baikal, estrutura, conforto e conveniência existem para tornar a rotina fluida e devolver ao morador o que importa — tempo para viver do seu jeito.</p></div>
+  </div>
+  <button class="case__mais" type="button">＋ Texto completo</button>
+
+  <div class="case__media" data-stagger="180" data-delay="378" data-foco style="--realce:1.035;--recuo:.968">
+    <div class="case__video" data-enter="expande" data-foco-item data-paralaxe="22" data-video="assets/video/case-golden-lake.mp4" data-poster="assets/img/cases/golden-lake-hero.jpg" data-legenda="Golden Lake · Lake Baikal — videocase">
+      <div class="px"><img data-lazy="assets/img/cases/golden-lake-hero.jpg" data-lazy-m="assets/img/cases/golden-lake-hero-m.jpg" alt="Cena do minidoc Lake Baikal"></div>
+      <button class="play-btn" type="button" aria-label="Assistir ao videocase"></button>
+      <span class="case__tag">Assistir ao videocase</span>
+    </div>
+    <div class="case__stack">
+    <div class="case__img case__img--video" data-enter="expande" data-foco-item data-paralaxe="16"
+         data-video="assets/video/case-golden-lake-v1.mp4" data-poster="assets/img/cases/golden-lake-vid1.jpg"
+         data-legenda="Golden Lake · Lake Baikal — conteúdo 1">
+      <div class="px"><img data-lazy="assets/img/cases/golden-lake-vid1.jpg" data-lazy-m="assets/img/cases/golden-lake-vid1-m.jpg" alt="Golden Lake · Lake Baikal — conteúdo 1"></div>
+      <button class="play-btn play-btn--mini" type="button" aria-label="Assistir ao conteúdo 1"></button>
+      <span class="case__tag">Assistir</span></div>
+    <div class="case__img case__img--video" data-enter="expande" data-foco-item data-paralaxe="16"
+         data-video="assets/video/case-golden-lake-v2.mp4" data-poster="assets/img/cases/golden-lake-vid2.jpg"
+         data-legenda="Golden Lake · Lake Baikal — conteúdo 2">
+      <div class="px"><img data-lazy="assets/img/cases/golden-lake-vid2.jpg" data-lazy-m="assets/img/cases/golden-lake-vid2-m.jpg" alt="Golden Lake · Lake Baikal — conteúdo 2"></div>
+      <button class="play-btn play-btn--mini" type="button" aria-label="Assistir ao conteúdo 2"></button>
+      <span class="case__tag">Assistir</span></div>
+    <div class="case__img case__img--video" data-enter="expande" data-foco-item data-paralaxe="16"
+         data-video="assets/video/case-golden-lake-v3.mp4" data-poster="assets/img/cases/golden-lake-vid3.jpg"
+         data-legenda="Golden Lake · Lake Baikal — conteúdo 3">
+      <div class="px"><img data-lazy="assets/img/cases/golden-lake-vid3.jpg" data-lazy-m="assets/img/cases/golden-lake-vid3-m.jpg" alt="Golden Lake · Lake Baikal — conteúdo 3"></div>
+      <button class="play-btn play-btn--mini" type="button" aria-label="Assistir ao conteúdo 3"></button>
+      <span class="case__tag">Assistir</span></div>
+    </div>
+  </div>
+
+  <div class="case__kpis case__kpis--vert" data-enter="up" data-delay="560"
+       data-foco style="--realce:1.1;--recuo:.94">
+    <div class="kpi-cx">
+      <div class="case__kpi" data-foco-item data-enter="up"><b data-count-to="14" data-count-pre="+" data-count-pos="M" data-delay="655">+0M</b><span>Impressões</span></div>
+      <div class="case__kpi" data-foco-item data-enter="up"><b data-count-to="373" data-count-pre="+" data-count-pos="K" data-delay="689">+0K</b><span>Cliques</span></div>
+      <div class="case__kpi" data-foco-item data-enter="up"><b data-count-to="553" data-count-pre="+" data-count-pos="K" data-delay="722">+0K</b><span>Engajamentos</span></div>
+      <div class="case__kpi" data-foco-item data-enter="up"><b data-count-to="853" data-count-pre="+" data-count-pos="K" data-delay="756">+0K</b><span>Pessoas alcançadas</span></div>
+      <div class="case__kpi" data-foco-item data-enter="up"><b data-count-to="13226" data-count-sep="1" data-delay="790">0</b><span>Leads gerados</span></div>
+      <div class="case__kpi" data-foco-item data-enter="up"><b>I.A</b><span>Como ferramenta</span></div>
     </div>
   </div>
   <div class="marca marca--bl marca--sm l-marcas sobre-escuro" data-enter="fade" data-delay="700">Case</div>
@@ -1679,8 +1761,8 @@
 
 </div><!-- /#viewport -->
 
-<script src="js/deck.js?v=187"></script>
-<script src="js/i18n-dic.js?v=187"></script>
-<script src="js/i18n.js?v=187"></script>
+<script src="js/deck.js?v=191"></script>
+<script src="js/i18n-dic.js?v=191"></script>
+<script src="js/i18n.js?v=191"></script>
 </body>
 </html>
