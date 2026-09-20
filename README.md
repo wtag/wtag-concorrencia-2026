@@ -40,7 +40,7 @@ assets/
   img/                  fotos, logos, selos
   video/                8 vídeos, 143 MB
   fonts/                Special Gothic Condensed One + Geist
-  logo/                 marcas WT.AG e Grupo WE
+  logo/                 marcas WT.AG
   logos-imprensa/       acervo de prêmios e veículos, com originais
 ```
 

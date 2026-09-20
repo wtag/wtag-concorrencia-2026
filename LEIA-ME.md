@@ -12,7 +12,7 @@
 > | Público | institucional | pitch para um anunciante |
 > | Idioma padrão | português | **inglês** (o toggle PT continua) |
 > | Telas | 31 | 29 |
-> | Grupo WE | abre o deck | **fora** — há um concorrente do anunciante entre os clientes do grupo |
+> | Abertura institucional do grupo | abre o deck | **fora** desta versão |
 > | Cases | dez | **oito**, agrupados por cliente, cada um com capa |
 > | Time | duas telas (Liderança · O Time) | **uma**, com o número de 140 |
 >
@@ -24,7 +24,7 @@
 > origem e continua valendo para tudo que é design system — a métrica do
 > lettering, a constante `--cap-k`, a calibração dos logotipos, o diagnóstico do
 > `Range` no Safari. Mas ele cita telas, cases e numerações que **não existem
-> mais nesta versão** (Grupo WE, Sicredi, Odontoprev, Golden Lake, Marcos Muniz).
+> mais nesta versão** (a abertura do grupo, Sicredi, Odontoprev, Marcos Muniz).
 > Leia essas passagens como histórico do sistema, não como mapa deste deck. O
 > mapa deste deck é a tabela de atos mais abaixo, que está atualizada.
 
@@ -89,7 +89,7 @@ js/deck.js          navegação, coreografia de entrada, roleta de texto, player
 js/review.js        marcação de áreas/pontos, lista e relatório
 assets/
   fonts/            Geist (300–700) + Special Gothic Condensed One
-  logo/             WT.AG (SVG preto/branco, + Social First) e Grupo WE
+  logo/             WT.AG (SVG preto/branco, + Social First)
   img/              fotos, logos de clientes/parceiros, framework, cases
     logos-cases/    logotipos dos clientes usados no topo de cada case
     time/           retratos da direção executiva e das lideranças
@@ -241,12 +241,12 @@ O que o gerador faz, e por quê:
 
 - **Tira a capa WT.AG** (`SEM_CAPA`). Ela recebe quem abre o deck e não sabe
   como andar nele; num PDF, que se folheia, é uma página de rodeio antes do
-  assunto. O documento abre na capa do Grupo WE. **No `index.html` a capa
+  assunto. Nesta versão o PDF abre na capa WT.AG. **No `index.html` a capa
   continua** — o gerador não toca no deck.
 - **Tira os cases sem texto fechado** (lista `EXCLUIR` no alto do arquivo). Um
   case com `(a definir)` no contexto e `(nº)` nos números passa numa tela que
   alguém narra em três segundos; num PDF, lido sozinho, ele é uma página
-  incompleta. Hoje ficam fora BarraShoppingSul, Golden Lake e Brasil Corre —
+  incompleta. Nesta versão a lista `EXCLUIR` está vazia: todos os oito cases têm texto e números fechados —
   **quando o texto chegar, é apagar o id da lista.**
 - **Empilha os slides como páginas** de 1920×1080 (= 1440×810 pt), cada uma
   congelada no quadro final: entra `is-played` na marcação e os contadores já
@@ -412,10 +412,16 @@ Onde o Figma e o PDF divergiam (slides 08/09/10/11/15), o Figma estava com os
 `x` achatados pela importação do PPTX; os valores medidos coincidiram com o
 Figma exatamente onde o Figma estava certo, o que validou o método.
 
-Os tamanhos dos logotipos dos murais (slides 04 e 15) saem de **massa óptica**
-`√(largura × altura)` constante, com compensação para marcas de traço denso — no
-slide 04 a Keeta foi ajustada por altura-de-x contra os vizinhos da fileira
-(Cinemark 26,5 · Haier 25,5 · Magalu 24 · BYD 23,5 → alvo 25).
+Os tamanhos dos logotipos do mural de **Marcas Parceiras** saem de **massa
+óptica** `√(largura × altura)` constante, com compensação para marcas de traço
+denso e ajuste por altura-de-x contra os vizinhos da fileira. (O outro mural que
+esta passagem citava era o de clientes do grupo, que saiu com o Ato 1.)
+
+**Correção registrada neste projeto:** para as **capas de cliente** a régua é
+outra — ali a equalização é por **área de tinta** (fração de tinta × largura ×
+altura), e não por massa óptica. Massa óptica erra feio em proporções extremas:
+foi ela que deixou o logotipo da Bridgestone desproporcional no case, e a área de
+tinta é que resolveu. Ver o comentário do bloco CAPAS DE CLIENTE no `index.html`.
 
 ## Assets: o que veio de onde
 

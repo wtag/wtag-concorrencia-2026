@@ -82,7 +82,7 @@ def extrair(html):
         apoios = [a for a in apoios if len(a) > 25]
         d['apoio'] = max(apoios, key=len) if apoios else ''
 
-        # ── números do Grupo WE ──
+        # ── blocos de número grande (herdado do ato institucional antigo) ──
         d['numeros'] = [{'v': limpo(m.group(1)), 'r': limpo(m.group(2))}
                         for m in re.finditer(r'class="[^"]*we-num__v[^"]*"[^>]*>(.*?)</\w+>\s*<\w+[^>]*class="[^"]*we-num__lb[^"]*"[^>]*>(.*?)</\w+>', lim, re.S)]
 
@@ -423,7 +423,7 @@ def emitir(dados):
             o.append(bloco_foto(d['foto']))
             if d['capa']['logo']:
                 o.append('<img style="width:min(62%%,300px);height:auto" '
-                         'data-lazy="%s" alt="Grupo WE">' % d['capa']['logo'])
+                         'data-lazy="%s" alt="">' % d['capa']['logo'])
             if d['capa']['card']:
                 o.append('<div class="rot">%s</div>' % esc(d['capa']['card']))
             o.append('</section>')

@@ -29,3 +29,9 @@ assets/video/_alta/
 # Mesma regra dos vídeos: master não entra no repositório. O que o deck usa é o
 # recorte 16:9 em assets/img/capas/, gerado a partir daqui.
 assets/img/capascases/
+
+# Pasta que o app cria para os arquivos que eu recebo anexados. O briefing da
+# concorrência vive aqui, e ele NÃO vai para o repositório: nomeia o concorrente
+# do anunciante, a lista de clientes recortada e as decisões ainda em aberto.
+# Já foi purgado do histórico uma vez — não deixe voltar.
+Claude outputs/

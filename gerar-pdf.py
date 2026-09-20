@@ -118,7 +118,7 @@ def formatar(valor, dec, sep):
 def fechar_contadores(bloco):
     """Escreve o valor final onde o deck escreveria com requestAnimationFrame.
 
-    Casa QUALQUER tag, não só <b>: os quatro números do slide do Grupo WE são
+    Casa QUALQUER tag, não só <b>: os números de bloco grande do deck são
     <span class="we-num">, e uma primeira versão que só olhava <b> deixou a
     página inteira em "+0,0 BI / +0 / 0 empresas / +0 clientes"."""
     def troca(m):
