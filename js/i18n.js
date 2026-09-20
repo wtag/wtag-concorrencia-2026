@@ -188,19 +188,20 @@
     atualizarBotao();
   }
 
-  /* O deck de concorrência é apresentado em inglês, então o PADRÃO é 'en' e o
-     português é que precisa estar gravado para valer. Repare no caso salvo ===
-     null: é a primeira visita, e é exatamente a máquina de quem vai apresentar —
-     por isso ele cai no inglês, e não no português.
+  /* O deck abre SEMPRE em inglês. Não é "inglês por omissão": é inglês toda vez,
+     de propósito, ignorando o que estiver gravado.
+     A versão anterior lembrava a última escolha, e isso é uma armadilha num
+     pitch: basta alguém clicar em PT numa conferência — ou eu, testando — para
+     a máquina passar a abrir em português para sempre, sem aviso. O toggle
+     continua valendo durante a sessão; ele só não sobrevive ao recarregamento.
+     O localStorage continua sendo escrito pelo aplicar(), e serve ao mobile.html
+     e a quem quiser ler o estado; simplesmente não manda mais na abertura.
      O HTML continua escrito em português e o data-pt continua guardando o
      original na primeira troca: a fonte não mudou de idioma, só o padrão de
-     exibição. Voltar ao português segue relendo o data-pt, e não reconstruindo
-     do dicionário no sentido inverso. */
+     exibição. */
   function iniciar() {
     montarBotao();
-    var salvo = null;
-    try { salvo = localStorage.getItem('wtag-idioma'); } catch (e) {}
-    if (salvo !== 'pt') aplicar('en');
+    aplicar('en');
   }
 
   if (document.readyState === 'loading') {

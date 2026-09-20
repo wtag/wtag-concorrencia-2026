@@ -182,12 +182,10 @@
     btn.setAttribute('aria-label', para === 'pt' ? 'Switch to English' : 'Mudar para português');
   }
   btn.addEventListener('click', function () { traduzir(idioma === 'pt' ? 'en' : 'pt'); });
-  /* Mesmo padrão do deck: inglês por omissão, português só se estiver gravado.
-     Se o localStorage explodir (aba privada), o catch deixa em inglês, que é o
-     idioma da apresentação. */
-  var salvoM = null;
-  try { salvoM = localStorage.getItem('wtag-idioma'); } catch (e) {}
-  if (salvoM !== 'pt') traduzir('en');
+  /* Mesma regra do deck: inglês TODA vez, e não "inglês se não houver nada
+     gravado". Lembrar a escolha faria um clique acidental em PT virar o padrão
+     permanente daquele aparelho. */
+  traduzir('en');
 
   window.MOBILE = { traduzir: traduzir, secoes: secs.length };
 })();

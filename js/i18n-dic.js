@@ -190,7 +190,6 @@ window.DIC_EN = {
 'Planejamento, compra e otimização de mídia, do digital ao offline, com a meta amarrada ao negócio.': 'Media planning, buying and optimisation, from digital to offline, tied to the business goal.',
 'Escuta das conversas e leitura dos dados para orientar a decisão, antes e depois da campanha.': 'Listening to the conversation and reading the data to guide decisions, before and after the campaign.',
 'Seleção, negociação e gestão de criadores, com a influência medida como mídia.': 'Creator selection, negotiation and management, with influence measured as media.',
-'Ideia, roteiro e produção: still, motion, stop motion e live action, do social ao filme.': 'Idea, script and production: still, motion, stop motion and live action, from social to film.',
 'Inteligência artificial dentro do processo criativo, da pesquisa à peça final.': 'Artificial intelligence inside the creative process, from research to the final piece.',
 'Conteúdo e estrutura para a marca ser encontrada, nas buscas e dentro das plataformas.': 'Content and structure so the brand gets found, in search and inside the platforms.',
 'Comunicação 360°': '360° Communications',
@@ -198,7 +197,6 @@ window.DIC_EN = {
 'Mídia e Performance': 'Media & Performance',
 'on e off': 'online and offline',
 'Social Listening e BI': 'Social Listening & BI',
-'Conteúdo e Criação': 'Content & Creative',
 'IA Aplicada à Criação': 'AI Applied to Creative',
 'SEO e Busca': 'SEO & Search',
 

@@ -1892,7 +1892,6 @@ a.reperc__it:hover .reperc__ph{border-color:var(--acento,var(--laranja-wt));
 .mandala__rot[data-f="5"].is-foco ~ .mandala__painel .mandala__ficha[data-f="5"]{opacity:1}
 .mandala__rot[data-f="6"].is-foco ~ .mandala__painel .mandala__ficha[data-f="6"]{opacity:1}
 .mandala__rot[data-f="7"].is-foco ~ .mandala__painel .mandala__ficha[data-f="7"]{opacity:1}
-.mandala__rot[data-f="8"].is-foco ~ .mandala__painel .mandala__ficha[data-f="8"]{opacity:1}
 
 @media (prefers-reduced-motion:reduce){
   .mandala__rot,.mandala__apoio,.mandala__painel,.mandala__ficha{transition:none}
