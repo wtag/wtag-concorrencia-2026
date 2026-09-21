@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WT.AG — Credenciais 2026</title>
 <meta name="description" content="Credenciais WT.AG 2026 — Social First Agency. Apresentação de slides.">
-<link rel="stylesheet" href="css/deck.css?v=204">
+<link rel="stylesheet" href="css/deck.css?v=209">
 </head>
 <body>
 
@@ -364,114 +364,119 @@
   </div>
 </section>
 
-<!-- 10 ─ O Que Fazemos · a mandala das frentes -->
-<!-- Direcional do Lucas (21.09): "antes de Estrutura, uma mandala (usar de base
-     layout do hub) com tudo que nós fazemos, em todas as frentes."
+<!-- 10 ─ O Que Fazemos · a mandala -->
+<!-- Refaz a mandala no molde da referência do grupo: disco no centro, setores em
+     coroa, serviços em duas faixas radiais e o nome de cada grupo do lado de
+     fora, ligado por um filete. No meio, o logotipo da WT.AG.
 
-     A composição é herdada do antigo slide "Hub de Soluções": arte radial à
-     direita, coluna de texto à esquerda em Geist Medium 44,3px nas mesmas
-     coordenadas (125,7 / 303 / 361 / 420), filete de 310×1,2 em y=502 e dois
-     blocos de apoio em 551 e 713. A cadência de entrada também é a de lá.
+     O AGRUPAMENTO é o assunto da tela, e não a lista. Os 25 serviços foram
+     lidos por afinidade de mercado e caíram em cinco frentes; o ângulo de cada
+     setor é proporcional ao número de serviços dele (360° ÷ 25 = 14,4° por
+     serviço), então o desenho já conta onde a agência tem mais repertório.
+     Nenhum tom inventado: os setores usam o mesmo creme da paleta, variando só
+     a opacidade numa rampa de .05 a .15 — é o que separa um setor do vizinho
+     sem introduzir cinza nenhum.
 
-     A ARTE, porém, é nova e é vetor — não o PNG antigo. Três razões: o texto
-     precisa passar pelo i18n (um PNG não traduz), o PDF sai leve e vetorial, e
-     mudar um raio vira mudar um número. Só os anéis, os raios e as pontas estão
-     em SVG; os rótulos são divs, para herdarem a mesma métrica de fonte do resto
-     do deck e serem traduzidos como qualquer outro texto.
+     Os serviços alternam entre duas faixas (r=252 e r=352) porque na mesma
+     faixa os rótulos se encostariam: no maior setor, sete itens em 100,8°
+     deixariam 14,4° entre vizinhos, e alternando a distância dobra.
 
-     A geometria diz a tese: o CENTRO é a lente (social first, em laranja chapado
-     com texto preto, como manda a paleta) e os RAIOS são o escopo 360. Oito
-     frentes a 45°, rótulos num raio de 300 a partir do centro em (1290, 540),
-     ancorados para fora — à esquerda do texto quando o raio aponta para a
-     esquerda, à direita quando aponta para a direita. -->
+     O HOVER aqui só aumenta a bolinha — a ficha de descrição saiu a pedido. O
+     item cresce pelo PONTO, e não por scale no bloco, porque o rótulo ao lado
+     tem de continuar legível no mesmo corpo. -->
 <section class="slide bg-preto sobre-escuro" data-ato="wtag" data-tom="escuro" data-fundo="#000000" data-titulo="O Que Fazemos">
   <div class="marca marca--tl l-marcas" data-enter="fade" data-delay="0">Credenciais</div>
   <div class="marca marca--tr l-marcas" data-enter="fade" data-delay="0">2026</div>
 
-  <!-- anéis -->
-  <div class="abs l-fundo" data-enter="fade" data-delay="0" style="left:940px;top:190px;width:700px;height:700px">
-    <svg width="700" height="700" viewBox="0 0 700 700" aria-hidden="true" focusable="false">
-      <g fill="none" stroke="#F7F9EA">
-        <circle cx="350" cy="350" r="290" stroke-opacity=".18"/>
-        <circle cx="350" cy="350" r="205" stroke-opacity=".17" stroke-dasharray="2 8"/>
-        <circle cx="350" cy="350" r="124" stroke-opacity=".22"/>
+  <div class="abs l-fundo" data-enter="fade" data-delay="0" style="left:0;top:0;width:1920px;height:1080px">
+    <svg width="1920" height="1080" viewBox="0 0 1920 1080" aria-hidden="true" focusable="false">
+      <g>
+    <path d="M967.5,368.2 L978.8,110.4 A430.0,430.0 0 0,1 1240.4,214.0 L1072.2,409.6 A172.0,172.0 0 0,0 967.5,368.2 Z" fill="#F7F9EA" fill-opacity="0.05"/>
+    <path d="M1083.1,419.9 L1267.7,239.7 A430.0,430.0 0 0,1 1385.5,602.1 L1130.2,564.8 A172.0,172.0 0 0,0 1083.1,419.9 Z" fill="#F7F9EA" fill-opacity="0.075"/>
+    <path d="M1127.4,579.6 L1378.5,638.9 A430.0,430.0 0 0,1 924.8,968.6 L945.9,711.4 A172.0,172.0 0 0,0 1127.4,579.6 Z" fill="#F7F9EA" fill-opacity="0.1"/>
+    <path d="M931.0,709.5 L887.5,963.9 A430.0,430.0 0 0,1 541.5,638.9 L792.6,579.6 A172.0,172.0 0 0,0 931.0,709.5 Z" fill="#F7F9EA" fill-opacity="0.125"/>
+    <path d="M789.8,564.8 L534.5,602.1 A430.0,430.0 0 0,1 941.2,110.4 L952.5,368.2 A172.0,172.0 0 0,0 789.8,564.8 Z" fill="#F7F9EA" fill-opacity="0.15"/>
+      </g>
+      <g fill="none" stroke="#F7F9EA" stroke-opacity=".16" stroke-width="1">
+        <circle cx="960" cy="540" r="430"/>
+        <circle cx="960" cy="540" r="172"/>
+      </g>
+      <g stroke="#F7F9EA" stroke-opacity=".28" stroke-width="1">
+    <line x1="1120.5" y1="134.6" x2="1127.9" y2="116.0"/>
+    <line x1="1374.7" y1="405.3" x2="1393.7" y2="399.1"/>
+    <line x1="1216.3" y1="892.7" x2="1228.0" y2="908.9"/>
+    <line x1="661.5" y1="857.8" x2="647.8" y2="872.4"/>
+    <line x1="624.1" y1="262.1" x2="608.6" y2="249.3"/>
+      </g>
+      <g>
+    <circle cx="979.2" cy="290.7" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1102.1" cy="181.1" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1116.6" cy="345.1" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1248.3" cy="283.4" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1184.9" cy="430.8" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1340.0" cy="472.2" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1208.8" cy="564.7" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1328.4" cy="655.2" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1172.0" cy="672.6" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1224.9" cy="820.8" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1080.0" cy="759.3" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="1053.5" cy="914.5" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="957.3" cy="790.0" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="872.8" cy="916.0" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="842.2" cy="760.5" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="695.8" cy="821.4" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="747.4" cy="671.5" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="590.2" cy="650.6" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="710.5" cy="555.3" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="580.9" cy="467.3" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="733.8" cy="433.4" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="662.6" cy="294.0" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="812.9" cy="337.8" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="817.5" cy="181.3" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
+    <circle cx="919.6" cy="224.6" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
       </g>
     </svg>
   </div>
 
-  <!-- raios e pontas · a íris abre do centro para fora, que é o gesto da lente -->
-  <div class="abs l-visual" data-enter="iris" data-delay="109" style="left:940px;top:190px;width:700px;height:700px">
-    <svg width="700" height="700" viewBox="0 0 700 700" aria-hidden="true" focusable="false">
-      <g stroke="#F7F9EA" stroke-opacity=".26" stroke-width="1">
-    <line x1="350.0" y1="218.0" x2="350.0" y2="66.0"/>
-    <line x1="453.2" y1="267.7" x2="572.0" y2="172.9"/>
-    <line x1="478.7" y1="379.4" x2="626.9" y2="413.2"/>
-    <line x1="407.3" y1="468.9" x2="473.2" y2="605.9"/>
-    <line x1="292.7" y1="468.9" x2="226.8" y2="605.9"/>
-    <line x1="221.3" y1="379.4" x2="73.1" y2="413.2"/>
-    <line x1="246.8" y1="267.7" x2="128.0" y2="172.9"/>
-      </g>
-      <g fill="#F7F9EA" fill-opacity=".5">
-    <circle cx="350.0" cy="60.0" r="4.5"/>
-    <circle cx="576.7" cy="169.2" r="4.5"/>
-    <circle cx="632.7" cy="414.5" r="4.5"/>
-    <circle cx="475.8" cy="611.3" r="4.5"/>
-    <circle cx="224.2" cy="611.3" r="4.5"/>
-    <circle cx="67.3" cy="414.5" r="4.5"/>
-    <circle cx="123.3" cy="169.2" r="4.5"/>
-      </g>
-    </svg>
+  <div class="mand__nucleo l-visual" data-enter="pop" data-delay="120">
+    <img src="assets/logo/wtag-branco.svg" alt="WT.AG">
   </div>
 
-  <!-- o centro: a lente. Laranja chapado, texto preto (seção 3.2). -->
-  <div class="abs l-visual display mandala__nucleo" data-enter="pop" data-delay="180"
-       style="left:1166px;top:416px;width:248px;height:248px;border-radius:50%;
-       background:var(--laranja-wt);display:flex;align-items:center;justify-content:center;
-       font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-       font-size:68px;line-height:.84;text-align:center;color:var(--preto-wt)">SOCIAL<br>FIRST</div>
-
-  <!-- rótulos das frentes -->
-  <div class="abs l-apoio mandala__rotulos" style="left:0;top:0;width:1920px;height:1080px" data-stagger="52" data-delay="420" data-foco>
-    <div class="mandala__rot" data-foco-item data-f="1" data-enter="up" style="position:absolute;left:1290.0px;top:218.0px;--t:translateX(-50%) translateY(-50%);transform:var(--t);
-         text-align:center;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
-         color:rgba(247,249,234,.92);white-space:nowrap"><span>Comunicação 360°</span></div>
-    <div class="mandala__rot" data-foco-item data-f="2" data-enter="up" style="position:absolute;left:1541.7px;top:339.2px;--t:translateX(0) translateY(-50%);transform:var(--t);
-         text-align:left;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
-         color:rgba(247,249,234,.92);white-space:nowrap"><span>Gestão de Redes Sociais</span><br><span class="mandala__sub" style="font-weight:300;font-size:16px;color:rgba(247,249,234,.66)">always on</span></div>
-    <div class="mandala__rot" data-foco-item data-f="3" data-enter="up" style="position:absolute;left:1603.9px;top:611.7px;--t:translateX(0) translateY(-50%);transform:var(--t);
-         text-align:left;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
-         color:rgba(247,249,234,.92);white-space:nowrap"><span>Mídia e Performance</span><br><span class="mandala__sub" style="font-weight:300;font-size:16px;color:rgba(247,249,234,.66)">on e off</span></div>
-    <div class="mandala__rot" data-foco-item data-f="4" data-enter="up" style="position:absolute;left:1429.7px;top:830.1px;--t:translateX(0) translateY(-50%);transform:var(--t);
-         text-align:left;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
-         color:rgba(247,249,234,.92);white-space:nowrap"><span>Social Listening e BI</span></div>
-    <div class="mandala__rot" data-foco-item data-f="5" data-enter="up" style="position:absolute;left:1150.3px;top:830.1px;--t:translateX(-100%) translateY(-50%);transform:var(--t);
-         text-align:right;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
-         color:rgba(247,249,234,.92);white-space:nowrap"><span>Influencer Marketing</span></div>
-    <div class="mandala__rot" data-foco-item data-f="6" data-enter="up" style="position:absolute;left:976.1px;top:611.7px;--t:translateX(-100%) translateY(-50%);transform:var(--t);
-         text-align:right;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
-         color:rgba(247,249,234,.92);white-space:nowrap"><span>IA Aplicada à Criação</span></div>
-    <div class="mandala__rot" data-foco-item data-f="7" data-enter="up" style="position:absolute;left:1038.3px;top:339.2px;--t:translateX(-100%) translateY(-50%);transform:var(--t);
-         text-align:right;font-family:var(--font-sans);font-weight:500;font-size:21px;line-height:1.35;
-         color:rgba(247,249,234,.92);white-space:nowrap"><span>SEO e Busca</span></div>
-  <div class="abs l-apoio" style="left:122px;top:502px;width:310px;height:1.2px;background:rgba(247,249,234,.3);transform-origin:left" data-enter="scaleX" data-delay="344"></div>
-  <div class="abs l-apoio mandala__apoio" style="left:128px;top:calc(551px - 0.145*24px);font-family:var(--font-sans);font-weight:300;font-size:24px;line-height:1.33;color:rgba(247,249,234,.86)" data-enter="up" data-delay="378">Não é uma lista de serviços.<br>É o mesmo olhar aplicado<br>a todas as frentes.</div>
-  <div class="abs l-apoio mandala__apoio" style="left:128px;top:calc(713px - 0.145*22px);font-family:var(--font-sans);font-weight:300;font-size:22px;line-height:1.36;color:rgba(247,249,234,.86)" data-enter="up" data-delay="428">O escopo é 360.<br>A lente é social.</div>
-    <div class="mandala__painel" aria-hidden="true">
-      <div class="mandala__ficha" data-f="1"><b>Comunicação 360°</b><span>Da estratégia à execução, em todos os pontos de contato — on e off, com o mesmo olhar.</span></div>
-      <div class="mandala__ficha" data-f="2"><b>Gestão de Redes Sociais</b><span>Presença diária: conteúdo, comunidade e resposta em tempo real, no ritmo de cada plataforma.</span></div>
-      <div class="mandala__ficha" data-f="3"><b>Mídia e Performance</b><span>Planejamento, compra e otimização de mídia, do digital ao offline, com a meta amarrada ao negócio.</span></div>
-      <div class="mandala__ficha" data-f="4"><b>Social Listening e BI</b><span>Escuta das conversas e leitura dos dados para orientar a decisão, antes e depois da campanha.</span></div>
-      <div class="mandala__ficha" data-f="5"><b>Influencer Marketing</b><span>Seleção, negociação e gestão de criadores, com a influência medida como mídia.</span></div>
-      <div class="mandala__ficha" data-f="6"><b>IA Aplicada à Criação</b><span>Inteligência artificial dentro do processo criativo, da pesquisa à peça final.</span></div>
-      <div class="mandala__ficha" data-f="7"><b>SEO e Busca</b><span>Conteúdo e estrutura para a marca ser encontrada, nas buscas e dentro das plataformas.</span></div>
-    </div>
+  <div class="abs l-apoio mand__pista" style="left:0;top:0;width:1920px;height:1080px;--realce:1;--recuo:1"
+       data-stagger="34" data-delay="300" data-foco>
+    <div class="mand__it" data-foco-item data-g="0" data-enter="up" style="left:979.2px;top:281.7px"><i class="mand__dot"></i><span>Estratégia &amp; Inteligência</span></div>
+    <div class="mand__it" data-foco-item data-g="0" data-enter="up" style="left:1102.1px;top:172.1px"><i class="mand__dot"></i><span>Consumer Insights</span></div>
+    <div class="mand__it" data-foco-item data-g="0" data-enter="up" style="left:1116.6px;top:336.1px"><i class="mand__dot"></i><span>Startup Thinking</span></div>
+    <div class="mand__it" data-foco-item data-g="1" data-enter="up" style="left:1248.3px;top:274.4px"><i class="mand__dot"></i><span>Mídia Programática</span></div>
+    <div class="mand__it" data-foco-item data-g="1" data-enter="up" style="left:1184.9px;top:421.8px"><i class="mand__dot"></i><span>Campaign LP</span></div>
+    <div class="mand__it" data-foco-item data-g="1" data-enter="up" style="left:1340.0px;top:463.2px"><i class="mand__dot"></i><span>OOH</span></div>
+    <div class="mand__it" data-foco-item data-g="1" data-enter="up" style="left:1208.8px;top:555.7px"><i class="mand__dot"></i><span>TV</span></div>
+    <div class="mand__it" data-foco-item data-g="2" data-enter="up" style="left:1328.4px;top:646.2px"><i class="mand__dot"></i><span>Conteúdo Social</span></div>
+    <div class="mand__it" data-foco-item data-g="2" data-enter="up" style="left:1172.0px;top:663.6px"><i class="mand__dot"></i><span>Editoria Digital</span></div>
+    <div class="mand__it" data-foco-item data-g="2" data-enter="up" style="left:1224.9px;top:811.8px"><i class="mand__dot"></i><span>Cultura Digital</span></div>
+    <div class="mand__it" data-foco-item data-g="2" data-enter="up" style="left:1080.0px;top:750.3px"><i class="mand__dot"></i><span>Branded content</span></div>
+    <div class="mand__it" data-foco-item data-g="2" data-enter="up" style="left:1053.5px;top:905.5px"><i class="mand__dot"></i><span>Influência Orgânica</span></div>
+    <div class="mand__it" data-foco-item data-g="2" data-enter="up" style="left:957.3px;top:781.0px"><i class="mand__dot"></i><span>Gestão Comunidades</span></div>
+    <div class="mand__it" data-foco-item data-g="3" data-enter="up" style="left:872.8px;top:907.0px"><i class="mand__dot"></i><span>Ativação</span></div>
+    <div class="mand__it" data-foco-item data-g="3" data-enter="up" style="left:842.2px;top:751.5px"><i class="mand__dot"></i><span>PR Stunt</span></div>
+    <div class="mand__it" data-foco-item data-g="3" data-enter="up" style="left:695.8px;top:812.4px"><i class="mand__dot"></i><span>Sponsorship</span></div>
+    <div class="mand__it" data-foco-item data-g="3" data-enter="up" style="left:747.4px;top:662.5px"><i class="mand__dot"></i><span>Ações Promocionais</span></div>
+    <div class="mand__it" data-foco-item data-g="3" data-enter="up" style="left:590.2px;top:641.6px"><i class="mand__dot"></i><span>Campanha Personalizada</span></div>
+    <div class="mand__it" data-foco-item data-g="4" data-enter="up" style="left:710.5px;top:546.3px"><i class="mand__dot"></i><span>Varejo / CTA</span></div>
+    <div class="mand__it" data-foco-item data-g="4" data-enter="up" style="left:580.9px;top:458.3px"><i class="mand__dot"></i><span>PDV</span></div>
+    <div class="mand__it" data-foco-item data-g="4" data-enter="up" style="left:733.8px;top:424.4px"><i class="mand__dot"></i><span>Merchan</span></div>
+    <div class="mand__it" data-foco-item data-g="4" data-enter="up" style="left:662.6px;top:285.0px"><i class="mand__dot"></i><span>E-commerce</span></div>
+    <div class="mand__it" data-foco-item data-g="4" data-enter="up" style="left:812.9px;top:328.8px"><i class="mand__dot"></i><span>Incentivo / Fidelidade</span></div>
+    <div class="mand__it" data-foco-item data-g="4" data-enter="up" style="left:817.5px;top:172.3px"><i class="mand__dot"></i><span>CRM</span></div>
+    <div class="mand__it" data-foco-item data-g="4" data-enter="up" style="left:919.6px;top:215.6px"><i class="mand__dot"></i><span>Operação sob Demanda</span></div>
   </div>
 
-  <!-- coluna de texto · mesmas coordenadas do Hub de Soluções -->
-  <div class="abs l-chamada" style="left:0;top:0;width:1920px;height:1080px" data-stagger="80" data-delay="235">
-    <div class="mandala__ln" data-enter="up" style="position:absolute;left:125.7px;top:calc(303px - 0.145*44.3px);font-family:var(--font-sans);font-weight:500;font-size:44.3px;line-height:1;color:var(--creme-wt)">Tudo o que uma marca</div>
-    <div class="mandala__ln" data-enter="up" style="position:absolute;left:125.7px;top:calc(361px - 0.145*44.3px);font-family:var(--font-sans);font-weight:500;font-size:44.3px;line-height:1;color:var(--creme-wt)">precisa, visto pela</div>
-    <div class="mandala__ln" data-enter="up" style="position:absolute;left:125.7px;top:calc(420px - 0.145*44.3px);font-family:var(--font-sans);font-weight:500;font-size:44.3px;line-height:1;color:var(--creme-wt)">lente do social.</div>
+  <div class="abs l-chamada" style="left:0;top:0;width:1920px;height:1080px" data-stagger="90" data-delay="240">
+    <div class="mand__grupo" data-enter="up" style="left:1133.0px;top:103.0px;transform:translateX(0) translateY(-50%);text-align:left">Inteligência &amp; Planejamento</div>
+    <div class="mand__grupo" data-enter="up" style="left:1407.0px;top:394.8px;transform:translateX(0) translateY(-50%);text-align:left">Mídia &amp; Performance</div>
+    <div class="mand__grupo" data-enter="up" style="left:1236.3px;top:920.2px;transform:translateX(0) translateY(-50%);text-align:left">Social &amp; Conteúdo</div>
+    <div class="mand__grupo" data-enter="up" style="left:638.3px;top:882.6px;transform:translateX(-100%) translateY(-50%);text-align:right">Marca &amp; Ativação</div>
+    <div class="mand__grupo" data-enter="up" style="left:597.9px;top:240.4px;transform:translateX(-100%) translateY(-50%);text-align:right">Varejo &amp; Relacionamento</div>
   </div>
 
   <div class="marca marca--bl marca--sm l-marcas" data-enter="fade" data-delay="820">O que fazemos</div>
@@ -820,7 +825,7 @@
 
   <div class="int__regua l-visual" data-enter="scaleY" data-delay="90"></div>
 
-  <div class="abs l-chamada display escada--forte blk" data-en-txt="It's not about<br>having the tool,<br>but how<br>you use it" data-en-fs="70.4px" data-en-cap="678px"
+  <div class="abs l-chamada display escada--forte blk int__chamada" data-en-txt="It's not about<br>having the tool,<br>but how<br>you use it" data-en-fs="70.4px" data-en-cap="678px"
        style="--x:72px;--cap:667px;--fs:73.2px;--lh:1.05;font-family:var(--font-display);font-weight:400;text-transform:uppercase;color:var(--preto-wt)"
        data-enter="up" data-delay="150">Não é sobre ter<br>a ferramenta,<br>mas sim como<br>usá-la</div>
 
@@ -832,7 +837,7 @@
   <div class="int__fio l-visual" style="left:640px;top:682px;width:48px;height:1px" data-enter="scaleX" data-delay="290"></div>
   <div class="int__fio l-visual" style="left:640px;top:844px;width:48px;height:1px" data-enter="scaleX" data-delay="305"></div>
 
-  <div class="abs l-chamada display escada--forte blk" style="--x:688px;--cap:477px;--fs:108px;--lh:1;font-family:var(--font-display);font-weight:400;text-transform:uppercase;color:var(--preto-wt)"
+  <div class="abs l-chamada display escada--forte blk int__marca" style="--x:688px;--cap:477px;--fs:108px;--lh:1;font-family:var(--font-display);font-weight:400;text-transform:uppercase;color:var(--preto-wt)"
        data-enter="up" data-delay="200">WT.INTELLIGENCE</div>
 
   <div class="abs l-apoio" style="left:0;top:0;width:1920px;height:1080px" data-stagger="70" data-delay="330">
@@ -871,7 +876,7 @@
 
   <div class="int__regua l-visual" data-enter="scaleY" data-delay="90"></div>
 
-  <div class="abs l-chamada display escada--forte blk" style="--x:72px;--cap:880px;--fs:85.9px;--lh:1;font-family:var(--font-display);font-weight:400;text-transform:uppercase;color:var(--preto-wt)"
+  <div class="abs l-chamada display escada--forte blk ferr__chamada" style="--x:72px;--cap:880px;--fs:85.9px;--lh:1;font-family:var(--font-display);font-weight:400;text-transform:uppercase;color:var(--preto-wt)"
        data-enter="up" data-delay="150">Ferramentas</div>
 
     <div class="ferr__col" style="left:620px" data-stagger="46" data-delay="150">
@@ -1860,8 +1865,8 @@
 
 </div><!-- /#viewport -->
 
-<script src="js/deck.js?v=204"></script>
-<script src="js/i18n-dic.js?v=204"></script>
-<script src="js/i18n.js?v=204"></script>
+<script src="js/deck.js?v=209"></script>
+<script src="js/i18n-dic.js?v=209"></script>
+<script src="js/i18n.js?v=209"></script>
 </body>
 </html>

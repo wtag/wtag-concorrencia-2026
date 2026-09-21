@@ -28,6 +28,30 @@ ENT = [('&nbsp;', ' '), ('&amp;', '&'), ('&quot;', '"'), ('&#39;', "'"),
        ('&lt;', '<'), ('&gt;', '>')]
 
 
+def interior(html, classe):
+    """innerHTML do primeiro elemento que tem essa classe.
+    Varredura, e não regex: o data-en-txt da chamada de inteligência tem <br>
+    dentro, ou seja um '>' NO MEIO do valor do atributo, e qualquer [^>]*>
+    fecha a tag no lugar errado — foi exatamente o que aconteceu, e o título
+    saiu com pedaço de style dentro."""
+    i = html.find(classe)
+    if i < 0:
+        return ''
+    k, aspas = html.rfind('<', 0, i), None
+    while k < len(html):
+        c = html[k]
+        if aspas:
+            if c == aspas:
+                aspas = None
+        elif c in '"\'':
+            aspas = c
+        elif c == '>':
+            break
+        k += 1
+    fim = html.find('</div>', k)
+    return html[k + 1:fim]
+
+
 def entidades(t):
     """Entidade HTML → caractere. Tem de vir ANTES do esc(), senão o esc()
     reescapa o & e o texto sai literal na tela."""
@@ -178,27 +202,31 @@ def extrair(html):
             d['divisor'] = ''
 
         # ── mandala ──
-        # No palco ela é radial; num telefone, radial não cabe e não se lê. O que
-        # a tela DIZ, porém, cabe: o centro é a lente e as frentes são o escopo.
-        # Vira, então, núcleo + lista — a mesma informação, sem a geometria.
-        if 'mandala__rotulos' in lim:
-            frentes = []
-            # a descrição de cada frente vive na ficha que o desktop mostra no
-            # hover. Num telefone não há hover, então ela vira texto corrido —
-            # é o mesmo conteúdo, sem o gesto.
-            fichas = {}
-            for m in re.finditer(r'<div class="mandala__ficha"[^>]*><b>(.*?)</b><span>(.*?)</span></div>', lim, re.S):
-                fichas[limpo(m.group(1))] = limpo(m.group(2))
-            for m in re.finditer(r'<div class="mandala__rot"[^>]*>(.*?)</div>', lim, re.S):
-                dentro = m.group(1)
-                nome = limpo(um(r'<span>(.*?)</span>', dentro))
-                sub  = limpo(um(r'<span class="mandala__sub"[^>]*>(.*?)</span>', dentro))
-                if nome:
-                    frentes.append({'n': nome, 's': sub, 'd': fichas.get(nome, '')})
+        # O data-g de cada serviço diz a que frente ele pertence. Sem ele eu
+        # teria de inferir o agrupamento pela ordem no DOM, que é exatamente o
+        # tipo de acoplamento que quebra em silêncio na primeira reordenação.
+        if 'mand__grupo' in lim:
             d['mandala'] = {
-                'nucleo': limpo(um(r'class="[^"]*mandala__nucleo[^"]*"[^>]*>(.*?)</div>', lim).replace('<br>', ' ')),
-                'linhas': [limpo(x) for x in re.findall(r'<div class="mandala__ln"[^>]*>(.*?)</div>', lim, re.S)],
-                'frentes': frentes,
+                'grupos': [limpo(x) for x in re.findall(r'class="mand__grupo"[^>]*>(.*?)</div>', lim, re.S)],
+                'itens': [(int(m.group(1)), limpo(m.group(2)))
+                          for m in re.finditer(r'class="mand__it"[^>]*data-g="(\d+)"[\s\S]*?<span>(.*?)</span>', lim)],
+            }
+
+        # ── inteligência ──
+        if 'int__bloco' in lim:
+            d['intel'] = {
+                'chamada': [limpo(x) for x in linhas(interior(lim, 'int__chamada'))],
+                'marca':   limpo(interior(lim, 'int__marca')),
+                'blocos':  [(limpo(m.group(1)), limpo(m.group(2)), [limpo(x) for x in re.findall(r'<i>(.*?)</i>', m.group(3))])
+                            for m in re.finditer(r'<div class="int__nome"><b>(.*?)</b><span>(.*?)</span></div>\s*<div class="int__sub"[^>]*>(.*?)</div>', lim, re.S)],
+            }
+
+        # ── ferramentas ──
+        if 'ferr__it' in lim:
+            d['ferr'] = {
+                'titulo': limpo(interior(lim, 'ferr__chamada')),
+                'itens': [(limpo(m.group(1)), limpo(m.group(2)))
+                          for m in re.finditer(r'<div class="ferr__it"[^>]*><b>(.*?)</b><span>(.*?)</span></div>', lim, re.S)],
             }
 
         # ── capa (slide 1) ──
@@ -426,6 +454,49 @@ def emitir(dados):
                          'data-lazy="%s" alt="">' % d['capa']['logo'])
             if d['capa']['card']:
                 o.append('<div class="rot">%s</div>' % esc(d['capa']['card']))
+            o.append('</section>')
+            continue
+
+        # ── mandala ────────────────────────────────────────────────────────
+        # No palco ela é radial; num telefone radial não cabe e não se lê. O que
+        # a tela DIZ cabe: cinco frentes e o que mora em cada uma. Vira lista.
+        if d.get('mandala'):
+            m = d['mandala']
+            o.append(sec_abre(d, auto=True))
+            o.append('<h2 class="tit tit--p">%s</h2>' % esc(t))
+            for gi, g in enumerate(m['grupos']):
+                servs = [s for k, s in m['itens'] if k == gi]
+                o.append('<div class="rot" style="margin-top:24px">%s</div>' % esc(g))
+                o.append('<div class="reperc">%s</div>'
+                         % ''.join('<span class="premio"><em style="max-width:none">%s</em></span>' % esc(s)
+                                   for s in servs))
+            o.append('</section>')
+            continue
+
+        # ── inteligência ───────────────────────────────────────────────────
+        if d.get('intel'):
+            k = d['intel']
+            o.append(sec_abre(d, auto=True))
+            if k['chamada']: o.append('<h2 class="tit">%s</h2>' % '<br>'.join(map(esc, k['chamada'])))
+            if k['marca']:   o.append('<div class="rot" style="margin-top:20px">%s</div>' % esc(k['marca']))
+            for nome, desc, subs in k['blocos']:
+                o.append('<div class="rot" style="margin-top:22px">%s</div>' % esc(nome))
+                o.append('<p class="txt" style="margin-top:6px">%s</p>' % esc(desc))
+                if subs:
+                    o.append('<div class="reperc">%s</div>'
+                             % ''.join('<span class="premio"><em style="max-width:none">%s</em></span>' % esc(x)
+                                       for x in subs))
+            o.append('</section>')
+            continue
+
+        # ── ferramentas ────────────────────────────────────────────────────
+        if d.get('ferr'):
+            k = d['ferr']
+            o.append(sec_abre(d, auto=True))
+            o.append('<h2 class="tit tit--p">%s</h2>' % esc(k['titulo'] or t))
+            for nome, desc in k['itens']:
+                o.append('<div class="rot" style="margin-top:20px">%s</div>' % esc(nome))
+                o.append('<p class="txt" style="margin-top:6px">%s</p>' % esc(desc))
             o.append('</section>')
             continue
 

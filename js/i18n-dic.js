@@ -154,6 +154,34 @@ window.DIC_EN = {
 'Ver as marcas parceiras da WT.AG': 'See WT.AG partner brands',
 '＋ Texto completo': '＋ Full text',
 
+/* ── mandala · os 25 serviços e as cinco frentes ──────────────────────────
+   As chaves trazem &amp; porque é assim que o innerHTML devolve o "&" do HTML —
+   com "&" puro a chave não casaria e o rótulo ficaria em português.
+   Nomes que já são termo de mercado em inglês não têm entrada: Consumer
+   Insights, Startup Thinking, Campaign LP, OOH, TV, PR Stunt, Sponsorship,
+   E-commerce, CRM. */
+'Inteligência &amp; Planejamento': 'Intelligence &amp; Planning',
+'Mídia &amp; Performance': 'Media &amp; Performance',
+'Social &amp; Conteúdo': 'Social &amp; Content',
+'Marca &amp; Ativação': 'Brand &amp; Activation',
+'Varejo &amp; Relacionamento': 'Retail &amp; CRM',
+'Estratégia &amp; Inteligência': 'Strategy &amp; Intelligence',
+'Mídia Programática': 'Programmatic Media',
+'Conteúdo Social': 'Social Content',
+'Editoria Digital': 'Digital Editorial',
+'Cultura Digital': 'Digital Culture',
+'Branded content': 'Branded Content',
+'Influência Orgânica': 'Organic Influence',
+'Gestão Comunidades': 'Community Management',
+'Ativação': 'Brand Activation',
+'Ações Promocionais': 'Promotional Campaigns',
+'Campanha Personalizada': 'Custom Campaigns',
+'Varejo / CTA': 'Retail / CTA',
+'PDV': 'Point of Sale',
+'Merchan': 'Merchandising',
+'Incentivo / Fidelidade': 'Incentive / Loyalty',
+'Operação sob Demanda': 'On-Demand Operations',
+
 /* ── inteligência e ferramentas ───────────────────────────────────────────
    Nomes de produto e de ferramenta não se traduzem — TGI, SemRush, Stilingue,
    WDI Consulting, Adhoc, R&F. O que se traduz é o que explica cada um.
@@ -209,25 +237,6 @@ window.DIC_EN = {
 /* ── 10 · mandala · o que fazemos ────────────────────────────────────── */
 'O Que Fazemos': 'What We Do',
 'O que fazemos': 'What we do',
-'Tudo o que uma marca': 'Everything a brand',
-'precisa, visto pela': 'needs, seen through',
-'lente do social.': 'the social lens.',
-'Não é uma lista de serviços.<br>É o mesmo olhar aplicado<br>a todas as frentes.': 'This is not a list of services.<br>It is one way of looking,<br>applied to every front.',
-'O escopo é 360.<br>A lente é social.': 'The scope is 360.<br>The lens is social.',
-'Da estratégia à execução, em todos os pontos de contato — on e off, com o mesmo olhar.': 'From strategy to execution, across every touchpoint — online and off, with the same eye.',
-'Presença diária: conteúdo, comunidade e resposta em tempo real, no ritmo de cada plataforma.': 'Daily presence: content, community and real-time response, at the pace of each platform.',
-'Planejamento, compra e otimização de mídia, do digital ao offline, com a meta amarrada ao negócio.': 'Media planning, buying and optimisation, from digital to offline, tied to the business goal.',
-'Escuta das conversas e leitura dos dados para orientar a decisão, antes e depois da campanha.': 'Listening to the conversation and reading the data to guide decisions, before and after the campaign.',
-'Seleção, negociação e gestão de criadores, com a influência medida como mídia.': 'Creator selection, negotiation and management, with influence measured as media.',
-'Inteligência artificial dentro do processo criativo, da pesquisa à peça final.': 'Artificial intelligence inside the creative process, from research to the final piece.',
-'Conteúdo e estrutura para a marca ser encontrada, nas buscas e dentro das plataformas.': 'Content and structure so the brand gets found, in search and inside the platforms.',
-'Comunicação 360°': '360° Communications',
-'Gestão de Redes Sociais': 'Social Media Management',
-'Mídia e Performance': 'Media & Performance',
-'on e off': 'online and offline',
-'Social Listening e BI': 'Social Listening & BI',
-'IA Aplicada à Criação': 'AI Applied to Creative',
-'SEO e Busca': 'SEO & Search',
 
 /* ── 13 · nosso time (uma tela só) ───────────────────────────────────── */
 'Nosso time': 'Our team',
