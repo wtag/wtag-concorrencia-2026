@@ -154,6 +154,35 @@ window.DIC_EN = {
 'Ver as marcas parceiras da WT.AG': 'See WT.AG partner brands',
 '＋ Texto completo': '＋ Full text',
 
+/* ── inteligência e ferramentas ───────────────────────────────────────────
+   Nomes de produto e de ferramenta não se traduzem — TGI, SemRush, Stilingue,
+   WDI Consulting, Adhoc, R&F. O que se traduz é o que explica cada um.
+   A chamada da tela de inteligência vai por data-en-txt, e não por aqui: ela é
+   lettering posicionado, e leva corpo e --cap próprios junto do texto. */
+'Inteligência': 'Intelligence',
+'Ferramentas': 'Tools',
+'Consultoria estratégica, com foco em insights e análises de mercado, marcas e canais': 'Strategic consulting focused on insight and analysis of market, brands and channels',
+'Share of search, dinâmica competitiva, desempenho de R&amp;F, eficiência da compra de mídia': 'Share of search, competitive dynamics, R&amp;F performance, media buying efficiency',
+'Dashboards, dados de concorrência, lançamentos, análises preditivas e customizadas': 'Dashboards, competitor data, launches, predictive and custom analysis',
+'Dashboards para análise de dados, identificando tendências e prevendo resultados': 'Dashboards for data analysis, spotting trends and forecasting results',
+'Hábitos e atitudes dos consumidores orientam a escolha de meios e momentos ideais, on/off.': 'Consumer habits and attitudes guide the choice of channels and of the right moments, on and off.',
+'Observação dos investimentos da categoria: onde investir e onde não investir.': 'Watches category spend: where to invest and where not to.',
+'Entende o comportamento do consumidor na vida digital, usando um database de 90 milhões de pessoas.': 'Reads consumer behaviour in digital life, on a database of 90 million people.',
+'Investimento e monitoramento das redes sociais; ajuda a entender como as marcas estão se comportando na “caixa preta” das plataformas.': 'Investment and social listening; helps read how brands behave inside the black box of the platforms.',
+'Monitora os principais assuntos procurados pela audiência sobre diversos temas.': 'Monitors the main subjects the audience searches for across topics.',
+'Software para simulação em TV aberta e paga; orienta compras mais eficientes e assertivas.': 'Simulation software for free-to-air and pay TV; guides more efficient, more accurate buying.',
+'Planejamento, execução e pós-venda de TV; traz agilidade e excelência na execução tática.': 'TV planning, execution and post-sale; brings speed and rigour to tactical execution.',
+'Monitoramento de resultados das atividades digitais da marca.': 'Monitoring of the results of the brand’s digital activity.',
+'Análise de SEO/SEM, marketing de conteúdo, pesquisa de concorrentes, pagamento por clique e ações em redes sociais.': 'SEO/SEM analysis, content marketing, competitor research, pay-per-click and social media activity.',
+'Gestão de redes sociais: agendamento de publicações, relatórios completos e SAC para Meta, LinkedIn e Twitter. Também faz monitoramento avançado e atendimento omnichannel.': 'Social media management: post scheduling, full reporting and customer service for Meta, LinkedIn and Twitter. It also does advanced monitoring and omnichannel service.',
+'Audiência e horário de cada inserção de TV com precisão de minuto/segundo.': 'Audience and time of every TV spot, accurate to the minute and second.',
+'Avalia o resultado das inserções de TV, cruzando dados do VideoTrack com cadastro, vendas etc.': 'Measures the result of TV spots, crossing VideoTrack data with sign-ups, sales and so on.',
+'Plataforma para extração de dados e otimização dos relatórios de resultados de campanha.': 'Platform for data extraction and for streamlining campaign result reports.',
+'Monitoramento dos assuntos nas redes sociais, análise de sentimento, tamanho das marcas e engajamento — da marca e dos concorrentes.': 'Social listening, sentiment analysis, brand size and engagement — for the brand and for its competitors.',
+'Gestão de projetos e demandas online, para acompanhamento e aprovação das tarefas junto a clientes e parceiros.': 'Online project and request management, for tracking and approving tasks with clients and partners.',
+'Ferramenta de IA para produção de peças digitais em escala.': 'AI tool for producing digital assets at scale.',
+'Consultoria sobre IA proprietária, da primeira IA 100% nacional.': 'Consulting on proprietary AI, from the first fully Brazilian AI.',
+
 /* ── marcações de canto ─────────────────────────────────────────────── */
 'Credenciais': 'Credentials',
 'Esta apresentação foi feita para a tela na horizontal.': 'This presentation was made for landscape screens.',
@@ -487,7 +516,7 @@ window.DIC_EN = {
 'Direita avança, esquerda volta': 'Right goes forward, left goes back',
 'Abrir o sumário': 'Open the contents',
 'Ir direto para uma tela': 'Jump straight to a screen',
-'Credenciais WT.AG · 2026 · abertura e cinco atos, 29 telas': 'WT.AG Credentials · 2026 · opening and five acts, 29 screens',
+'Credenciais WT.AG · 2026 · abertura e cinco atos, 31 telas': 'WT.AG Credentials · 2026 · opening and five acts, 31 screens',
 'Para os lados, como quiser': 'Sideways, either direction',
 'Na foto ou no vídeo, abre em tela cheia': 'On a photo or video, opens full screen',
 'Deite o aparelho: a apresentação é horizontal':

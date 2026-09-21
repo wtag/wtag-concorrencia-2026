@@ -1897,3 +1897,42 @@ a.reperc__it:hover .reperc__ph{border-color:var(--acento,var(--laranja-wt));
   .mandala__rot,.mandala__apoio,.mandala__painel,.mandala__ficha{transition:none}
 }
 
+/* ============================================================================
+   INTELIGÊNCIA E FERRAMENTAS
+   Duas telas trazidas do deck do grupo: a estrutura de layout é a de lá, a
+   pele é a nossa. Fundo creme, Special Gothic na chamada, Geist no resto, e
+   nenhuma cor fora da paleta — o bloco escuro é o preto do brandbook, não o
+   cinza do original.
+   ========================================================================= */
+.int__regua{position:absolute;left:520px;top:72px;width:1px;height:936px;
+  background:rgba(0,0,0,.20);transform-origin:top center}
+.int__fio{position:absolute;background:rgba(0,0,0,.34)}
+.int__fio[data-enter="scaleY"]{transform-origin:top center}
+.int__fio[data-enter="scaleX"]{transform-origin:left center}
+
+.int__bloco{position:absolute;display:flex;align-items:stretch}
+.int__nome{width:440px;flex:none;background:var(--preto-wt);color:var(--creme-wt);
+  display:flex;align-items:center;gap:24px;padding:0 28px}
+.int__nome b{flex:none;width:120px;font-family:var(--font-sans);font-weight:500;
+  font-size:20px;line-height:1.15}
+.int__nome span{font-family:var(--font-sans);font-weight:300;font-size:14.5px;
+  line-height:1.4;color:rgba(247,249,234,.86)}
+/* A caixa clara é contorno, não preenchimento: sobre creme um preenchimento
+   claro não se distinguiria do fundo, e o brandbook não tem um segundo tom de
+   creme para isso. */
+.int__sub{width:720px;flex:none;border:1px solid rgba(0,0,0,.26);border-left:0;
+  display:flex;flex-wrap:wrap;align-content:center;justify-content:center;
+  gap:12px 0;padding:12px 16px}
+/* A referência usa 3 colunas quando são 3 ou 6 itens, 2 quando são 4 e uma só
+   quando é um. O número vem do próprio bloco, em --cols. */
+.int__sub i{font-style:normal;width:calc(100% / var(--cols,3));text-align:center;
+  font-family:var(--font-sans);font-weight:500;font-size:16px;line-height:1.2;
+  color:var(--preto-wt)}
+
+.ferr__col{position:absolute;top:118px;width:362px;
+  display:flex;flex-direction:column;gap:19px}
+.ferr__it b{display:block;font-family:var(--font-sans);font-weight:500;
+  font-size:17px;line-height:1.2;color:var(--preto-wt);margin:0 0 5px}
+.ferr__it span{display:block;font-family:var(--font-sans);font-weight:300;
+  font-size:14px;line-height:1.45;color:rgba(0,0,0,.74)}
+
