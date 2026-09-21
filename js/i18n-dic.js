@@ -156,16 +156,16 @@ window.DIC_EN = {
 
 /* ── capas de cliente · textos e big numbers ──────────────────────────────
    Os rótulos dos números são o que se traduz; os valores também, porque muda o
-   separador decimal (64,7 vira 64.7) e a abreviação (bi vira bn). */
+   separador decimal (64,7 vira 64.7) e a abreviação, que é B nos dois idiomas. */
 'O Magalu é um dos maiores ecossistemas de varejo e tecnologia do Brasil, integrando <b>lojas físicas, e-commerce, marketplace, logística, fintech e publicidade</b>. Em 2025, movimentou <b>R$ 64,7 bilhões em vendas</b>, mantendo presença nacional e uma das maiores operações digitais do varejo brasileiro.': "Magalu is one of Brazil's largest retail and technology ecosystems, bringing together <b>physical stores, e-commerce, marketplace, logistics, fintech and advertising</b>. In 2025 it moved <b>R$64.7 billion in sales</b>, holding a nationwide presence and one of the biggest digital operations in Brazilian retail.",
 'A Keeta é a operação internacional da <b>Meituan</b>, uma das maiores plataformas de tecnologia e serviços locais da China, com mais de <b>800 milhões de usuários transacionando anualmente</b>. O Brasil é uma das prioridades de expansão global do grupo.': "Keeta is the international arm of <b>Meituan</b>, one of China's largest technology and local-services platforms, with more than <b>800 million users transacting every year</b>. Brazil is one of the group's global expansion priorities.",
 'Bridgestone e Firestone fazem parte de um dos maiores grupos globais de pneus e mobilidade, com forte presença industrial, comercial e automotiva no Brasil. A operação brasileira atende tanto o mercado de reposição quanto <b>montadoras</b>, reunindo uma estrutura relevante de produção e desenvolvimento no país.': "Bridgestone and Firestone belong to one of the world's largest tyre and mobility groups, with a strong industrial, commercial and automotive presence in Brazil. The Brazilian operation serves both the replacement market and <b>carmakers</b>, with a substantial production and development structure in the country.",
 'A Multiplan é uma das maiores e mais relevantes empresas de shopping centers do Brasil, com ativos localizados em alguns dos principais mercados consumidores do país. Seu portfólio combina varejo, entretenimento, serviços e experiência.': "Multiplan is one of the largest and most relevant shopping-centre companies in Brazil, with assets in some of the country's main consumer markets. Its portfolio combines retail, entertainment, services and experience.",
-'R$ 64,7 bi': 'R$64.7bn',
-'R$ 44,3 bi': 'R$44.3bn',
-'R$ 26,8 bi': 'R$26.8bn',
-'RMB 364,9 bi': 'RMB364.9bn',
-'US$ 1 bi': 'US$1bn',
+'R$ 64,7 B': 'R$64.7B',
+'R$ 44,3 B': 'R$44.3B',
+'R$ 26,8 B': 'R$26.8B',
+'RMB 364,9 B': 'RMB364.9B',
+'US$ 1 B': 'US$1B',
 '+800 mi': '+800m',
 '+5 mil': '+5k',
 '1.246': '1,246',
