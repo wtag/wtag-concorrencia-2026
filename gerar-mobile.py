@@ -198,6 +198,8 @@ def extrair(html):
                     r'capa-cli__logo[\s\S]{0,260}?data-lazy="([^"]+)"[^>]*alt="([^"]*)"', lim)],
                 'ctx':  d.get('divisor') or '',
                 'intro': limpo(um(r'capa-cli__scrim[\s\S]*?class="abs l-apoio blk"[^>]*>(.*?)</div>', lim)),
+                'nums': [(limpo(m.group(1)), limpo(m.group(2))) for m in re.finditer(
+                    r'<div class="capa-cli__num"[^>]*><b>(.*?)</b><span>(.*?)</span></div>', lim, re.S)],
             }
             d['divisor'] = ''
 
@@ -511,6 +513,13 @@ def emitir(dados):
                 o.append('<div class="rot">%s</div>' % esc(k['ctx']))
             if k.get('intro'):
                 o.append('<p class="txt">%s</p>' % esc(k['intro']))
+            # os big numbers viram a mesma grade de números das outras telas
+            if k.get('nums'):
+                o.append('<div class="nums">')
+                for v, r_ in k['nums']:
+                    o.append('<div><div class="num__v">%s</div><div class="num__r">%s</div></div>'
+                             % (esc(v), esc(r_)))
+                o.append('</div>')
             o.append('</section>')
             continue
 

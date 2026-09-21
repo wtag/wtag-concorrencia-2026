@@ -154,12 +154,47 @@ window.DIC_EN = {
 'Ver as marcas parceiras da WT.AG': 'See WT.AG partner brands',
 '＋ Texto completo': '＋ Full text',
 
+/* ── capas de cliente · textos e big numbers ──────────────────────────────
+   Os rótulos dos números são o que se traduz; os valores também, porque muda o
+   separador decimal (64,7 vira 64.7) e a abreviação (bi vira bn). */
+'O Magalu é um dos maiores ecossistemas de varejo e tecnologia do Brasil, integrando lojas físicas, e-commerce, marketplace, logística, fintech e publicidade. Em 2025, movimentou R$ 64,7 bilhões em vendas, mantendo presença nacional e uma das maiores operações digitais do varejo brasileiro.': "Magalu is one of Brazil's largest retail and technology ecosystems, bringing together physical stores, e-commerce, marketplace, logistics, fintech and advertising. In 2025 it moved R$64.7 billion in sales, holding a nationwide presence and one of the biggest digital operations in Brazilian retail.",
+'A Keeta é a operação internacional da Meituan, uma das maiores plataformas de tecnologia e serviços locais da China, com mais de 800 milhões de usuários transacionando anualmente. O Brasil é uma das prioridades de expansão global do grupo.': "Keeta is the international arm of Meituan, one of China's largest technology and local-services platforms, with more than 800 million users transacting every year. Brazil is one of the group's global expansion priorities.",
+'Bridgestone e Firestone fazem parte de um dos maiores grupos globais de pneus e mobilidade, com forte presença industrial, comercial e automotiva no Brasil. A operação brasileira atende tanto o mercado de reposição quanto montadoras, reunindo uma estrutura relevante de produção e desenvolvimento no país.': "Bridgestone and Firestone belong to one of the world's largest tyre and mobility groups, with a strong industrial, commercial and automotive presence in Brazil. The Brazilian operation serves both the replacement market and carmakers, with a substantial production and development structure in the country.",
+'A Multiplan é uma das maiores e mais relevantes empresas de shopping centers do Brasil, com ativos localizados em alguns dos principais mercados consumidores do país. Seu portfólio combina varejo, entretenimento, serviços e experiência.': "Multiplan is one of the largest and most relevant shopping-centre companies in Brazil, with assets in some of the country's main consumer markets. Its portfolio combines retail, entertainment, services and experience.",
+'R$ 64,7 bi': 'R$64.7bn',
+'R$ 44,3 bi': 'R$44.3bn',
+'R$ 26,8 bi': 'R$26.8bn',
+'RMB 364,9 bi': 'RMB364.9bn',
+'US$ 1 bi': 'US$1bn',
+'+800 mi': '+800m',
+'+5 mil': '+5k',
+'1.246': '1,246',
+'~6.000': '~6,000',
+'905,9 mil m²': '905.9k m²',
+'em vendas': 'in sales',
+'no digital': 'from digital',
+'lojas': 'stores',
+'de investimento no Brasil': 'invested in Brazil',
+'de usuários': 'users',
+'de receita anual': 'in annual revenue',
+'colaboradores': 'employees',
+'unidades industriais': 'industrial sites',
+'fábricas de pneus e de bandas de rodagem': 'tyre plants and tread plants',
+'shoppings': 'malls',
+'operações': 'retail units',
+'de ABL': 'of GLA',
+
 /* ── mandala · os 25 serviços e as cinco frentes ──────────────────────────
    As chaves trazem &amp; porque é assim que o innerHTML devolve o "&" do HTML —
    com "&" puro a chave não casaria e o rótulo ficaria em português.
    Nomes que já são termo de mercado em inglês não têm entrada: Consumer
    Insights, Startup Thinking, Campaign LP, OOH, TV, PR Stunt, Sponsorship,
    E-commerce, CRM. */
+'Tudo o que uma marca': 'Everything a brand',
+'precisa, visto pela': 'needs, seen through',
+'lente do social.': 'the social lens.',
+'Não é uma lista de serviços. É o mesmo olhar aplicado a todas as frentes.': 'This is not a list of services. It is one way of looking, applied to every front.',
+'O escopo é 360.<br>A lente é social.': 'The scope is 360.<br>The lens is social.',
 'Inteligência &amp; Planejamento': 'Intelligence &amp; Planning',
 'Mídia &amp; Performance': 'Media &amp; Performance',
 'Social &amp; Conteúdo': 'Social &amp; Content',
@@ -220,10 +255,6 @@ window.DIC_EN = {
 'Capa · Keeta': 'Cover · Keeta',
 'Capa · Bridgestone': 'Cover · Bridgestone',
 'Capa · Multiplan': 'Cover · Multiplan',
-'Um dos maiores ecossistemas de varejo do Brasil: mais de 1.200 lojas, presença em 20 estados e cerca de 33 milhões de clientes ativos.': "One of Brazil's largest retail ecosystems: more than 1,200 stores, a presence in 20 states and some 33 million active customers.",
-'A operação brasileira da chinesa Meituan, uma das maiores plataformas de delivery do mundo. Chegou ao país com R$ 5,6 bilhões anunciados para cinco anos.': "The Brazilian arm of China's Meituan, one of the world's largest delivery platforms. It arrived with R$5.6 billion announced over five years.",
-'Bridgestone e Firestone, do maior fabricante de pneus do mundo: presença em mais de 150 países e duas fábricas no Brasil. A Firestone soma mais de 95 anos de história por aqui.': "Bridgestone and Firestone, from the world's largest tyre maker: present in more than 150 countries, with two plants in Brazil. Firestone alone has over 95 years of history here.",
-'Uma das maiores empresas de shopping centers do país: 20 shoppings, dois complexos de torres corporativas e mais de 30 empreendimentos imobiliários construídos.': "One of Brazil's largest shopping-centre companies: 20 malls, two corporate tower complexes and more than 30 real-estate developments built.",
 'INFLUÊNCIA E VAREJO': 'INFLUENCE AND RETAIL',
 'DELIVERY E MARKETPLACE': 'DELIVERY AND MARKETPLACE',
 'PNEUS E MOBILIDADE': 'TYRES AND MOBILITY',

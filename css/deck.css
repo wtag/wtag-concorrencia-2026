@@ -1852,25 +1852,25 @@ a.reperc__it:hover .reperc__ph{border-color:var(--acento,var(--laranja-wt));
    --realce e --recuo em 1 o scale genérico fica neutro e quem cresce é só o
    ponto — o rótulo continua no mesmo corpo, que é o que o mantém legível.
    ========================================================================= */
-.mand__nucleo{position:absolute;left:810px;top:390px;width:300px;height:300px;
+.mand__nucleo{position:absolute;left:1136px;top:426px;width:228px;height:228px;
   border-radius:50%;background:#000;display:grid;place-items:center}
-.mand__nucleo img{width:196px;height:auto;display:block}
+.mand__nucleo img{width:148px;height:auto;display:block}
 
 .mand__pista{pointer-events:none}
-.mand__it{position:absolute;width:106px;margin-left:-53px;text-align:center;
+.mand__it{position:absolute;width:94px;margin-left:-47px;text-align:center;
   pointer-events:auto;cursor:default;transition:opacity 170ms ease}
 .mand__dot{display:block;width:10px;height:10px;margin:0 auto 7px;border-radius:50%;
   background:var(--creme-wt);
   transition:transform 210ms var(--ease),background 170ms ease}
 .mand__it span{display:block;font-family:var(--font-sans);font-weight:500;
-  font-size:12.5px;line-height:1.24;color:rgba(247,249,234,.88);
+  font-size:12px;line-height:1.24;color:rgba(247,249,234,.88);
   transition:color 170ms ease}
 .mand__pista.tem-foco .mand__it.is-foco .mand__dot{transform:scale(2.4);background:var(--laranja-wt)}
 .mand__pista.tem-foco .mand__it.is-foco span{color:var(--creme-wt)}
 
 .mand__grupo{position:absolute;font-family:var(--font-display);font-weight:400;
-  text-transform:uppercase;font-size:24px;line-height:1.1;letter-spacing:.005em;
-  color:var(--creme-wt);width:280px;white-space:normal}
+  text-transform:uppercase;font-size:21px;line-height:1.1;letter-spacing:.005em;
+  color:var(--creme-wt);width:200px;white-space:normal}
 .mand__grupo[style*="translateX(-100%)"]{margin-left:0}
 
 @media (prefers-reduced-motion:reduce){
@@ -1885,23 +1885,34 @@ a.reperc__it:hover .reperc__ph{border-color:var(--acento,var(--laranja-wt));
    nenhuma cor fora da paleta — o bloco escuro é o preto do brandbook, não o
    cinza do original.
    ========================================================================= */
+/* A régua da esquerda vai mais para a direita na tela de Ferramentas, para a
+   palavra caber maior sem encostar nela. */
 .int__regua{position:absolute;left:520px;top:72px;width:1px;height:936px;
-  background:rgba(0,0,0,.20);transform-origin:top center}
-.int__fio{position:absolute;background:rgba(0,0,0,.34)}
+  background:rgba(0,0,0,.24);transform-origin:top center}
+.int__regua--larga{left:560px}
+.int__fio{position:absolute;background:rgba(0,0,0,.42)}
 .int__fio[data-enter="scaleY"]{transform-origin:top center}
 .int__fio[data-enter="scaleX"]{transform-origin:left center}
 
-.int__bloco{position:absolute;display:flex;align-items:stretch}
+/* Canto arredondado no box inteiro, com overflow para o preenchimento escuro e
+   o contorno claro seguirem a mesma curva. 32px = 24% de 132, a menor dimensão
+   do box (regra 2.5). */
+.int__bloco{position:absolute;display:flex;align-items:stretch;
+  border-radius:32px;overflow:hidden}
 .int__nome{width:440px;flex:none;background:var(--preto-wt);color:var(--creme-wt);
   display:flex;align-items:center;gap:24px;padding:0 28px}
 .int__nome b{flex:none;width:120px;font-family:var(--font-sans);font-weight:500;
   font-size:20px;line-height:1.15}
-.int__nome span{font-family:var(--font-sans);font-weight:300;font-size:14.5px;
-  line-height:1.4;color:rgba(247,249,234,.86)}
+/* Medium em tudo que mora dentro dos boxes, como pedido — o Light some sobre
+   o preto em 14,5px. O balance evita a primeira linha cheia e a última com
+   duas palavras. */
+.int__nome span{font-family:var(--font-sans);font-weight:500;font-size:14.5px;
+  line-height:1.4;color:rgba(247,249,234,.88);text-wrap:balance}
 /* A caixa clara é contorno, não preenchimento: sobre creme um preenchimento
    claro não se distinguiria do fundo, e o brandbook não tem um segundo tom de
    creme para isso. */
 .int__sub{width:720px;flex:none;border:1px solid rgba(0,0,0,.26);border-left:0;
+  border-radius:0 32px 32px 0;
   display:flex;flex-wrap:wrap;align-content:center;justify-content:center;
   gap:12px 0;padding:12px 16px}
 /* A referência usa 3 colunas quando são 3 ou 6 itens, 2 quando são 4 e uma só
@@ -1914,6 +1925,27 @@ a.reperc__it:hover .reperc__ph{border-color:var(--acento,var(--laranja-wt));
   display:flex;flex-direction:column;gap:19px}
 .ferr__it b{display:block;font-family:var(--font-sans);font-weight:500;
   font-size:17px;line-height:1.2;color:var(--preto-wt);margin:0 0 5px}
-.ferr__it span{display:block;font-family:var(--font-sans);font-weight:300;
-  font-size:14px;line-height:1.45;color:rgba(0,0,0,.74)}
+.ferr__it span{display:block;font-family:var(--font-sans);font-weight:500;
+  font-size:14px;line-height:1.45;color:rgba(0,0,0,.72);text-wrap:balance}
+
+/* Big numbers da capa de cliente · mesma receita de vidro do rodapé de case,
+   que é o tratamento das one pages: 7,5% de creme, borda a 16%, blur de 20px
+   com saturação e a sombra interna de 1px no topo, que é o que dá a impressão
+   de espessura. Raio 31 = 24% de 128, a menor dimensão da caixa (regra 2.5).
+   As caixas são flex, então três ou quatro números se resolvem sozinhos. */
+.capa-cli__nums{position:absolute;left:72px;top:820px;width:1776px;height:128px;
+  display:flex;gap:24px;z-index:5}
+.capa-cli__num{flex:1 1 0;min-width:0;border-radius:31px;padding:0 30px;
+  display:flex;flex-direction:column;justify-content:center;gap:10px;
+  background:rgba(247,249,234,.075);
+  border:1px solid rgba(247,249,234,.16);
+  -webkit-backdrop-filter:blur(20px) saturate(1.25);
+  backdrop-filter:blur(20px) saturate(1.25);
+  box-shadow:0 20px 64px rgba(0,0,0,.48),inset 0 1px 0 rgba(247,249,234,.12)}
+.capa-cli__num b{display:block;font-family:var(--font-display);font-weight:400;
+  font-size:50px;line-height:.9;color:var(--creme-wt);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.capa-cli__num span{display:block;font-family:var(--font-sans);font-weight:500;
+  font-size:12px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--creme-55);line-height:1.3;text-wrap:balance}
 
