@@ -49,20 +49,23 @@ import sys
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ORIGEM = os.path.join(AQUI, 'index.html')
-DESTINO = os.path.join(AQUI, 'index_pdf.html')
-PDF = os.path.join(AQUI, 'WT.AG_Concorrencia_2026.pdf')
+def destino(idioma):
+    return os.path.join(AQUI, 'index_pdf_%s.html' % idioma)
+
+
+def caminho_pdf(idioma):
+    return os.path.join(AQUI, 'WT.AG_Concorrencia_2026_%s.pdf' % idioma.upper())
 
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
 EXCLUIR = ()   # todos os cases deste deck estão completos
 
-# A capa VOLTA para o PDF neste deck. No deck de credenciais ela ficava de fora
-# porque era a segunda capa — a tela de instruções de navegação antes da capa do
-# grupo — e num PDF, que se folheia, instrução de navegação é rodeio. Sem o Ato 1
-# a capa WT.AG é a ÚNICA capa do documento, e um PDF de concorrência sem capa
-# abriria no Social First. A caixa_da_capa() reescreve as instruções para leitor
-# de PDF, que é exatamente o caso de uso agora.
-SEM_CAPA = False
+# A capa fica FORA. Ela é a tela de instruções de navegação, e num PDF — que se
+# folheia — instrução de como andar num deck é uma página de rodeio antes do
+# assunto. O documento abre direto no Social First.
+# A caixa_da_capa() continua no arquivo: se a capa voltar, ela volta reescrita
+# para leitor de PDF, e não para o deck.
+SEM_CAPA = True
 
 DECK_ONLINE = 'https://wtag.github.io/wtag-concorrencia-2026/'
 
@@ -152,7 +155,7 @@ def montar_imagens(bloco):
 
 
 # ---------------------------------------------------------------------- vídeos
-def ligar_videos(bloco, faltando):
+def ligar_videos(bloco, faltando, slide=None):
     """Insere a âncora transparente logo depois da tag de abertura de quem tem
     data-video ou data-youtube. Depois da tag, e não no fim do elemento, porque
     achar o </div> certo por regex é como se perde um .case__stack inteiro —
@@ -161,10 +164,16 @@ def ligar_videos(bloco, faltando):
     def por_arquivo(m):
         tag, caminho = m.group(1), m.group(2)
         fid = DRIVE.get(caminho)
-        if not fid:
-            faltando.append(caminho)
-            return tag
-        return tag + ancora(link_drive(fid))
+        if fid:
+            return tag + ancora(link_drive(fid))
+        # Sem arquivo no Drive, o link vai para a TELA do deck publicado. Não é
+        # consolo: ali o vídeo toca dentro do case, com o texto e os números em
+        # volta, que para quem lê um pitch vale mais que um .mp4 solto. O Drive
+        # continua sendo o destino de quem quer o master.
+        faltando.append(caminho)
+        if slide:
+            return tag + ancora('%s#slide-%02d' % (DECK_ONLINE, slide))
+        return tag
 
     def por_youtube(m):
         tag, vid = m.group(1), m.group(2)
@@ -269,16 +278,25 @@ def virar_pagina(bloco):
 
 def main():
     so_html = '--so-html' in sys.argv
+    pedidos = [a for a in sys.argv[1:] if a in ('pt', 'en')] or ['pt', 'en']
+    for idioma in pedidos:
+        print('\n── %s ──' % idioma.upper())
+        gerar(idioma, so_html)
+
+
+def gerar(idioma, so_html=False):
     html = io_ler(ORIGEM)
 
     versao = (re.search(r'deck\.css\?v=(\d+)', html) or [0, '1'])[1]
     secoes = re.findall(r'<section\b[^>]*>[\s\S]*?</section>', html)
 
     paginas, fora, faltando, avisos = [], [], [], []
+    n_deck = 0          # número da tela NO DECK, que não é o da página do PDF
     for s in secoes:
         abrir = re.match(r'<section\b[^>]*>', s).group(0)
         if 'data-oculto' in abrir:
             continue
+        n_deck += 1
         if SEM_CAPA and 'slide capa' in abrir:
             fora.append(('Capa · WT.AG', 'abertura: só faz sentido no deck'))
             continue
@@ -290,7 +308,7 @@ def main():
         b = virar_pagina(s)
         b = montar_imagens(b)
         b = fechar_contadores(b)
-        b = ligar_videos(b, faltando)
+        b = ligar_videos(b, faltando, n_deck)
         if 'reperc__fita' in b:
             b = deduplicar_fitas(b, avisos)
         if 's14__video' in b:
@@ -300,33 +318,40 @@ def main():
         b = b.replace('Clique para abrir o vídeo', 'Abrir o vídeo')
         paginas.append(b)
 
-    doc = ['<!DOCTYPE html>', '<html lang="en">', '<head>',
+    en = (idioma == 'en')
+    doc = ['<!DOCTYPE html>',
+           '<html lang="%s">' % ('en' if en else 'pt-BR'), '<head>',
            '<meta charset="utf-8">',
-           '<title>WT.AG &#183; Credentials 2026</title>',
-           '<meta name="description" content="WT.AG Credentials 2026 — Social First Agency.">',
+           '<title>WT.AG &#183; %s 2026</title>' % ('Credentials' if en else 'Credenciais'),
+           '<meta name="description" content="%s">' % (
+               'WT.AG Credentials 2026 — Social First Agency.' if en
+               else 'Credenciais WT.AG 2026 — Social First Agency.'),
            '<link rel="stylesheet" href="css/deck.css?v=%s">' % versao,
            '<link rel="stylesheet" href="css/pdf.css?v=%s">' % versao,
            '</head>', '<body>', AVISO]
     doc += paginas
-    # O PDF sai em inglês, como a apresentação. A tradução NÃO é refeita aqui:
-    # são os mesmos js/i18n-dic.js e js/i18n.js do deck, rodando no Chrome antes
-    # da impressão. Duplicar a lógica em Python daria duas verdades que divergem
-    # na primeira entrada nova do dicionário.
+    # A versão em inglês carrega os MESMOS js/i18n-dic.js e js/i18n.js do deck,
+    # rodando no Chrome antes da impressão. Duplicar a tradução em Python daria
+    # duas verdades que divergem na primeira entrada nova do dicionário.
     # O botão PT/EN não aparece: montarBotao() desiste sem o #ui, que só existe
-    # no deck. E o idioma inicial cai no inglês sozinho, porque o headless abre
-    # sem localStorage.
-    doc += ['<script src="js/i18n-dic.js?v=%s"></script>' % versao,
-            '<script src="js/i18n.js?v=%s"></script>' % versao]
+    # no deck. E o iniciar() aplica inglês sozinho, sem depender de localStorage.
+    # A versão em português não carrega nada: o index.html JÁ é o português, e
+    # é por isso que ela é a mais barata das duas.
+    if en:
+        doc += ['<script src="js/i18n-dic.js?v=%s"></script>' % versao,
+                '<script src="js/i18n.js?v=%s"></script>' % versao]
     doc += ['</body>', '</html>', '']
-    io_escrever(DESTINO, '\n'.join(doc))
+    alvo = destino(idioma)
+    io_escrever(alvo, '\n'.join(doc))
 
-    print('index_pdf.html: %d páginas' % len(paginas))
+    print('%s: %d páginas' % (os.path.basename(alvo), len(paginas)))
     for t, motivo in fora:
         print('  fora · %s — %s' % (t, motivo))
     links = sum(p.count('class="pdf-lk"') for p in paginas)
     print('  links de vídeo: %d' % links)
-    for c in sorted(set(faltando)):
-        print('  ! sem link no Drive: %s' % c)
+    if faltando:
+        print('  %d vídeos sem arquivo no Drive — apontam para a tela do deck no ar'
+              % len(set(faltando)))
     for a in sorted(set(avisos)):
         print('  ! %s' % a)
     fitas = sum(p.count('class="reperc__fita"') for p in paginas)
@@ -337,7 +362,7 @@ def main():
     if not os.path.exists(CHROME):
         print('! Chrome não encontrado em %s — só o HTML foi gerado' % CHROME)
         return
-    imprimir()
+    imprimir(alvo, caminho_pdf(idioma))
 
 
 # ------------------------------------------------------- fitas de repercussão
@@ -507,7 +532,7 @@ def comprimir(caminho, limite=120_000, qualidade=86, lado_max=3840):
           (trocadas, antes / 1e6, depois / 1e6))
 
 
-def imprimir():
+def imprimir(origem, pdf):
     """--run-all-compositor-stages-before-draw e o orçamento de tempo virtual
     existem porque são 26 páginas de imagem: sem eles o Chrome imprime antes de
     tudo decodificar e saem retângulos vazios."""
@@ -515,15 +540,15 @@ def imprimir():
            '--run-all-compositor-stages-before-draw',
            '--virtual-time-budget=60000',
            '--no-pdf-header-footer',
-           '--print-to-pdf=' + PDF, DESTINO]
+           '--print-to-pdf=' + pdf, origem]
     r = subprocess.run(cmd, capture_output=True, text=True)
-    if not os.path.exists(PDF):
+    if not os.path.exists(pdf):
         print('! o Chrome não gerou o PDF')
         print(r.stderr[-2000:])
         return
-    print('%s: %.1f MB' % (os.path.basename(PDF), os.path.getsize(PDF) / 1e6))
-    comprimir(PDF)
-    print('%s: %.1f MB (final)' % (os.path.basename(PDF), os.path.getsize(PDF) / 1e6))
+    print('%s: %.1f MB' % (os.path.basename(pdf), os.path.getsize(pdf) / 1e6))
+    comprimir(pdf)
+    print('%s: %.1f MB (final)' % (os.path.basename(pdf), os.path.getsize(pdf) / 1e6))
 
 
 def io_ler(p):

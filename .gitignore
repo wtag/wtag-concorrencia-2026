@@ -13,7 +13,7 @@ index_review.html
 # O padrão substitui o nome fixo de propósito: quando o arquivo passou de
 # Credenciais para Concorrência, a linha antiga deixou de casar em silêncio e o
 # PDF entrou no histórico por quatro commits.
-index_pdf.html
+index_pdf_*.html
 WT.AG_*.pdf
 
 # Auxiliares de conferência que eu crio e apago
