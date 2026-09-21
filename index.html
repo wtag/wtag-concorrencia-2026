@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WT.AG — Credenciais 2026</title>
 <meta name="description" content="Credenciais WT.AG 2026 — Social First Agency. Apresentação de slides.">
-<link rel="stylesheet" href="css/deck.css?v=217">
+<link rel="stylesheet" href="css/deck.css?v=219">
 </head>
 <body>
 
@@ -380,6 +380,10 @@
      faixa os rótulos se encostariam: no maior setor, sete itens em 100,8°
      deixariam 14,4° entre vizinhos, e alternando a distância dobra.
 
+     Os rótulos dos grupos ficam em r=382, e não colados no anel: com 356 eles
+     encostavam na coroa (só 26px de folga). Em 382 são 52px, e o limite é o
+     lado leste — 1250+382 mais 200px de rótulo dá 1832, a 16px da margem.
+
      A mandala mora à DIREITA, com a coluna de texto à esquerda nas mesmas
      coordenadas do antigo hub. O raio externo caiu de 430 para 330 e o centro
      foi para x=1250 justamente por causa dessa coluna: com o desenho centrado
@@ -406,11 +410,11 @@
         <circle cx="1250" cy="540" r="130"/>
       </g>
       <g stroke="#F7F9EA" stroke-opacity=".28" stroke-width="1">
-    <line x1="1383.9" y1="231.8" x2="1391.0" y2="215.3"/>
-    <line x1="1579.0" y1="471.6" x2="1596.6" y2="468.0"/>
-    <line x1="1383.9" y1="848.2" x2="1391.0" y2="864.7"/>
-    <line x1="951.7" y1="694.6" x2="935.7" y2="702.9"/>
-    <line x1="1038.0" y1="279.4" x2="1026.6" y2="265.4"/>
+    <line x1="1383.9" y1="231.8" x2="1399.0" y2="197.0"/>
+    <line x1="1579.0" y1="471.6" x2="1616.2" y2="463.9"/>
+    <line x1="1383.9" y1="848.2" x2="1399.0" y2="883.0"/>
+    <line x1="951.7" y1="694.6" x2="917.9" y2="712.1"/>
+    <line x1="1038.0" y1="279.4" x2="1014.0" y2="249.9"/>
       </g>
       <g>
     <circle cx="1264.9" cy="354.6" r="1.6" fill="#F7F9EA" fill-opacity=".35"/>
@@ -482,11 +486,11 @@
   </div>
 
   <div class="abs l-chamada" style="left:0;top:0;width:1920px;height:1080px" data-stagger="90" data-delay="240">
-    <div class="mand__grupo" data-enter="up" style="left:1391.8px;top:213.5px;transform:translateX(0) translateY(-50%);text-align:left">Inteligência &amp; Planejamento</div>
-    <div class="mand__grupo" data-enter="up" style="left:1598.6px;top:467.6px;transform:translateX(0) translateY(-50%);text-align:left">Mídia &amp; Performance</div>
-    <div class="mand__grupo" data-enter="up" style="left:1391.8px;top:866.5px;transform:translateX(0) translateY(-50%);text-align:left">Social &amp; Conteúdo</div>
-    <div class="mand__grupo" data-enter="up" style="left:933.9px;top:703.8px;transform:translateX(-100%) translateY(-50%);text-align:right">Marca &amp; Ativação</div>
-    <div class="mand__grupo" data-enter="up" style="left:1025.3px;top:263.8px;transform:translateX(-100%) translateY(-50%);text-align:right">Varejo &amp; Relacionamento</div>
+    <div class="mand__grupo" data-enter="up" style="left:1402.2px;top:189.6px;transform:translateX(0) translateY(-50%);text-align:left">Inteligência &amp; Planejamento</div>
+    <div class="mand__grupo" data-enter="up" style="left:1624.0px;top:462.3px;transform:translateX(0) translateY(-50%);text-align:left">Mídia &amp; Performance</div>
+    <div class="mand__grupo" data-enter="up" style="left:1402.2px;top:890.4px;transform:translateX(0) translateY(-50%);text-align:left">Social &amp; Conteúdo</div>
+    <div class="mand__grupo" data-enter="up" style="left:910.8px;top:715.7px;transform:translateX(-100%) translateY(-50%);text-align:right">Marca &amp; Ativação</div>
+    <div class="mand__grupo" data-enter="up" style="left:1008.9px;top:243.7px;transform:translateX(-100%) translateY(-50%);text-align:right">Varejo &amp; Relacionamento</div>
   </div>
 
   <div class="marca marca--bl marca--sm l-marcas" data-enter="fade" data-delay="820">O que fazemos</div>
@@ -860,8 +864,12 @@
   <div class="int__fio l-visual" style="left:640px;top:682px;width:48px;height:2px" data-enter="scaleX" data-delay="290"></div>
   <div class="int__fio l-visual" style="left:640px;top:828px;width:48px;height:2px" data-enter="scaleX" data-delay="305"></div>
 
+  <!-- O --cap 463 não é estética: a altura de maiúscula em 124px é 88,04, o vão
+       entre o par de cima (que fecha em 398) e o de baixo (que abre em 616) é
+       218, e centrar a TINTA nesse vão dá 398 + (218−88,04)/2 = 462,98. Antes,
+       em 451, sobravam 53px em cima e 77 embaixo. -->
   <div class="escada display escada--forte l-chamada int__marca" data-stagger="0" data-delay="200">
-    <span class="ln" data-en-x="686.1px" style="--x:686.1px;--cap:451px;--fs:124px;color:var(--preto-wt)">WT.INTELLIGENCE</span>
+    <span class="ln" data-en-x="686.1px" style="--x:686.1px;--cap:463px;--fs:124px;color:var(--preto-wt)">WT.INTELLIGENCE</span>
   </div>
 
   <div class="abs l-apoio" style="left:0;top:0;width:1920px;height:1080px" data-stagger="70" data-delay="330">
@@ -993,13 +1001,13 @@
   <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
        style="z-index:5;left:72px;top:446px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
 
-  <div class="abs l-chamada rl-alvo rl-caixa" style="z-index:5;left:72px;top:calc(488px - 0.145*40px);
+  <div class="abs l-chamada rl-alvo rl-caixa capa-cli__ctx" style="z-index:5;left:72px;top:calc(488px - 0.145*40px);
        font-family:var(--font-display);font-weight:400;text-transform:uppercase;
        font-size:40px;line-height:1;color:var(--creme-wt);white-space:nowrap"
        data-delay="330" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">INFLUÊNCIA E VAREJO</div>
 
   <div class="abs l-apoio blk" data-enter="up" data-delay="430"
-       style="z-index:5;--x:72px;--cap:566px;--fs:22px;--lh:1.5;width:980px;text-wrap:balance;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">O Magalu é um dos maiores ecossistemas de varejo e tecnologia do Brasil, integrando lojas físicas, e-commerce, marketplace, logística, fintech e publicidade. Em 2025, movimentou R$ 64,7 bilhões em vendas, mantendo presença nacional e uma das maiores operações digitais do varejo brasileiro.</div>
+       style="z-index:5;--x:72px;--cap:566px;--fs:22px;--lh:1.5;width:980px;text-wrap:balance;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">O Magalu é um dos maiores ecossistemas de varejo e tecnologia do Brasil, integrando <b>lojas físicas, e-commerce, marketplace, logística, fintech e publicidade</b>. Em 2025, movimentou <b>R$ 64,7 bilhões em vendas</b>, mantendo presença nacional e uma das maiores operações digitais do varejo brasileiro.</div>
 
   <div class="capa-cli__nums l-apoio" data-stagger="70" data-delay="520">
     <div class="capa-cli__num" data-enter="up"><b>R$ 64,7 bi</b><span>em vendas</span></div>
@@ -1194,13 +1202,13 @@
   <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
        style="z-index:5;left:72px;top:446px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
 
-  <div class="abs l-chamada rl-alvo rl-caixa" style="z-index:5;left:72px;top:calc(488px - 0.145*40px);
+  <div class="abs l-chamada rl-alvo rl-caixa capa-cli__ctx" style="z-index:5;left:72px;top:calc(488px - 0.145*40px);
        font-family:var(--font-display);font-weight:400;text-transform:uppercase;
        font-size:40px;line-height:1;color:var(--creme-wt);white-space:nowrap"
        data-delay="330" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">DELIVERY E MARKETPLACE</div>
 
   <div class="abs l-apoio blk" data-enter="up" data-delay="430"
-       style="z-index:5;--x:72px;--cap:566px;--fs:22px;--lh:1.5;width:980px;text-wrap:balance;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">A Keeta é a operação internacional da Meituan, uma das maiores plataformas de tecnologia e serviços locais da China, com mais de 800 milhões de usuários transacionando anualmente. O Brasil é uma das prioridades de expansão global do grupo.</div>
+       style="z-index:5;--x:72px;--cap:566px;--fs:22px;--lh:1.5;width:980px;text-wrap:balance;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">A Keeta é a operação internacional da <b>Meituan</b>, uma das maiores plataformas de tecnologia e serviços locais da China, com mais de <b>800 milhões de usuários transacionando anualmente</b>. O Brasil é uma das prioridades de expansão global do grupo.</div>
 
   <div class="capa-cli__nums l-apoio" data-stagger="70" data-delay="520">
     <div class="capa-cli__num" data-enter="up"><b>US$ 1 bi</b><span>de investimento no Brasil</span></div>
@@ -1479,13 +1487,13 @@
   <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
        style="z-index:5;left:72px;top:446px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
 
-  <div class="abs l-chamada rl-alvo rl-caixa" style="z-index:5;left:72px;top:calc(488px - 0.145*40px);
+  <div class="abs l-chamada rl-alvo rl-caixa capa-cli__ctx" style="z-index:5;left:72px;top:calc(488px - 0.145*40px);
        font-family:var(--font-display);font-weight:400;text-transform:uppercase;
        font-size:40px;line-height:1;color:var(--creme-wt);white-space:nowrap"
        data-delay="330" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">PNEUS E MOBILIDADE</div>
 
   <div class="abs l-apoio blk" data-enter="up" data-delay="430"
-       style="z-index:5;--x:72px;--cap:566px;--fs:22px;--lh:1.5;width:980px;text-wrap:balance;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">Bridgestone e Firestone fazem parte de um dos maiores grupos globais de pneus e mobilidade, com forte presença industrial, comercial e automotiva no Brasil. A operação brasileira atende tanto o mercado de reposição quanto montadoras, reunindo uma estrutura relevante de produção e desenvolvimento no país.</div>
+       style="z-index:5;--x:72px;--cap:566px;--fs:22px;--lh:1.5;width:980px;text-wrap:balance;font-family:var(--font-sans);font-weight:300;color:rgba(247,249,234,.92)">Bridgestone e Firestone fazem parte de um dos maiores grupos globais de pneus e mobilidade, com forte presença industrial, comercial e automotiva no Brasil. A operação brasileira atende tanto o mercado de reposição quanto <b>montadoras</b>, reunindo uma estrutura relevante de produção e desenvolvimento no país.</div>
 
   <div class="capa-cli__nums l-apoio" data-stagger="70" data-delay="520">
     <div class="capa-cli__num" data-enter="up"><b>+5 mil</b><span>colaboradores</span></div>
@@ -1612,7 +1620,7 @@
   <div class="abs l-apoio" data-enter="scaleX" data-delay="300"
        style="z-index:5;left:72px;top:446px;width:160px;height:2px;background:var(--laranja-wt);transform-origin:left"></div>
 
-  <div class="abs l-chamada rl-alvo rl-caixa" style="z-index:5;left:72px;top:calc(488px - 0.145*40px);
+  <div class="abs l-chamada rl-alvo rl-caixa capa-cli__ctx" style="z-index:5;left:72px;top:calc(488px - 0.145*40px);
        font-family:var(--font-display);font-weight:400;text-transform:uppercase;
        font-size:40px;line-height:1;color:var(--creme-wt);white-space:nowrap"
        data-delay="330" data-rl-dur="620" data-rl-stagger="46" data-rl-voltas="2">SHOPPING E IMOBILIÁRIO</div>
@@ -1915,8 +1923,8 @@
 
 </div><!-- /#viewport -->
 
-<script src="js/deck.js?v=217"></script>
-<script src="js/i18n-dic.js?v=217"></script>
-<script src="js/i18n.js?v=217"></script>
+<script src="js/deck.js?v=219"></script>
+<script src="js/i18n-dic.js?v=219"></script>
+<script src="js/i18n.js?v=219"></script>
 </body>
 </html>
